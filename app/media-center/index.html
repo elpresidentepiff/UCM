@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>UCM Media Center</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="mark">UCM</div>
+        <div>
+          <strong>Media Center</strong>
+          <span>AI growth ops for cleaning</span>
+        </div>
+      </div>
+      <nav>
+        <a href="#targeting">Targeting</a>
+        <a href="#campaign">AI Savings Campaign</a>
+        <a href="#engine">Media Engine</a>
+        <a href="#tools">Tools</a>
+      </nav>
+    </aside>
+
+    <main>
+      <section class="hero">
+        <div>
+          <p class="eyebrow">UCM London Growth App</p>
+          <h1>Find the best London cleaning demand zones, generate campaign angles, and route media through an approval engine.</h1>
+          <p class="lede">Built for UCM's next stage: borough targeting, AI-assisted savings messaging, short-form video production, and quote-led campaign execution.</p>
+        </div>
+        <div class="hero-panel">
+          <span>Current play</span>
+          <strong>AI-assisted economical cleaning</strong>
+          <p>Position AI as an efficiency layer: smarter scheduling, faster quotes, less admin waste, clearer scopes. No fake price promises.</p>
+        </div>
+      </section>
+
+      <section id="targeting" class="section">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">London targeting</p>
+            <h2>Priority zones</h2>
+          </div>
+          <label class="filter">
+            Service focus
+            <select id="serviceFilter">
+              <option value="all">All services</option>
+              <option value="office cleaning">Office cleaning</option>
+              <option value="end-of-tenancy">End-of-tenancy</option>
+              <option value="property manager care">Property manager care</option>
+              <option value="communal">Communal area cleaning</option>
+              <option value="residential">Residential cleaning</option>
+            </select>
+          </label>
+        </div>
+        <div id="zoneGrid" class="zone-grid"></div>
+      </section>
+
+      <section id="campaign" class="section split">
+        <div>
+          <p class="eyebrow">Campaign thesis</p>
+          <h2>AI helps UCM sell economical service without cheapening the brand.</h2>
+          <p>The campaign should not say "AI makes us the cheapest." It should say UCM uses AI-assisted planning to reduce waste: faster quoting, better route grouping, clearer scopes, smarter content, and less admin time.</p>
+        </div>
+        <div class="campaign-card">
+          <h3>Approved claim frame</h3>
+          <p>"Because we use AI-assisted planning, UCM can reduce admin waste and build more efficient cleaning plans. That helps us offer clearer, more economical quotes without cutting service standards."</p>
+          <button id="copyClaim">Copy campaign claim</button>
+        </div>
+      </section>
+
+      <section id="engine" class="section">
+        <p class="eyebrow">Media engine adaptation</p>
+        <h2>From raw job footage to approved campaign asset</h2>
+        <div class="pipeline">
+          <div><strong>1. Ingest</strong><span>Photos, reels, site clips, testimonials</span></div>
+          <div><strong>2. Understand</strong><span>Transcribe, tag borough, service, proof level</span></div>
+          <div><strong>3. Plan</strong><span>Hook, storyboard, CTA, target zone</span></div>
+          <div><strong>4. Produce</strong><span>Clip, caption, thumbnail, variants</span></div>
+          <div><strong>5. Approve</strong><span>Human review for claims and client proof</span></div>
+          <div><strong>6. Learn</strong><span>Return metrics by borough, hook and service</span></div>
+        </div>
+      </section>
+
+      <section id="tools" class="section">
+        <p class="eyebrow">Tools to add</p>
+        <h2>Recommended stack</h2>
+        <div class="tools">
+          <article>
+            <h3>VideoAgent / FFmpeg lane</h3>
+            <p>Use for video understanding, clipping, remaking and workflow orchestration. Sandbox first before production.</p>
+          </article>
+          <article>
+            <h3>Whisper transcription</h3>
+            <p>Transcribe site videos, client testimonials, founder voice notes and walkthroughs.</p>
+          </article>
+          <article>
+            <h3>Campaign manifest</h3>
+            <p>Every asset gets campaign ID, borough, service, hook, proof status, CTA and approval state.</p>
+          </article>
+          <article>
+            <h3>Meta + GBP + GA4</h3>
+            <p>Track calls, quote clicks, forms, profile visits and cost per qualified lead.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
+
