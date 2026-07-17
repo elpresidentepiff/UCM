@@ -110,6 +110,9 @@ Operational routes:
 - `supabase/migrations/20260717013203_create_ucm_cleanscope_foundation.sql` - dedicated UCM schema, RLS and private media-bucket foundation.
 - `growth/sprints/2026-07-16-kickoff.md` - active kickoff sprint.
 - `growth/scripts/ucm-company-introduction-script.md` - 90, 30 and 15-second company scripts with claims gates.
+- `growth/scripts/carlos-ucm-digital-future-script.md` - UCM Growth Agent presentation to Carlos covering the complete digital company system.
+- `growth/scripts/ucm-cleaning-services-extended-video-script.md` - longer human-voiced customer film for the next cleaning video.
+- `growth/scripts/ucm-mission-statement-script.md` - public UCM mission film and concise written statement.
 - `growth/research/ucm-crm-benchmark-2026.md` - cleaning CRM research and UCM build decision.
 - `growth/strategy/ucm-system-boundaries.md` - website, app, CRM, field operations and Media Engine ownership boundaries.
 - `growth/innovation/hocl-verified-disinfection-promotion-and-implementation.md` - HOCl offer, testing protocol, claims controls, scripts, carbon evidence and 30-day pilot.

@@ -6,6 +6,12 @@ Priority production draft: `growth/scripts/ucm-company-introduction-script.md` c
 
 First rendered campaign concept: `growth/media/ucm-cleaning-reel/ucm-cleaning-services-reel-v1.mp4` presents UCM commercial cleaning, before/after cleanliness verification and the controlled HOCl pilot in a 34-second vertical format. Generated concept imagery must be replaced with approved real UCM footage where possible before paid promotion.
 
+Human-voice replacements and company narrative scripts:
+
+- `growth/scripts/carlos-ucm-digital-future-script.md`
+- `growth/scripts/ucm-cleaning-services-extended-video-script.md`
+- `growth/scripts/ucm-mission-statement-script.md`
+
 | # | Working title | Buyer | Core hook | Primary channels | CTA |
 | ---: | --- | --- | --- | --- | --- |
 | 1 | From UTC in 1994 to UCM Today | Commercial buyers | UCM began with technical cleaning before it became a wider property-care company. | LinkedIn, YouTube | Learn about UCM |
