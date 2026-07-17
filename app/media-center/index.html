@@ -3,112 +3,165 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>UCM Media Center</title>
+    <meta name="description" content="UCM Growth Command Center for channel planning, London targeting, service innovation and commercial measurement." />
+    <title>UCM Growth Command Center</title>
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
     <aside class="sidebar">
-      <div class="brand">
-        <div class="mark">UCM</div>
-        <div>
-          <strong>Media Center</strong>
-          <span>AI growth ops for cleaning</span>
-        </div>
-      </div>
-      <nav>
-        <a href="#targeting">Targeting</a>
-        <a href="#campaign">AI Savings Campaign</a>
-        <a href="#engine">Media Engine</a>
-        <a href="#tools">Tools</a>
+      <a class="brand" href="#overview" aria-label="UCM Growth Command Center home">
+        <span class="brand-mark">UCM</span>
+        <span><strong>Growth Center</strong><small>Commercial operating system</small></span>
+      </a>
+      <nav aria-label="Growth Center sections">
+        <a href="#overview">Overview</a>
+        <a href="#channels">Channels</a>
+        <a href="#scripts">Video scripts</a>
+        <a href="#targeting">Demand radar</a>
+        <a href="#innovations">Innovations</a>
+        <a href="#plans">Care plans</a>
+        <a href="#evidence">Evidence</a>
+        <a href="#roadmaps">Roadmaps</a>
+        <a href="#execution">Execution</a>
       </nav>
+      <div class="sidebar-foot">
+        <span class="status-dot"></span>
+        <span>Strategy workspace</span>
+      </div>
     </aside>
 
     <main>
-      <section class="hero">
-        <div>
-          <p class="eyebrow">UCM London Growth App</p>
-          <h1>Find the best London cleaning demand zones, generate campaign angles, and route media through an approval engine.</h1>
-          <p class="lede">Built for UCM's next stage: borough targeting, AI-assisted savings messaging, short-form video production, and quote-led campaign execution.</p>
+      <header class="topbar">
+        <label class="mobile-jump" for="sectionJump">View</label>
+        <select id="sectionJump" aria-label="Jump to section">
+          <option value="overview">Overview</option>
+          <option value="channels">Channels</option>
+          <option value="scripts">Video scripts</option>
+          <option value="targeting">Demand radar</option>
+          <option value="innovations">Innovations</option>
+          <option value="plans">Care plans</option>
+          <option value="evidence">Evidence</option>
+          <option value="roadmaps">Roadmaps</option>
+          <option value="execution">Execution</option>
+        </select>
+        <p>UCM Services · London</p>
+        <span id="updatedAt">Loading strategy data…</span>
+      </header>
+
+      <section id="overview" class="hero section-band">
+        <div class="hero-copy">
+          <p class="eyebrow">UCM Growth Command Center</p>
+          <h1>Turn service proof into recurring contracts, stronger client relationships and measurable growth.</h1>
+          <p class="lede">One operating view for the customer-hub blueprint, commercial operations, channel plans, London demand, product innovation and the Media Engine behind them.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="#execution">View priorities</a>
+            <a class="button secondary" href="https://www.ucmservices.co.uk/" target="_blank" rel="noreferrer">Open UCM website</a>
+          </div>
         </div>
-        <div class="hero-panel">
-          <span>Current play</span>
-          <strong>AI-assisted economical cleaning</strong>
-          <p>Position AI as an efficiency layer: smarter scheduling, faster quotes, less admin waste, clearer scopes. No fake price promises.</p>
+        <aside class="current-play" aria-label="Current commercial play">
+          <p>Current commercial play</p>
+          <strong>AI-assisted economical service</strong>
+          <span>Reduce admin waste, build clearer scopes and improve scheduling. Human-reviewed. No fake savings promises.</span>
+          <button id="copyClaim" type="button">Copy approved claim</button>
+        </aside>
+      </section>
+
+      <section class="stat-strip" aria-label="Strategy summary">
+        <div><strong>4</strong><span>platform plans</span></div>
+        <div><strong>15</strong><span>video subjects</span></div>
+        <div><strong>12</strong><span>active innovations</span></div>
+        <div><strong>2</strong><span>controlled pilots</span></div>
+      </section>
+
+      <section class="section" aria-labelledby="systemTitle">
+        <div class="section-head"><div><p class="eyebrow">Operating model</p><h2 id="systemTitle">Three connected systems</h2></div></div>
+        <div id="systemLayers" class="system-grid"></div>
+      </section>
+
+      <section id="channels" class="section section-band" aria-labelledby="channelsTitle">
+        <div class="section-head">
+          <div><p class="eyebrow">Channel portfolio</p><h2 id="channelsTitle">Different channels. Different commercial jobs.</h2></div>
+        </div>
+        <div id="channelTabs" class="segmented" role="tablist" aria-label="Marketing channel"></div>
+        <div id="channelPanel" class="channel-panel" role="tabpanel"></div>
+        <div class="founder-strip">
+          <div><p class="eyebrow">Founder authority</p><h3 id="founderName">Carlos Cuevas</h3><p id="founderPosition"></p></div>
+          <div id="founderSeries" class="tag-list"></div>
+          <a class="button secondary" href="https://www.linkedin.com/in/carlos-cuevas-ba1bbb35" target="_blank" rel="noreferrer">Carlos on LinkedIn</a>
         </div>
       </section>
 
-      <section id="targeting" class="section">
+      <section id="scripts" class="section" aria-labelledby="scriptsTitle">
         <div class="section-head">
-          <div>
-            <p class="eyebrow">London targeting</p>
-            <h2>Priority zones</h2>
-          </div>
-          <label class="filter">
-            Service focus
-            <select id="serviceFilter">
-              <option value="all">All services</option>
-              <option value="office cleaning">Office cleaning</option>
-              <option value="end-of-tenancy">End-of-tenancy</option>
-              <option value="property manager care">Property manager care</option>
-              <option value="communal">Communal area cleaning</option>
-              <option value="residential">Residential cleaning</option>
-            </select>
+          <div><p class="eyebrow">Media production</p><h2 id="scriptsTitle">Fifteen videos tied to buyer action</h2></div>
+          <label class="filter" for="scriptChannel">Channel
+            <select id="scriptChannel"><option value="all">All channels</option><option value="instagram">Instagram</option><option value="youtube">YouTube</option><option value="linkedin">LinkedIn</option><option value="facebook">Facebook</option></select>
+          </label>
+        </div>
+        <div id="scriptGrid" class="script-grid"></div>
+      </section>
+
+      <section id="targeting" class="section section-band" aria-labelledby="targetingTitle">
+        <div class="section-head">
+          <div><p class="eyebrow">London Demand Radar</p><h2 id="targetingTitle">Start where demand and service fit overlap</h2></div>
+          <label class="filter" for="serviceFilter">Service focus
+            <select id="serviceFilter"><option value="all">All services</option><option value="office cleaning">Office cleaning</option><option value="end-of-tenancy">End-of-tenancy</option><option value="property manager care">Property manager care</option><option value="communal">Communal cleaning</option><option value="residential">Residential cleaning</option></select>
           </label>
         </div>
         <div id="zoneGrid" class="zone-grid"></div>
       </section>
 
-      <section id="campaign" class="section split">
-        <div>
-          <p class="eyebrow">Campaign thesis</p>
-          <h2>AI helps UCM sell economical service without cheapening the brand.</h2>
-          <p>The campaign should not say "AI makes us the cheapest." It should say UCM uses AI-assisted planning to reduce waste: faster quoting, better route grouping, clearer scopes, smarter content, and less admin time.</p>
+      <section id="innovations" class="section" aria-labelledby="innovationTitle">
+        <div class="section-head">
+          <div><p class="eyebrow">Product portfolio</p><h2 id="innovationTitle">Innovation with a buyer, owner and next experiment</h2></div>
+          <label class="filter" for="innovationStage">Delivery wave
+            <select id="innovationStage"><option value="all">All waves</option><option value="Wave 1">Wave 1</option><option value="Wave 2">Wave 2</option><option value="Wave 3">Wave 3</option></select>
+          </label>
         </div>
-        <div class="campaign-card">
-          <h3>Approved claim frame</h3>
-          <p>"Because we use AI-assisted planning, UCM can reduce admin waste and build more efficient cleaning plans. That helps us offer clearer, more economical quotes without cutting service standards."</p>
-          <button id="copyClaim">Copy campaign claim</button>
+        <div id="innovationGrid" class="innovation-grid"></div>
+        <div class="pilot-band"><div><p class="eyebrow">Controlled pilots</p><h3>Promising, but evidence-gated</h3></div><div id="pilotList"></div></div>
+      </section>
+
+      <section id="plans" class="section section-band" aria-labelledby="plansTitle">
+        <div class="section-head"><div><p class="eyebrow">Recurring revenue</p><h2 id="plansTitle">Package outcomes, not vague cleaning hours</h2></div></div>
+        <div id="carePlanGrid" class="care-grid"></div>
+        <p class="commercial-note">Pricing stays private until labour, travel, materials, risk, service frequency and target margin are verified.</p>
+      </section>
+
+      <section id="evidence" class="section" aria-labelledby="evidenceTitle">
+        <div class="section-head"><div><p class="eyebrow">Commercial evidence</p><h2 id="evidenceTitle">Measure efficiency before making savings claims</h2></div></div>
+        <div class="evidence-layout">
+          <div><h3>AI Efficiency Ledger</h3><div id="ledgerList" class="metric-list"></div></div>
+          <div><h3>Claims register</h3><div id="claimsTable" class="claims-table"></div></div>
         </div>
       </section>
 
-      <section id="engine" class="section">
-        <p class="eyebrow">Media engine adaptation</p>
-        <h2>From raw job footage to approved campaign asset</h2>
-        <div class="pipeline">
-          <div><strong>1. Ingest</strong><span>Photos, reels, site clips, testimonials</span></div>
-          <div><strong>2. Understand</strong><span>Transcribe, tag borough, service, proof level</span></div>
-          <div><strong>3. Plan</strong><span>Hook, storyboard, CTA, target zone</span></div>
-          <div><strong>4. Produce</strong><span>Clip, caption, thumbnail, variants</span></div>
-          <div><strong>5. Approve</strong><span>Human review for claims and client proof</span></div>
-          <div><strong>6. Learn</strong><span>Return metrics by borough, hook and service</span></div>
+      <section id="roadmaps" class="section section-band" aria-labelledby="roadmapsTitle">
+        <div class="section-head"><div><p class="eyebrow">Product roadmaps</p><h2 id="roadmapsTitle">Build trust and operational control together</h2></div></div>
+        <div class="roadmap-grid">
+          <div><h3>Customer hub</h3><ol id="customerRoadmap"></ol></div>
+          <div><h3>Internal operations center</h3><ol id="operationsRoadmap"></ol></div>
         </div>
       </section>
 
-      <section id="tools" class="section">
-        <p class="eyebrow">Tools to add</p>
-        <h2>Recommended stack</h2>
-        <div class="tools">
-          <article>
-            <h3>VideoAgent / FFmpeg lane</h3>
-            <p>Use for video understanding, clipping, remaking and workflow orchestration. Sandbox first before production.</p>
-          </article>
-          <article>
-            <h3>Whisper transcription</h3>
-            <p>Transcribe site videos, client testimonials, founder voice notes and walkthroughs.</p>
-          </article>
-          <article>
-            <h3>Campaign manifest</h3>
-            <p>Every asset gets campaign ID, borough, service, hook, proof status, CTA and approval state.</p>
-          </article>
-          <article>
-            <h3>Meta + GBP + GA4</h3>
-            <p>Track calls, quote clicks, forms, profile visits and cost per qualified lead.</p>
-          </article>
+      <section class="section" aria-labelledby="engineTitle">
+        <div class="section-head"><div><p class="eyebrow">Media Engine boundary</p><h2 id="engineTitle">Real work becomes approved, attributable media</h2></div></div>
+        <div class="pipeline" aria-label="Media production pipeline">
+          <div><strong>1</strong><span>Approved source</span></div><div><strong>2</strong><span>Transcribe and tag</span></div><div><strong>3</strong><span>Script and clip</span></div><div><strong>4</strong><span>Claims check</span></div><div><strong>5</strong><span>Human approval</span></div><div><strong>6</strong><span>Publish and learn</span></div>
         </div>
       </section>
+
+      <section id="execution" class="section section-band" aria-labelledby="executionTitle">
+        <div class="section-head"><div><p class="eyebrow">Implementation board</p><h2 id="executionTitle">Do the foundations before scaling spend</h2></div></div>
+        <div id="executionBoard" class="execution-board"></div>
+      </section>
+
+      <footer>
+        <span>UCM Growth Command Center · strategy workspace</span>
+        <a href="mailto:info@ucmservices.co.uk">info@ucmservices.co.uk</a>
+      </footer>
     </main>
-
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
     <script src="./app.js"></script>
   </body>
 </html>
-

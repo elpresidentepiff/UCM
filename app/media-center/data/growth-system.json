@@ -1,0 +1,124 @@
+{
+  "updated": "16 July 2026",
+  "systemLayers": [
+    {"name": "Customer Hub", "status": "Blueprint", "summary": "Quote, account, booking, evidence, documents and support for customers and commercial clients."},
+    {"name": "Growth & Operations", "status": "Design", "summary": "Lead, quote, contract, service, renewal and campaign intelligence in one operational center."},
+    {"name": "Media Engine", "status": "Adaptation", "summary": "Approved job media becomes scripts, clips, campaigns, publishing records and measurable learning."}
+  ],
+  "channels": [
+    {
+      "id": "instagram",
+      "name": "Instagram",
+      "role": "Visual proof and local discovery",
+      "cadence": "15 adapted feed assets · 4-6 Reels · 10 Stories monthly",
+      "audience": ["London professionals", "Landlords and tenants", "Property managers", "New-build residents"],
+      "offers": ["Handover Complete", "Office cleaning", "Communal care", "Specialist cleaning"],
+      "cta": "Quote page or qualified DM",
+      "metrics": ["Qualified DMs", "Bio clicks", "Quote completions", "Video retention", "Won revenue"]
+    },
+    {
+      "id": "youtube",
+      "name": "YouTube",
+      "role": "Search authority and evidence library",
+      "cadence": "4 Shorts · 1-2 longer videos monthly",
+      "audience": ["Facilities managers", "Property managers", "Landlords and agents", "Technical buyers"],
+      "offers": ["Service guides", "Carlos on Site", "Case studies", "Technical cleaning"],
+      "cta": "Service landing page or quote request",
+      "metrics": ["Search impressions", "Retention", "Watch time", "Quote completions", "Influenced contracts"]
+    },
+    {
+      "id": "linkedin",
+      "name": "LinkedIn",
+      "role": "Founder authority and B2B contracts",
+      "cadence": "8 Carlos posts · 4 company posts · 2 native videos monthly",
+      "audience": ["Facilities managers", "Operations directors", "Developers", "Property and block managers"],
+      "offers": ["Commercial care plans", "Building Health Report", "Technical cleaning", "Site review"],
+      "cta": "Site visit or commercial quote",
+      "metrics": ["Relevant connections", "Buyer conversations", "Site visits", "Qualified pipeline", "Won contract value"],
+      "profile": "https://www.linkedin.com/in/carlos-cuevas-ba1bbb35"
+    },
+    {
+      "id": "facebook",
+      "name": "Facebook",
+      "role": "Local trust and Meta conversion",
+      "cadence": "12-15 adapted posts · 4 Reels · 10 Stories monthly",
+      "audience": ["London households", "Landlords and tenants", "Small businesses", "Existing customers"],
+      "offers": ["Local job proof", "Handover Complete", "Property care", "Cleaning plus maintenance"],
+      "cta": "Quote, message or call",
+      "metrics": ["Calls", "Messages", "Qualified leads", "Review growth", "Won revenue"],
+      "profile": "https://www.facebook.com/ucmservicesuk"
+    }
+  ],
+  "founder": {
+    "name": "Carlos Cuevas",
+    "position": "Founder authority for commercial cleaning, specialist technical cleaning and responsive property care",
+    "series": ["30 Years, 30 Lessons", "Carlos on Site", "What Commercial Buyers Should Ask", "Technical Cleaning Then and Now"],
+    "rule": "First-person operating insight, never generic motivational content or automated outreach."
+  },
+  "scripts": [
+    {"id": 1, "title": "From UTC in 1994 to UCM Today", "buyer": "Commercial buyers", "channels": ["linkedin", "youtube"], "hook": "UCM began with technical cleaning before expanding into wider property care.", "cta": "Learn about UCM"},
+    {"id": 2, "title": "Experience That Must Be Proven", "buyer": "Commercial buyers", "channels": ["linkedin", "youtube"], "hook": "Big claims mean nothing without evidence, process and permission.", "cta": "Book a site visit"},
+    {"id": 3, "title": "What Happens After You Request a Quote?", "buyer": "All buyers", "channels": ["instagram", "facebook", "youtube"], "hook": "A proper quote begins with scope, access, frequency and standard.", "cta": "Request a quote"},
+    {"id": 4, "title": "What AI Does at UCM", "buyer": "All buyers", "channels": ["instagram", "youtube", "linkedin", "facebook"], "hook": "AI helps with planning and admin; trained people deliver the work.", "cta": "See the process"},
+    {"id": 5, "title": "The Office First-Impression Reset", "buyer": "Office managers", "channels": ["instagram", "linkedin", "youtube"], "hook": "Your workplace starts speaking before the meeting does.", "cta": "Request an office quote"},
+    {"id": 6, "title": "The Communal-Area Inspection", "buyer": "Property managers", "channels": ["linkedin", "facebook", "youtube"], "hook": "Small cleaning failures become repeated tenant complaints.", "cta": "Request a building review"},
+    {"id": 7, "title": "End-of-Tenancy Detail Check", "buyer": "Landlords and tenants", "channels": ["instagram", "facebook", "youtube"], "hook": "Handover problems hide in the details.", "cta": "Request a handover quote"},
+    {"id": 8, "title": "Technical Spaces Need Technical Cleaning", "buyer": "IT and facilities buyers", "channels": ["linkedin", "youtube"], "hook": "Server rooms and equipment cannot be treated like ordinary surfaces.", "cta": "Discuss specialist cleaning"},
+    {"id": 9, "title": "One Supplier, Fewer Headaches", "buyer": "Property and office managers", "channels": ["linkedin", "facebook"], "hook": "Cleaning plus maintenance reduces supplier friction.", "cta": "Ask about a care plan"},
+    {"id": 10, "title": "Proof, Not Promises", "buyer": "All buyers", "channels": ["instagram", "facebook", "youtube"], "hook": "Show the real condition, process and result.", "cta": "View the case study"},
+    {"id": 11, "title": "Carlos on Site", "buyer": "Commercial buyers", "channels": ["linkedin", "youtube"], "hook": "Experience matters when it changes how a site is scoped and managed.", "cta": "Follow the series"},
+    {"id": 12, "title": "Sustainable Cleaning Without Slogans", "buyer": "Sustainability-conscious buyers", "channels": ["instagram", "youtube", "linkedin", "facebook"], "hook": "Products, process and evidence matter more than green imagery.", "cta": "Ask for evidence"},
+    {"id": 13, "title": "The Customer Case Study", "buyer": "Qualified prospects", "channels": ["linkedin", "youtube"], "hook": "Problem, scope, delivery and outcome from an approved real client.", "cta": "Request a similar plan"},
+    {"id": 14, "title": "Cleaning in a London Growth Zone", "buyer": "Local buyers", "channels": ["instagram", "facebook", "youtube"], "hook": "New buildings and busy neighbourhoods create specific cleaning pressure.", "cta": "Check service availability"},
+    {"id": 15, "title": "Five Questions Before Hiring a Cleaner", "buyer": "All buyers", "channels": ["instagram", "youtube", "linkedin", "facebook"], "hook": "Price is only one part of a reliable cleaning decision.", "cta": "Use the checklist"}
+  ],
+  "innovations": [
+    {"id": 1, "name": "UCM CleanScope", "stage": "Wave 1", "buyer": "All buyers", "value": "Structured media-assisted enquiry with human-reviewed scope.", "revenue": "Higher conversion and lower admin cost", "owner": "Sales lead", "dependency": "Quote rules, consent and human review", "kpi": "Response time and qualified conversion", "next": "Pilot 20 enquiries beside the current process"},
+    {"id": 2, "name": "UCM Proof Passport", "stage": "Wave 2", "buyer": "Commercial and property clients", "value": "Checklist, approved evidence, issues and sign-off.", "revenue": "Managed-tier inclusion or premium reporting", "owner": "Operations lead", "dependency": "Checklist, permissions and storage", "kpi": "Completion and complaint reduction", "next": "Pilot two sites for four weeks"},
+    {"id": 3, "name": "Essential Care Plan", "stage": "Wave 2", "buyer": "Small offices and managed sites", "value": "Defined recurring cleaning and quality checks.", "revenue": "Monthly recurring fee", "owner": "Commercial lead", "dependency": "Defined scope and service standard", "kpi": "Recurring gross margin", "next": "Price three representative sites"},
+    {"id": 4, "name": "Managed Care Plan", "stage": "Wave 2", "buyer": "Property and office managers", "value": "Cleaning, maintenance tickets and reporting.", "revenue": "Higher monthly recurring fee", "owner": "Commercial lead", "dependency": "Essential plan plus ticket workflow", "kpi": "Retention and resolution", "next": "Offer to three suitable clients"},
+    {"id": 5, "name": "Intelligent Care Plan", "stage": "Wave 2", "buyer": "Multi-site buyers", "value": "Proof, reporting and human-reviewed optimisation.", "revenue": "Premium monthly recurring fee", "owner": "Account lead", "dependency": "Reliable data and client portal", "kpi": "Net revenue retention", "next": "Manual report with one design partner"},
+    {"id": 6, "name": "Handover Complete", "stage": "Wave 2", "buyer": "Landlords, agents and developers", "value": "Cleaning, minor works, observations and completion evidence.", "revenue": "Fixed or scoped project fee", "owner": "Operations lead", "dependency": "Cleaning and minor-works rules", "kpi": "Order value and handover acceptance", "next": "Pilot five documented jobs"},
+    {"id": 7, "name": "Google Review Engine", "stage": "Wave 1", "buyer": "Successful customers", "value": "Policy-safe post-job review workflow.", "revenue": "Lower acquisition cost", "owner": "Customer success", "dependency": "Verified profile and post-job trigger", "kpi": "Genuine review rate", "next": "Send approved link after ten successful jobs"},
+    {"id": 8, "name": "WhatsApp Quote Concierge", "stage": "Wave 2", "buyer": "Residential and urgent buyers", "value": "Structured message and media intake with human handoff.", "revenue": "Higher conversion and lower response cost", "owner": "Sales lead", "dependency": "Business account and privacy copy", "kpi": "Qualified conversation rate", "next": "Process 20 conversations manually"},
+    {"id": 9, "name": "London Demand Radar", "stage": "Wave 3", "buyer": "Growth team", "value": "Public development signals joined to UCM outcomes.", "revenue": "Better pipeline efficiency", "owner": "Growth lead", "dependency": "Public data, CRM and contract outcomes", "kpi": "Qualified pipeline by zone", "next": "Re-rank five zones monthly"},
+    {"id": 10, "name": "Founder Authority Programme", "stage": "Wave 1", "buyer": "B2B buyers and partners", "value": "Experienced founder voice and relationship building.", "revenue": "Influenced pipeline", "owner": "Carlos Cuevas", "dependency": "Profile access and approval", "kpi": "Founder-attributed pipeline", "next": "Eight posts and two videos in 30 days"},
+    {"id": 11, "name": "Consent-by-Design Media", "stage": "Wave 1", "buyer": "UCM and customers", "value": "Clear permission status before media use.", "revenue": "Faster production and lower risk", "owner": "Operations lead", "dependency": "Consent language and controls", "kpi": "Jobs with clear media status", "next": "Add status to 20 job records"},
+    {"id": 12, "name": "Building Health Report", "stage": "Wave 3", "buyer": "Property and facilities buyers", "value": "Quality, defect, maintenance and action reporting.", "revenue": "Paid audit or premium inclusion", "owner": "Account lead", "dependency": "Inspection and reporting standard", "kpi": "Report-to-upsell conversion", "next": "Deliver one manual quarterly report"}
+  ],
+  "pilots": [
+    {"name": "Occupancy-Based Office Cleaning", "gate": "Client agreement, privacy review, baseline and no quality decline"},
+    {"name": "Predictive Recommendations", "gate": "Sufficient structured data, useful accuracy and human approval"}
+  ],
+  "carePlans": [
+    {"name": "Essential", "fit": "Small offices and recurring sites", "features": ["Defined scope", "Recurring schedule", "Standard checklist", "Quality checks", "Account review"]},
+    {"name": "Managed", "fit": "Property and office managers", "features": ["Everything in Essential", "Maintenance tickets", "Monthly report", "Issue log", "Service evidence"]},
+    {"name": "Intelligent", "fit": "Multi-site and reporting-led buyers", "features": ["Everything in Managed", "Proof Passport", "Building Health Report", "Trend analysis", "Quarterly optimisation"]},
+    {"name": "Handover Complete", "fit": "Landlords, agents and developers", "features": ["Detailed clean", "Minor-works coordination", "Snag observations", "Approved evidence", "Completion summary"]}
+  ],
+  "ledger": [
+    "First-response time", "Human-reviewed scope time", "Admin minutes per quote", "Quote revisions", "Travel time and distance", "Scheduling changes", "Rework and complaints", "Quote-to-contract conversion", "Gross margin by service", "Customer satisfaction"
+  ],
+  "claims": [
+    {"status": "Approved", "claim": "AI-assisted planning helps UCM structure enquiries and reduce avoidable administration.", "condition": "Explain the human review and service-delivery role."},
+    {"status": "Evidence required", "claim": "UCM saves customers a stated percentage through AI.", "condition": "Requires verified baseline, method, sample and approval."},
+    {"status": "Blocked", "claim": "UCM is the cheapest cleaning company in London.", "condition": "Unsupported comparative claim."},
+    {"status": "Approved", "claim": "UCM traces its operating history to Universal Technical Cleaning, founded in 1994.", "condition": "Use one consistent statement."},
+    {"status": "Evidence required", "claim": "Name or display a prestigious historic client.", "condition": "Requires evidence and permission for the exact use."},
+    {"status": "Evidence required", "claim": "A service or process is environmentally preferable.", "condition": "Specify the process and retain Green Claims Code evidence."}
+  ],
+  "customerRoadmap": ["Service and postcode check", "CleanScope enquiry", "Human-reviewed quote status", "Secure customer account", "Booking and recurring schedule", "Proof Passport", "Document center", "Tickets and maintenance requests", "Multi-site reporting"],
+  "operationsRoadmap": ["Lead inbox and source attribution", "Qualification and site visits", "Quotes and follow-up", "Customers, sites and access", "Services and schedules", "Contracts, value and margin", "Proof and quality", "Issues and resolution", "Renewals and expansion"],
+  "implementation": [
+    {"step": 1, "title": "Secure media infrastructure", "status": "Priority zero"},
+    {"step": 2, "title": "Collect proof, permissions and economics", "status": "Now"},
+    {"step": 3, "title": "Define buyer offers and care plans", "status": "Now"},
+    {"step": 4, "title": "Pilot CleanScope and review workflow", "status": "Next"},
+    {"step": 5, "title": "Build customer and operations systems", "status": "Next"},
+    {"step": 6, "title": "Repair the Media Engine for UCM", "status": "Next"},
+    {"step": 7, "title": "Connect publishing and attribution", "status": "Later"},
+    {"step": 8, "title": "Launch three focused campaigns", "status": "Later"},
+    {"step": 9, "title": "Build five location clusters", "status": "Later"},
+    {"step": 10, "title": "Scale qualified, profitable demand", "status": "Ongoing"}
+  ]
+}
