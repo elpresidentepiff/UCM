@@ -29,6 +29,7 @@ It contains:
 - A working Growth Command Center, CleanScope enquiry workflow, Lead Center and governed Reel Factory demonstration.
 - A separate UCM Commercial CRM demonstration using fictional records only.
 - A founder/company introduction script covering purpose, differentiation, compliance and evidence-led carbon reduction.
+- An evidence-gated HOCl Verified Disinfection promotion and implementation pilot.
 
 ## Current Status
 
@@ -110,6 +111,7 @@ Operational routes:
 - `growth/scripts/ucm-company-introduction-script.md` - 90, 30 and 15-second company scripts with claims gates.
 - `growth/research/ucm-crm-benchmark-2026.md` - cleaning CRM research and UCM build decision.
 - `growth/strategy/ucm-system-boundaries.md` - website, app, CRM, field operations and Media Engine ownership boundaries.
+- `growth/innovation/hocl-verified-disinfection-promotion-and-implementation.md` - HOCl offer, testing protocol, claims controls, scripts, carbon evidence and 30-day pilot.
 - `growth/seo-briefs/office-cleaning-london.md` - first SEO/GEO page brief.
 - `growth/seo-briefs/commercial-cleaning-london.md` - second SEO/GEO page brief.
 - `growth/content/2026-07-content-calendar.md` - first content calendar draft.

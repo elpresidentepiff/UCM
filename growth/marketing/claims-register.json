@@ -1,5 +1,5 @@
 {
-  "version": "1.1.0",
+  "version": "1.2.0",
   "lastReviewed": "2026-07-17",
   "claims": [
     {
@@ -64,6 +64,48 @@
       "claim": "A UCM service is carbon neutral, net zero, zero impact or planet safe.",
       "conditions": "Blocked until a complete, independently supportable boundary, calculation, reduction plan and compliant claim methodology exist.",
       "owner": "UCM director"
+    },
+    {
+      "id": "hocl-verified-pilot",
+      "status": "approved",
+      "claim": "UCM is developing a verified HOCl disinfection pilot for suitable surfaces.",
+      "conditions": "Describe it as a proposed pilot until the exact product, intended use, HSE status, COSHH controls and operator training are approved.",
+      "owner": "UCM operations lead"
+    },
+    {
+      "id": "hocl-organism-efficacy",
+      "status": "evidence-required",
+      "claim": "The selected HOCl product is effective against a named bacterium, virus, fungus, yeast or spore.",
+      "conditions": "Requires product-specific label and efficacy evidence for the exact organism, surface, concentration, application method and contact time.",
+      "owner": "UCM health and safety lead"
+    },
+    {
+      "id": "hocl-natural-or-harmless",
+      "status": "blocked",
+      "claim": "HOCl is natural, chemical-free, non-toxic, harmless or environmentally friendly.",
+      "conditions": "These terms are misleading or prohibited in biocidal advertising. HOCl is a chemical substance and product risks are use-specific.",
+      "owner": "UCM growth lead"
+    },
+    {
+      "id": "hocl-bleach-superiority",
+      "status": "blocked",
+      "claim": "HOCl is 100 times stronger than bleach or the world's strongest disinfectant.",
+      "conditions": "Undefined and unsupported comparative/superlative efficacy claim.",
+      "owner": "UCM growth lead"
+    },
+    {
+      "id": "hocl-sterility-theatre",
+      "status": "blocked",
+      "claim": "UCM HOCl treatment leaves a room sterile or as clean as a hospital operating theatre.",
+      "conditions": "Routine cleaning, ATP results and surface disinfection do not establish sterility or theatre equivalence.",
+      "owner": "UCM health and safety lead"
+    },
+    {
+      "id": "hocl-carbon-benefit",
+      "status": "evidence-required",
+      "claim": "UK-sourced or in-situ HOCl reduces a client's cleaning-related carbon footprint.",
+      "conditions": "Requires a defined comparator and functional unit plus product, packaging, distance, electricity, water, equipment and waste activity data using current UK conversion factors.",
+      "owner": "UCM operations lead"
     }
   ]
 }

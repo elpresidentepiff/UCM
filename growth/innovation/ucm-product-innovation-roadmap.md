@@ -52,6 +52,12 @@ Use appropriate booking, usage or footfall signals to vary selected tasks. Do no
 
 Generate recommendations only after UCM has enough structured service, issue and outcome data. Recommendations remain advisory and human-approved.
 
+### HOCl Verified Disinfection
+
+Pilot a cleaning-plus-disinfection add-on with repeatable before/after cleanliness testing, recorded product concentration and contact time, and a human-reviewed Proof Passport. Product selection, HSE status, COSHH controls and every efficacy claim must pass the evidence gate before use or promotion. ATP results measure cleanliness and must never be presented as proof of sterility or pathogen kill.
+
+Implementation brief: `growth/innovation/hocl-verified-disinfection-promotion-and-implementation.md`.
+
 ## Stop Rules
 
 Stop or redesign when buyers do not value the product, administration increases, quality or privacy deteriorates, economics fail or evidence cannot support the promise.
