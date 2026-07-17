@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Request a human-reviewed cleaning or property-care scope from UCM Services.">
+  <title>UCM CleanScope</title>
+  <link rel="stylesheet" href="hub.css">
+</head>
+<body>
+  <header class="app-header">
+    <a class="brand" href="index.html" aria-label="UCM Growth Center">
+      <span class="brand-mark">UCM</span>
+      <span class="brand-copy"><strong>CleanScope</strong><span>Human-reviewed enquiries</span></span>
+    </a>
+    <nav class="header-nav" aria-label="Product navigation">
+      <a href="cleanscope.html" aria-current="page">Request scope</a>
+      <a href="lead-center.html">Lead Center</a>
+      <a href="reel-factory.html">Reel Factory</a>
+    </nav>
+  </header>
+
+  <div class="mode-banner" id="modeBanner">Demonstration mode: enquiries stay in this browser and files are not uploaded.</div>
+
+  <main class="page-shell">
+    <section class="page-intro">
+      <div>
+        <p class="eyebrow">Cleaning and property care across London</p>
+        <h1>A clearer scope starts here.</h1>
+        <p>Tell UCM what the site needs. A person reviews the scope before any price or commitment is made.</p>
+      </div>
+      <div class="trust-strip" aria-label="Service commitments">
+        <strong>Human-reviewed scope</strong>
+        <span>AI may organise the information. UCM controls recommendations and pricing.</span>
+        <strong>Separate media permission</strong>
+        <span>Scope evidence is never marketing permission.</span>
+      </div>
+    </section>
+
+    <div class="progress-wrap">
+      <ol class="progress-list" id="progressList" aria-label="CleanScope progress">
+        <li class="progress-item active" data-step="1"><span>Service</span></li>
+        <li class="progress-item" data-step="2"><span>Site</span></li>
+        <li class="progress-item" data-step="3"><span>Scope</span></li>
+        <li class="progress-item" data-step="4"><span>Evidence</span></li>
+        <li class="progress-item" data-step="5"><span>Contact</span></li>
+      </ol>
+    </div>
+
+    <div class="workflow-layout" id="workflowLayout">
+      <form class="form-panel" id="cleanScopeForm" novalidate>
+        <div class="honeypot" aria-hidden="true">
+          <label for="companyWebsite">Company website</label>
+          <input id="companyWebsite" name="companyWebsite" tabindex="-1" autocomplete="off">
+        </div>
+        <section class="form-step" data-step="1">
+          <div class="step-heading">
+            <p class="eyebrow">Step 1 of 5</p>
+            <h2>Service requirement</h2>
+            <p>Choose the buyer and service that best match this enquiry.</p>
+          </div>
+          <div class="field-grid">
+            <fieldset class="choice-group full" data-required-group="buyerType">
+              <legend class="required">I am enquiring as</legend>
+              <div class="choice-grid">
+                <label class="choice"><input type="radio" name="buyerType" value="homeowner_tenant" required><strong>Homeowner or tenant</strong><span>Home, move or one-off service</span></label>
+                <label class="choice"><input type="radio" name="buyerType" value="landlord_agent"><strong>Landlord or agent</strong><span>Turnaround, tenancy or handover</span></label>
+                <label class="choice"><input type="radio" name="buyerType" value="office_facilities"><strong>Office or facilities</strong><span>Workplace or commercial site</span></label>
+                <label class="choice"><input type="radio" name="buyerType" value="property_manager"><strong>Property manager</strong><span>Blocks, communal areas or multi-site</span></label>
+                <label class="choice"><input type="radio" name="buyerType" value="other_business"><strong>Other organisation</strong><span>Hospitality, education or specialist site</span></label>
+              </div>
+              <span class="field-error" data-error-for="buyerType"></span>
+            </fieldset>
+
+            <fieldset class="choice-group full" data-required-group="serviceCode">
+              <legend class="required">Primary service</legend>
+              <div class="choice-grid">
+                <label class="choice"><input type="radio" name="serviceCode" value="office_cleaning" required><strong>Office cleaning</strong><span>Recurring workplace service</span></label>
+                <label class="choice"><input type="radio" name="serviceCode" value="commercial_cleaning"><strong>Commercial cleaning</strong><span>Retail, hospitality or business premises</span></label>
+                <label class="choice"><input type="radio" name="serviceCode" value="property_care"><strong>Property care</strong><span>Managed blocks and communal areas</span></label>
+                <label class="choice"><input type="radio" name="serviceCode" value="end_of_tenancy"><strong>End of tenancy</strong><span>Move-out cleaning and turnaround</span></label>
+                <label class="choice"><input type="radio" name="serviceCode" value="deep_cleaning"><strong>Deep cleaning</strong><span>One-off reset or specialist clean</span></label>
+                <label class="choice"><input type="radio" name="serviceCode" value="technical_cleaning"><strong>Technical cleaning</strong><span>IT equipment and controlled environments</span></label>
+                <label class="choice"><input type="radio" name="serviceCode" value="responsive_maintenance"><strong>Responsive maintenance</strong><span>Minor works and property issues</span></label>
+                <label class="choice"><input type="radio" name="serviceCode" value="handover_complete"><strong>Handover Complete</strong><span>Cleaning, observations and minor works</span></label>
+              </div>
+              <span class="field-error" data-error-for="serviceCode"></span>
+            </fieldset>
+          </div>
+        </section>
+
+        <section class="form-step" data-step="2" hidden>
+          <div class="step-heading">
+            <p class="eyebrow">Step 2 of 5</p>
+            <h2>Site details</h2>
+            <p>Location, property type and timing determine service fit and response priority.</p>
+          </div>
+          <div class="field-grid">
+            <div class="field">
+              <label class="required" for="postcode">Postcode</label>
+              <input id="postcode" name="postcode" autocomplete="postal-code" maxlength="10" placeholder="E14 5AB" required>
+              <span class="field-error" data-error-for="postcode"></span>
+            </div>
+            <div class="field">
+              <label for="addressLine">Address or building</label>
+              <input id="addressLine" name="addressLine" autocomplete="street-address" maxlength="160">
+            </div>
+            <div class="field">
+              <label class="required" for="propertyType">Property type</label>
+              <select id="propertyType" name="propertyType" required>
+                <option value="">Select</option>
+                <option>Office</option>
+                <option>Managed residential building</option>
+                <option>House or flat</option>
+                <option>Retail or hospitality</option>
+                <option>Education or community building</option>
+                <option>Technical or data environment</option>
+                <option>Other commercial site</option>
+              </select>
+              <span class="field-error" data-error-for="propertyType"></span>
+            </div>
+            <div class="field">
+              <label for="sizeEstimate">Approximate size</label>
+              <input id="sizeEstimate" name="sizeEstimate" maxlength="80" placeholder="e.g. 3 floors or 4,000 sq ft">
+            </div>
+            <div class="field">
+              <label class="required" for="frequency">Frequency</label>
+              <select id="frequency" name="frequency" required>
+                <option value="">Select</option>
+                <option value="one_off">One-off</option>
+                <option value="daily">Daily</option>
+                <option value="several_weekly">Several times weekly</option>
+                <option value="weekly">Weekly</option>
+                <option value="fortnightly">Fortnightly</option>
+                <option value="monthly">Monthly</option>
+                <option value="unsure">Not sure yet</option>
+              </select>
+              <span class="field-error" data-error-for="frequency"></span>
+            </div>
+            <div class="field">
+              <label class="required" for="urgency">Timing</label>
+              <select id="urgency" name="urgency" required>
+                <option value="">Select</option>
+                <option value="planned">Planning ahead</option>
+                <option value="within_30_days">Within 30 days</option>
+                <option value="within_7_days">Within 7 days</option>
+                <option value="urgent_48_hours">Urgent, within 48 hours</option>
+              </select>
+              <span class="field-error" data-error-for="urgency"></span>
+            </div>
+            <div class="field">
+              <label for="preferredDate">Preferred start or visit date</label>
+              <input id="preferredDate" name="preferredDate" type="date">
+            </div>
+            <div class="field">
+              <label for="accessNotes">Access constraints</label>
+              <input id="accessNotes" name="accessNotes" maxlength="240" placeholder="Keys, loading, security or operating hours">
+            </div>
+          </div>
+        </section>
+
+        <section class="form-step" data-step="3" hidden>
+          <div class="step-heading">
+            <p class="eyebrow">Step 3 of 5</p>
+            <h2>Scope and problem areas</h2>
+            <p>Describe the outcome needed, not just a list of rooms.</p>
+          </div>
+          <div class="field-grid single">
+            <fieldset>
+              <legend>Areas involved</legend>
+              <div class="check-grid">
+                <label class="check-tile"><input type="checkbox" name="areas" value="workspaces"><span>Workspaces</span></label>
+                <label class="check-tile"><input type="checkbox" name="areas" value="communal"><span>Communal areas</span></label>
+                <label class="check-tile"><input type="checkbox" name="areas" value="washrooms"><span>Washrooms</span></label>
+                <label class="check-tile"><input type="checkbox" name="areas" value="kitchen"><span>Kitchen</span></label>
+                <label class="check-tile"><input type="checkbox" name="areas" value="floors"><span>Floors and carpets</span></label>
+                <label class="check-tile"><input type="checkbox" name="areas" value="windows"><span>Windows</span></label>
+                <label class="check-tile"><input type="checkbox" name="areas" value="it_equipment"><span>IT equipment</span></label>
+                <label class="check-tile"><input type="checkbox" name="areas" value="minor_repairs"><span>Minor repairs</span></label>
+                <label class="check-tile"><input type="checkbox" name="areas" value="external"><span>External areas</span></label>
+              </div>
+            </fieldset>
+            <div class="field full">
+              <label class="required" for="scopeDetails">Required result and current problems</label>
+              <textarea id="scopeDetails" name="scopeDetails" minlength="20" maxlength="1600" required placeholder="What needs attention, what standard is required, and what is currently going wrong?"></textarea>
+              <span class="field-hint"><span id="scopeCount">0</span>/1600 characters</span>
+              <span class="field-error" data-error-for="scopeDetails"></span>
+            </div>
+          </div>
+        </section>
+
+        <section class="form-step" data-step="4" hidden>
+          <div class="step-heading">
+            <p class="eyebrow">Step 4 of 5</p>
+            <h2>Evidence and permission</h2>
+            <p>Photos or short videos can reduce unnecessary back-and-forth. They are optional.</p>
+          </div>
+          <div class="upload-zone">
+            <strong>Site photos or short videos</strong>
+            <p class="field-hint">Up to 6 files. JPG, PNG, WebP, MP4 or MOV. Maximum 25MB each.</p>
+            <input id="mediaFiles" name="mediaFiles" type="file" accept="image/jpeg,image/png,image/webp,video/mp4,video/quicktime" multiple>
+            <div class="file-list" id="fileList" aria-live="polite"></div>
+          </div>
+          <div class="consent-stack">
+            <label class="consent-row"><input id="mediaConsent" name="mediaConsent" type="checkbox"><span>I have authority to share these files with UCM for scoping and service delivery. This does not grant marketing permission.</span></label>
+            <label class="consent-row"><input id="marketingMediaConsent" name="marketingMediaConsent" type="checkbox"><span>UCM may ask separately about using approved results for marketing. Nothing is published without further human approval.</span></label>
+          </div>
+          <span class="field-error" data-error-for="mediaFiles"></span>
+        </section>
+
+        <section class="form-step" data-step="5" hidden>
+          <div class="step-heading">
+            <p class="eyebrow">Step 5 of 5</p>
+            <h2>Contact and review</h2>
+            <p>UCM uses these details to review the scope and respond.</p>
+          </div>
+          <div class="field-grid">
+            <div class="field">
+              <label for="organisationName">Organisation</label>
+              <input id="organisationName" name="organisationName" autocomplete="organization" maxlength="120">
+            </div>
+            <div class="field">
+              <label class="required" for="contactName">Contact name</label>
+              <input id="contactName" name="contactName" autocomplete="name" maxlength="100" required>
+              <span class="field-error" data-error-for="contactName"></span>
+            </div>
+            <div class="field">
+              <label class="required" for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" maxlength="160" required>
+              <span class="field-error" data-error-for="email"></span>
+            </div>
+            <div class="field">
+              <label class="required" for="phone">Phone</label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel" maxlength="32" required>
+              <span class="field-error" data-error-for="phone"></span>
+            </div>
+            <div class="field full">
+              <label class="required" for="preferredContact">Preferred contact</label>
+              <select id="preferredContact" name="preferredContact" required>
+                <option value="">Select</option>
+                <option value="phone">Phone</option>
+                <option value="email">Email</option>
+                <option value="whatsapp">WhatsApp</option>
+              </select>
+              <span class="field-error" data-error-for="preferredContact"></span>
+            </div>
+          </div>
+          <div class="consent-stack">
+            <label class="consent-row"><input id="privacyConsent" name="privacyConsent" type="checkbox" required><span>I agree that UCM may use these details to respond to this service enquiry.</span></label>
+            <label class="consent-row"><input id="marketingConsent" name="marketingConsent" type="checkbox"><span>I would like occasional UCM service updates. This is optional.</span></label>
+          </div>
+          <span class="field-error" data-error-for="privacyConsent"></span>
+          <div class="turnstile-wrap" id="turnstileWrap" hidden>
+            <div id="turnstileWidget"></div>
+            <input id="turnstileToken" name="turnstileToken" type="hidden">
+            <span class="field-error" data-error-for="turnstileToken"></span>
+          </div>
+        </section>
+
+        <div class="form-actions">
+          <button class="button secondary" id="backButton" type="button" hidden>Back</button>
+          <button class="button" id="nextButton" type="button">Continue</button>
+          <button class="button" id="submitButton" type="submit" hidden>Send for human review</button>
+        </div>
+      </form>
+
+      <aside class="summary-panel" aria-live="polite">
+        <h2>Enquiry summary</h2>
+        <dl class="summary-list">
+          <div><dt>Buyer</dt><dd id="summaryBuyer">Not selected</dd></div>
+          <div><dt>Service</dt><dd id="summaryService">Not selected</dd></div>
+          <div><dt>Postcode</dt><dd id="summaryPostcode">Not added</dd></div>
+          <div><dt>Timing</dt><dd id="summaryUrgency">Not selected</dd></div>
+          <div><dt>Evidence</dt><dd id="summaryFiles">No files</dd></div>
+        </dl>
+        <div class="completion-meter">
+          <div class="meter-track"><div class="meter-fill" id="completionFill"></div></div>
+          <div class="meter-copy"><span>Scope completeness</span><strong id="completionValue">0%</strong></div>
+        </div>
+      </aside>
+    </div>
+
+    <section class="success-view" id="successView" hidden tabindex="-1">
+      <p class="eyebrow">CleanScope received</p>
+      <h2>Ready for human review</h2>
+      <p>Your reference is:</p>
+      <div class="success-reference" id="successReference"></div>
+      <p id="successMessage"></p>
+      <div class="form-actions">
+        <a class="button secondary" href="cleanscope.html">Start another</a>
+        <a class="button" href="lead-center.html">Open Lead Center</a>
+      </div>
+    </section>
+  </main>
+
+  <div class="toast" id="toast" hidden role="status"></div>
+  <script src="config.js"></script>
+  <script src="hub-store.js"></script>
+  <script src="cleanscope.js"></script>
+</body>
+</html>
