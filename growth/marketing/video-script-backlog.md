@@ -4,6 +4,8 @@ Every script is a production brief. It requires approved footage, consent and a 
 
 Priority production draft: `growth/scripts/ucm-company-introduction-script.md` combines the origin, differentiation, compliance and evidence-led carbon position in 90, 30 and 15-second formats.
 
+First rendered campaign concept: `growth/media/ucm-cleaning-reel/ucm-cleaning-services-reel-v1.mp4` presents UCM commercial cleaning, before/after cleanliness verification and the controlled HOCl pilot in a 34-second vertical format. Generated concept imagery must be replaced with approved real UCM footage where possible before paid promotion.
+
 | # | Working title | Buyer | Core hook | Primary channels | CTA |
 | ---: | --- | --- | --- | --- | --- |
 | 1 | From UTC in 1994 to UCM Today | Commercial buyers | UCM began with technical cleaning before it became a wider property-care company. | LinkedIn, YouTube | Learn about UCM |

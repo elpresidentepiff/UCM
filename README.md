@@ -30,6 +30,7 @@ It contains:
 - A separate UCM Commercial CRM demonstration using fictional records only.
 - A founder/company introduction script covering purpose, differentiation, compliance and evidence-led carbon reduction.
 - An evidence-gated HOCl Verified Disinfection promotion and implementation pilot.
+- A rendered 34-second UCM Cleaning Services vertical campaign reel with voiceover and captions.
 
 ## Current Status
 
@@ -112,6 +113,7 @@ Operational routes:
 - `growth/research/ucm-crm-benchmark-2026.md` - cleaning CRM research and UCM build decision.
 - `growth/strategy/ucm-system-boundaries.md` - website, app, CRM, field operations and Media Engine ownership boundaries.
 - `growth/innovation/hocl-verified-disinfection-promotion-and-implementation.md` - HOCl offer, testing protocol, claims controls, scripts, carbon evidence and 30-day pilot.
+- `growth/media/ucm-cleaning-reel/` - rendered UCM cleaning reel, voiceover, subtitles, concept imagery and reproducible renderer.
 - `growth/seo-briefs/office-cleaning-london.md` - first SEO/GEO page brief.
 - `growth/seo-briefs/commercial-cleaning-london.md` - second SEO/GEO page brief.
 - `growth/content/2026-07-content-calendar.md` - first content calendar draft.
