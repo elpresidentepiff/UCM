@@ -12,6 +12,8 @@ Browser-local records are useful for workflow testing only. They are not shared 
 
 ## Production Activation
 
+Status: paused. UCM is not yet using this system to hold real client information. Do not create or link a remote project until the CRM operating model, minimum data fields, user roles, retention rules and accountable data owner are approved.
+
 1. Create a dedicated UCM Supabase project. The existing project belongs to Velo Oracle Prime and must not receive UCM data or migrations.
 2. Apply `supabase/migrations/20260717013203_create_ucm_cleanscope_foundation.sql` to staging first.
 3. Create the first staff user and insert the matching role in `public.ucm_staff` through an administrator-only process.

@@ -1,6 +1,6 @@
 {
-  "version": "1.0.0",
-  "lastReviewed": "2026-07-16",
+  "version": "1.1.0",
+  "lastReviewed": "2026-07-17",
   "claims": [
     {
       "id": "ai-efficiency-core",
@@ -43,7 +43,27 @@
       "claim": "A UCM service, product or process is environmentally preferable.",
       "conditions": "Specify the exact product or process and retain evidence under the CMA Green Claims Code.",
       "owner": "UCM operations lead"
+    },
+    {
+      "id": "compliance-approach",
+      "status": "evidence-required",
+      "claim": "UCM uses site and task risk controls, COSHH information, documented methods, training and PPE where relevant to the service.",
+      "conditions": "Verify the process and current records. Describe controls as site and task specific; never replace this with a blanket fully compliant claim.",
+      "owner": "UCM health and safety lead"
+    },
+    {
+      "id": "carbon-reduction-support",
+      "status": "evidence-required",
+      "claim": "UCM helps clients reduce the cleaning-related part of their environmental footprint through practical, measured actions.",
+      "conditions": "Name the actions actually delivered. Quantified reductions require a defined baseline, activity data, current UK conversion factors, methodology and approval.",
+      "owner": "UCM operations lead"
+    },
+    {
+      "id": "carbon-neutral-or-net-zero",
+      "status": "blocked",
+      "claim": "A UCM service is carbon neutral, net zero, zero impact or planet safe.",
+      "conditions": "Blocked until a complete, independently supportable boundary, calculation, reduction plan and compliant claim methodology exist.",
+      "owner": "UCM director"
     }
   ]
 }
-

@@ -2,6 +2,8 @@
 
 Every script is a production brief. It requires approved footage, consent and a real CTA before publishing.
 
+Priority production draft: `growth/scripts/ucm-company-introduction-script.md` combines the origin, differentiation, compliance and evidence-led carbon position in 90, 30 and 15-second formats.
+
 | # | Working title | Buyer | Core hook | Primary channels | CTA |
 | ---: | --- | --- | --- | --- | --- |
 | 1 | From UTC in 1994 to UCM Today | Commercial buyers | UCM began with technical cleaning before it became a wider property-care company. | LinkedIn, YouTube | Learn about UCM |

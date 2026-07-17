@@ -81,6 +81,16 @@ The agent must repeatedly push for:
 - Clear quote forms.
 - Call tracking.
 - CRM attribution.
+
+## System Boundaries
+
+- Website: public positioning, search, proof and enquiry generation.
+- Customer app: authorised quote, booking, evidence, document and support workflows.
+- UCM CRM: internal leads, quotes, accounts, contracts, renewals, compliance status and commercial actions.
+- Field operations app: assigned work, site controls, checklists, time, issues and proof.
+- Media Engine: consent-checked content creation, approval, publishing and attribution.
+
+Do not describe these products as one application. Supabase deployment is paused and the CRM must use fictional, non-persistent records until UCM approves data governance and live collection.
 - Service-specific landing pages.
 - Local SEO and GBP review engine.
 

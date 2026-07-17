@@ -27,12 +27,30 @@ It contains:
 - Customer-hub, internal-operations and Media Engine integration blueprints.
 - Sprint plans, SEO/GEO briefs, content calendars and paid campaign briefs.
 - A working Growth Command Center, CleanScope enquiry workflow, Lead Center and governed Reel Factory demonstration.
+- A separate UCM Commercial CRM demonstration using fictional records only.
+- A founder/company introduction script covering purpose, differentiation, compliance and evidence-led carbon reduction.
 
 ## Current Status
 
 The strategy foundation and Growth Command Center were implemented on 2026-07-16. The first operating slice now includes CleanScope, a lead pipeline and a location-led Reel Factory with hard consent and claims gates.
 
-The public demonstration currently uses browser-local data. A dedicated UCM Supabase backend has been designed in this repository and is the next production deployment. Customer authentication, shared live CRM data, secure media uploads, bookings and automated Media Engine publishing are not yet operational.
+The public Growth App currently uses browser-local data. A dedicated UCM Supabase backend has been designed but remote deployment is paused because UCM is not yet ready to hold real client information in this system.
+
+The UCM CRM is now a separate demonstration application. It uses fictional records in memory, does not persist them and is not connected to Supabase. Before a live CRM is authorised, UCM must agree data ownership, minimum fields, user roles, retention periods, operating workflows and the relationship with accounting and field-service systems.
+
+Customer authentication, shared live CRM data, secure media uploads, bookings and automated Media Engine publishing are not yet operational.
+
+## Separate Products
+
+| Product | Audience | Primary job |
+| --- | --- | --- |
+| UCM website | Public and prospective buyers | Explain services, establish trust and generate enquiries |
+| Customer app | Customers and authorised client contacts | Quotes, bookings, service evidence, documents and support |
+| UCM CRM | Authorised UCM staff | Leads, quotes, accounts, contracts, renewals, compliance and commercial control |
+| Field operations app | Cleaners, supervisors and maintenance teams | Assigned work, site controls, checklists, time, issues and proof |
+| Media Engine | Marketing and approved reviewers | Consent-checked content production, approval, publishing and attribution |
+
+These systems may exchange approved data later. They are not one application and must not be described as one.
 
 ### Supabase Separation
 
@@ -44,16 +62,17 @@ UCM must have its own Supabase project. The existing Supabase project belongs to
 - The `supabase/` directory in this repository is the source of truth for the dedicated UCM backend.
 - Production deployment requires a newly created UCM project, staging verification, security-advisor checks and an explicit project-reference check before every migration.
 
-The immediate priority is to supply real business evidence and connect the operating systems:
+The immediate priority is to validate the company evidence and operating model before collecting client data:
 
-1. Create the separate UCM Supabase project and deploy the reviewed schema, RLS policies and CleanScope function.
-2. Rotate any exposed Media Engine credentials and remove secrets from Git history.
-3. Confirm website, analytics, Search Console, Google Business Profile, Meta, LinkedIn and YouTube access.
-4. Collect client permissions, reviews, accreditations, pricing inputs and real job media.
-5. Connect CleanScope and Lead Center to authenticated UCM data and secure media uploads.
-6. Package and test CleanScope, Proof Passport and the three recurring Care Plans.
+1. Verify UCM history, insurance, accreditations, compliance processes, products and environmental evidence.
+2. Agree the CRM sales stages, quote process, contract fields, renewal process, roles and data-retention rules.
+3. Rotate any exposed Media Engine credentials and remove secrets from Git history.
+4. Confirm website, analytics, Search Console, Google Business Profile, Meta, LinkedIn and YouTube access.
+5. Collect client permissions, reviews, pricing inputs and real job media.
+6. Package and test CleanScope, Proof Passport and the three recurring Care Plans without storing real client data in the demonstration.
 7. Adapt the Media Engine to UCM consent, branding and approval rules.
-8. Launch tightly measured office, property-manager and handover campaigns.
+8. Resume the dedicated CRM/database decision only after governance and operating requirements are approved.
+9. Launch tightly measured office, property-manager and handover campaigns.
 
 ## Run The Growth App
 
@@ -70,6 +89,7 @@ Operational routes:
 - `http://127.0.0.1:4173/app/media-center/cleanscope.html`
 - `http://127.0.0.1:4173/app/media-center/lead-center.html`
 - `http://127.0.0.1:4173/app/media-center/reel-factory.html`
+- `http://127.0.0.1:4173/app/crm/`
 
 ## Key Files
 
@@ -82,10 +102,14 @@ Operational routes:
 - `growth/innovation/ucm-product-innovation-roadmap.md` - twelve innovations and controlled pilots.
 - `growth/strategy/` - customer hub, internal center and Media Engine blueprints.
 - `app/media-center/index.html` - UCM Growth Command Center.
+- `app/crm/index.html` - separate UCM Commercial CRM demonstration with fictional, non-persistent records.
 - `app/media-center/OPERATIONS.md` - production activation and security rules.
 - `supabase/README.md` - dedicated UCM backend boundary, deployment order and safety checks.
 - `supabase/migrations/20260717013203_create_ucm_cleanscope_foundation.sql` - dedicated UCM schema, RLS and private media-bucket foundation.
 - `growth/sprints/2026-07-16-kickoff.md` - active kickoff sprint.
+- `growth/scripts/ucm-company-introduction-script.md` - 90, 30 and 15-second company scripts with claims gates.
+- `growth/research/ucm-crm-benchmark-2026.md` - cleaning CRM research and UCM build decision.
+- `growth/strategy/ucm-system-boundaries.md` - website, app, CRM, field operations and Media Engine ownership boundaries.
 - `growth/seo-briefs/office-cleaning-london.md` - first SEO/GEO page brief.
 - `growth/seo-briefs/commercial-cleaning-london.md` - second SEO/GEO page brief.
 - `growth/content/2026-07-content-calendar.md` - first content calendar draft.

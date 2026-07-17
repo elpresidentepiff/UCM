@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="UCM commercial CRM demonstration for cleaning and property-care contracts.">
+  <title>UCM CRM</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <a class="brand" href="#dashboard" aria-label="UCM CRM dashboard">
+      <span class="brand-mark">UCM</span>
+      <span><strong>Commercial CRM</strong><small>Internal operations</small></span>
+    </a>
+    <nav aria-label="CRM sections">
+      <a class="active" href="#dashboard">Dashboard</a>
+      <a href="#pipeline">Pipeline</a>
+      <a href="#accounts">Accounts and sites</a>
+      <a href="#contracts">Contracts</a>
+      <a href="#compliance">Compliance</a>
+      <a href="#carbon">Carbon actions</a>
+      <a href="#tasks">Tasks</a>
+    </nav>
+    <div class="sidebar-foot">
+      <span class="status-dot"></span>
+      Demonstration data only
+    </div>
+  </aside>
+
+  <main>
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">UCM internal system</p>
+        <strong>Commercial control</strong>
+      </div>
+      <div class="system-links" aria-label="Related UCM systems">
+        <a href="https://www.ucmservices.co.uk/" target="_blank" rel="noreferrer">Website</a>
+        <a href="https://elpresidentepiff.github.io/UCM/cleanscope.html">Customer app</a>
+        <a href="https://elpresidentepiff.github.io/UCM/">Growth Center</a>
+      </div>
+    </header>
+
+    <div class="mode-banner"><strong>No real client information.</strong> This CRM uses fictional records and resets when the page reloads. Supabase is paused.</div>
+
+    <section id="dashboard" class="section intro">
+      <div>
+        <p class="eyebrow">Today's commercial position</p>
+        <h1>Protect the response, the margin and the renewal.</h1>
+        <p>One internal view from qualified enquiry to active cleaning contract. Every record needs an owner, next action and evidence status.</p>
+      </div>
+      <div class="priority-note">
+        <span>Priority</span>
+        <strong>Three actions require attention today</strong>
+        <p>One quote follow-up, one compliance expiry and one renewal review.</p>
+      </div>
+    </section>
+
+    <section class="metric-strip" aria-label="CRM summary">
+      <div><span>Qualified pipeline</span><strong id="pipelineValue">GBP 0</strong><small>Open opportunities</small></div>
+      <div><span>Weighted pipeline</span><strong id="weightedValue">GBP 0</strong><small>Probability adjusted</small></div>
+      <div><span>Renewals in 90 days</span><strong id="renewalCount">0</strong><small>Named review required</small></div>
+      <div><span>Compliance attention</span><strong id="complianceCount">0</strong><small>Due or evidence missing</small></div>
+    </section>
+
+    <section id="pipeline" class="section band">
+      <div class="section-head">
+        <div><p class="eyebrow">Sales pipeline</p><h2>Opportunity control</h2></div>
+        <div class="filters">
+          <label for="stageFilter">Stage<select id="stageFilter"><option value="all">All stages</option><option value="qualified">Qualified</option><option value="survey">Site survey</option><option value="quote">Quote</option><option value="negotiation">Negotiation</option></select></label>
+          <label for="serviceFilter">Service<select id="serviceFilter"><option value="all">All services</option><option value="office">Office cleaning</option><option value="property">Property care</option><option value="handover">Handover Complete</option><option value="technical">Technical cleaning</option></select></label>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Opportunity</th><th>Stage</th><th>Service</th><th>Value</th><th>Owner</th><th>Next action</th><th>Source</th></tr></thead>
+          <tbody id="opportunityRows"></tbody>
+        </table>
+      </div>
+      <div id="opportunityDetail" class="detail-panel" hidden></div>
+    </section>
+
+    <section id="accounts" class="section">
+      <div class="section-head"><div><p class="eyebrow">Account intelligence</p><h2>Accounts and sites</h2></div><p class="section-copy">Commercial context without exposing unnecessary personal data.</p></div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Account</th><th>Buyer</th><th>Sites</th><th>Current service</th><th>Health</th><th>Commercial next move</th></tr></thead>
+          <tbody id="accountRows"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="contracts" class="section band">
+      <div class="section-head"><div><p class="eyebrow">Recurring revenue</p><h2>Contracts and renewals</h2></div><p class="section-copy">Renewal preparation starts before the procurement email arrives.</p></div>
+      <div id="contractRows" class="contract-list"></div>
+    </section>
+
+    <section id="compliance" class="section">
+      <div class="section-head"><div><p class="eyebrow">Control register</p><h2>Compliance evidence</h2></div><p class="section-copy">A status register is not legal advice and does not prove compliance by itself.</p></div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Control</th><th>Applies to</th><th>Owner</th><th>Status</th><th>Review or expiry</th><th>Required evidence</th></tr></thead>
+          <tbody id="complianceRows"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="carbon" class="section band">
+      <div class="section-head"><div><p class="eyebrow">Evidence before claims</p><h2>Cleaning-related carbon actions</h2></div><p class="section-copy">Track activity, method and evidence. Do not convert an intention into a public reduction claim.</p></div>
+      <div id="carbonRows" class="action-list"></div>
+    </section>
+
+    <section id="tasks" class="section">
+      <div class="section-head"><div><p class="eyebrow">Execution</p><h2>Owned next actions</h2></div><button id="resetDemo" type="button">Reset demonstration</button></div>
+      <div id="taskRows" class="task-list"></div>
+    </section>
+
+    <footer>
+      <span>UCM CRM demonstration</span>
+      <span>Website, customer app and CRM remain separate systems.</span>
+    </footer>
+  </main>
+  <div id="toast" class="toast" hidden role="status"></div>
+  <script src="app.js"></script>
+</body>
+</html>

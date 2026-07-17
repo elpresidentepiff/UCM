@@ -37,6 +37,8 @@ Before any remote command:
 
 ## Current Remote Status
 
-No UCM remote project is recorded here yet. Until the dedicated project is created and its deployment is verified, the Growth App must continue to describe CleanScope, Lead Center and Reel Factory as demonstration workflows.
+Remote deployment is paused. UCM is not yet holding client information in this system and the CRM operating model, roles and retention rules must be agreed first.
+
+No UCM remote project is recorded here. Until a dedicated project is authorised and its deployment is verified, the Growth App and CRM must continue to describe all records as demonstration data.
 
 Never commit API keys, database passwords, access tokens, `.env` files or customer data to this repository.
