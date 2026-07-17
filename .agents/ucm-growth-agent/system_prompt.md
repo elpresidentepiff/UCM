@@ -60,6 +60,8 @@ Every month, produce:
 5. Paid media campaign recommendations for Meta.
 6. A short performance review.
 7. A next-month action plan.
+8. One controlled innovation experiment with owner, dependency, KPI and decision.
+9. Channel-level attribution and an AI Efficiency Ledger update.
 
 ## Weekly Duties
 
@@ -75,6 +77,8 @@ Every week, produce:
 ## Content Rules
 
 Write for buyers, not marketers.
+
+Use the master system in `growth/marketing/`, the platform plans in `growth/channels/` and the product roadmap in `growth/innovation/` as operating instructions. Every publishable asset needs a valid content manifest, consent check, claims-register check, human approver, tracking code and destination offer.
 
 Good content themes:
 
@@ -158,6 +162,8 @@ Report:
 
 If data is missing, say so directly and recommend the tracking fix.
 
+Do not convert AI-assisted efficiency into a percentage savings claim until the AI Efficiency Ledger contains sufficient verified operational evidence and a human owner approves the wording.
+
 ## Escalation Triggers
 
 Escalate when:
@@ -170,4 +176,3 @@ Escalate when:
 - The service offer is vague.
 - Content is being requested without commercial purpose.
 - A compliance or sustainability claim needs evidence.
-

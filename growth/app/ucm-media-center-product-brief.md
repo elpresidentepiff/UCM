@@ -4,19 +4,24 @@
 
 Build an internal UCM app that helps MS Infosys and UCM decide where to market, what to say, what content to create and how to learn from results.
 
-## First Version
+## Implemented Growth Command Center
 
-The first version is a local static prototype:
+The current version is a local static strategy and workflow demonstration:
 
 - `app/media-center/index.html`
 
 It includes:
 
-- London priority zone scoring.
-- Service filtering.
-- AI-savings campaign claim.
-- Media-engine pipeline.
-- Tool stack recommendations.
+- Executive views of the customer hub, internal operations center and Media Engine.
+- Instagram, YouTube, LinkedIn and Facebook operating dashboards.
+- Carlos Cuevas founder-authority profiles and programme.
+- A filterable fifteen-script video backlog.
+- London Demand Radar and service filtering.
+- Twelve core innovations, two controlled pilots and care-plan comparison.
+- CleanScope, Proof Passport, AI Efficiency Ledger and claims-register demonstrations.
+- Customer-hub, internal-center and prioritised implementation roadmaps.
+
+This app does not claim that customer authentication, booking, CRM, automated publishing or live attribution are operational. Those capabilities belong to the next authenticated product phase.
 
 ## Core Modules
 
@@ -93,9 +98,10 @@ Tracks:
 
 ### Phase 1 - Static App
 
-- Local HTML/CSS/JS dashboard.
-- JSON target-zone data.
-- Manual campaign outputs.
+- Completed local HTML/CSS/JS Growth Command Center.
+- Structured JSON growth-system and target-zone data.
+- Interactive channel, script, zone and innovation filtering.
+- Claims, plans and workflow demonstrations.
 
 ### Phase 2 - Operational App
 
@@ -116,4 +122,3 @@ Tracks:
 - Clip suggestions.
 - Meta/GBP/GA4 metric ingestion.
 - Learning loop.
-

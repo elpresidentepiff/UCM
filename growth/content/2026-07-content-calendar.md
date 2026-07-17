@@ -37,6 +37,17 @@ Goal: establish a professional, trust-building social presence while supporting 
 | 9 | Review/testimonial | Link sticker |
 | 10 | Quote reminder | Link sticker |
 
+## Channel Adaptation Plan
+
+| Platform | Use from the 15 core assets | Adaptation | Primary CTA |
+| --- | --- | --- | --- |
+| Instagram | All visual proof, service and team assets | 9:16 Reels, saveable carousels, story follow-ups | DM or guided quote |
+| YouTube | Posts 2, 5, 7, 9, 10, 12 and proof assets | Search-led explainers, case studies and Shorts | Service page or site visit |
+| LinkedIn | Posts 1, 4, 5, 9, 10 and 11 | Carlos-led lessons, document posts and commercial commentary | Commercial conversation |
+| Facebook | Posts 1, 3, 4, 7, 10, 14 and 15 | Local proof, short video, community context and retargeting | WhatsApp, call or quote form |
+
+Use `30 Years, 30 Lessons` or `Carlos on Site` for at least two founder-led LinkedIn adaptations, subject to Carlos approval. Every published version receives its own content manifest, UTM code and channel-specific result.
+
 ## Assets Needed
 
 - UCM logo files.
@@ -46,4 +57,6 @@ Goal: establish a professional, trust-building social presence while supporting 
 - Reviews/testimonials.
 - Cleaning equipment/product photos.
 - Short mobile video clips from real jobs.
-
+- Customer, site, logo and testimonial permissions.
+- Carlos founder headshot, biography and filming availability.
+- Final YouTube channel URL and access.

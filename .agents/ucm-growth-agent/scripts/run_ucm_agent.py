@@ -29,6 +29,9 @@ def print_brief() -> None:
     print("\nCommercial priorities:")
     for item in cfg["commercial_priorities"]:
         print(f"- {item}")
+    print("\nProduct priorities:")
+    for item in cfg["product_priorities"]:
+        print(f"- {item}")
     print("\nMonthly deliverables:")
     for key, value in cfg["monthly_deliverables"].items():
         print(f"- {key}: {value}")
@@ -49,6 +52,12 @@ def month_plan(month: str) -> None:
     print("- 1 SEO/GEO action list")
     print("- 1 website conversion recommendation")
     print("- 1 monthly performance report")
+    print("- 1 controlled innovation experiment")
+    print("- 1 AI Efficiency Ledger update")
+    print("\n## Channel Adaptation")
+    print("- Adapt the 15 core assets for Instagram, YouTube, LinkedIn and Facebook.")
+    print("- Assign buyer, offer, CTA, landing page and UTM naming to every version.")
+    print("- Create a content manifest and complete claims, consent and human approval checks.")
     print("\n## Recommended SEO/GEO Actions")
     actions = [
         "Create or improve Office Cleaning London landing page.",
@@ -64,6 +73,9 @@ def month_plan(month: str) -> None:
     print("- Audience: London office managers, facilities managers, property managers")
     print("- CTA: Request a quote / book a site visit")
     print("- Guardrail: Do not scale until conversion tracking is confirmed")
+    print("\n## Innovation Experiment")
+    print("- Select one Wave 1 product and record owner, dependency, KPI and stop condition.")
+    print("- Report results against qualified leads, contract value, margin or service quality.")
     print("\n## Proof Needed From UCM")
     proof = [
         "Real customer reviews or permission to request them.",
@@ -87,18 +99,21 @@ def week_checkin(week: str) -> None:
         "Check paid campaign readiness and tracking.",
         "Request missing proof assets from UCM.",
         "Review website CTA and form friction.",
+        "Check content manifests, claims evidence and media consent.",
+        "Update the active innovation experiment and AI Efficiency Ledger.",
     ]:
         print(f"- {item}")
     print("\n## Decisions Needed")
     print("- Which service should be the primary campaign focus this week?")
     print("- Which proof assets can UCM approve for public use?")
-    print("\n## Next 5 Actions")
+    print("\n## Next Actions")
     actions = [
         "Write 3 post captions for the weekly theme.",
         "Prepare 2 story ideas with CTA.",
         "Create one landing-page improvement note.",
         "Draft one paid-ad creative angle.",
         "Update the blocker list.",
+        "Connect channel activity to qualified enquiries and quote value.",
     ]
     for index, action in enumerate(actions, 1):
         print(f"{index}. {action}")
@@ -127,4 +142,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

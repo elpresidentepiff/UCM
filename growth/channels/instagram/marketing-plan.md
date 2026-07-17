@@ -4,7 +4,7 @@
 
 Use Instagram to make UCM's service quality visible, build local familiarity and turn job evidence into quote enquiries.
 
-## Priority Audiences
+## Audience
 
 - Time-poor London professionals.
 - Landlords and tenants preparing handovers.
@@ -20,7 +20,7 @@ Use Instagram to make UCM's service quality visible, build local familiarity and
 - Specialist and technical cleaning.
 - Cleaning plus responsive maintenance.
 
-## Monthly Baseline
+## Cadence And Formats
 
 - Fifteen adapted feed assets.
 - Four to six Reels within that total.
@@ -43,7 +43,7 @@ Use Instagram to make UCM's service quality visible, build local familiarity and
 - What Your Cleaner Missed.
 - One Supplier, Fewer Headaches.
 
-## Conversion
+## CTA And Tracking
 
 - Primary CTA: visit the quote page.
 - Secondary CTA: send `QUOTE` by direct message.
@@ -63,7 +63,7 @@ Before/after media, visible customer details, addresses, people, logos and testi
 - Three-second hold and video completion.
 - Qualified leads, contracts and revenue assisted by Instagram.
 
-## First 90 Days
+## 90-Day Execution
 
 ### Days 1-30
 
@@ -82,4 +82,3 @@ Before/after media, visible customer details, addresses, people, logos and testi
 - Retarget engaged visitors only after tracking and landing pages are ready.
 - Double down on service/zone combinations producing qualified enquiries.
 - Retire formats that create reach without business relevance.
-

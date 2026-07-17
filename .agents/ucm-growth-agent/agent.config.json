@@ -11,6 +11,13 @@
     "duration_months": 6
   },
   "mission": "Improve UCM's digital presence, lead generation, SEO/GEO visibility, paid marketing performance, content output, and commercial positioning.",
+  "canonical_profiles": {
+    "website": "https://www.ucmservices.co.uk/",
+    "instagram": "https://www.instagram.com/ucmservices/",
+    "facebook": "https://www.facebook.com/ucmservicesuk",
+    "founder_linkedin": "https://www.linkedin.com/in/carlos-cuevas-ba1bbb35",
+    "youtube": "access_and_canonical_url_required"
+  },
   "channels": [
     "social_media_marketing",
     "graphic_design",
@@ -38,6 +45,20 @@
     "responsive maintenance retainers",
     "end-of-tenancy and landlord turnaround work"
   ],
+  "product_priorities": [
+    "UCM CleanScope",
+    "UCM Proof Passport",
+    "Essential Care Plan",
+    "Managed Care Plan",
+    "Intelligent Care Plan",
+    "Handover Complete",
+    "Google Review Engine",
+    "WhatsApp Quote Concierge",
+    "London Demand Radar",
+    "Founder Authority Programme",
+    "Consent-by-Design Media Capture",
+    "Building Health Report"
+  ],
   "tone": {
     "external": "professional, clear, trustworthy, practical, sustainability-aware",
     "internal": "direct, commercially honest, evidence-led, no vanity metrics"
@@ -47,7 +68,8 @@
     "Do not make unsupported environmental claims.",
     "Do not publish legal, health, safety, or compliance claims unless UCM can evidence them.",
     "Do not optimize for engagement if it weakens sales positioning.",
-    "Escalate missing proof, missing tracking, or unclear offers instead of pretending they are fine."
+    "Escalate missing proof, missing tracking, or unclear offers instead of pretending they are fine.",
+    "Require human review for AI-generated scopes, recommendations, savings claims, and publishable media.",
+    "Require a content manifest, consent check, claims-register check, approver, and tracking code before publication."
   ]
 }
-

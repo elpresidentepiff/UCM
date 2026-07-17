@@ -4,7 +4,7 @@
 
 Use YouTube as UCM's searchable evidence and authority library. Shorts create discovery; longer videos answer buyer questions and support sales conversations.
 
-## Priority Audiences
+## Audience
 
 - Office and facilities managers.
 - Property and block managers.
@@ -12,7 +12,7 @@ Use YouTube as UCM's searchable evidence and authority library. Shorts create di
 - Buyers responsible for technical environments.
 - Prospects comparing cleaning contractors.
 
-## Monthly Baseline
+## Cadence And Formats
 
 - Four Shorts adapted from approved vertical assets.
 - One or two longer videos built from founder, service or case-study material.
@@ -34,7 +34,7 @@ Use YouTube as UCM's searchable evidence and authority library. Shorts create di
 - Description: service summary, proof context, quote URL and tracking.
 - Pinned comment: one relevant next step.
 
-## Conversion
+## CTA And Tracking
 
 - Primary CTA: relevant service or quote landing page.
 - Tracking: `utm_source=youtube&utm_medium=organic_social`.
@@ -44,6 +44,10 @@ Use YouTube as UCM's searchable evidence and authority library. Shorts create di
 
 The existing YouTube adapter is live-ready but cannot be trusted until credentials are rotated, real uploads are tested privately and duplicate protection is verified. Publishing remains human-approved.
 
+## Approval
+
+Every upload requires a content manifest, customer/site consent where relevant, claims review, thumbnail/title approval and a named human publisher. Client names, logos and technical claims stay blocked without written evidence.
+
 ## KPIs
 
 - Search impressions and click-through rate.
@@ -52,7 +56,7 @@ The existing YouTube adapter is live-ready but cannot be trusted until credentia
 - Landing-page sessions and quote completions.
 - Qualified leads and influenced contracts.
 
-## First 90 Days
+## 90-Day Execution
 
 ### Days 1-30
 
@@ -68,4 +72,3 @@ The existing YouTube adapter is live-ready but cannot be trusted until credentia
 
 - Publish the first approved case-study video.
 - Use retention and lead data to choose the next service series.
-

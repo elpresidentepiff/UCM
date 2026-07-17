@@ -6,14 +6,14 @@ Use Facebook for local trust, service proof, customer reviews, Meta retargeting 
 
 Canonical UCM page: https://www.facebook.com/ucmservicesuk
 
-## Priority Audiences
+## Audience
 
 - London households and professionals.
 - Landlords and tenants.
 - Local property managers and small businesses.
 - Existing customers who may review, refer or buy another service.
 
-## Monthly Baseline
+## Cadence And Formats
 
 - Twelve to fifteen adapted feed posts.
 - Four Reels within the shared video supply.
@@ -37,12 +37,18 @@ Canonical UCM page: https://www.facebook.com/ucmservicesuk
 - Messenger response expectations and human handoff.
 - Professional, specific responses to genuine reviews.
 
-## Conversion
+## CTA And Tracking
 
 - Organic CTA: quote page, message or call.
 - Tracking: `utm_source=facebook&utm_medium=organic_social`.
 - Paid campaigns use dedicated landing pages or Meta lead forms with qualification fields.
 - Retarget only after consent, conversion tracking and lead-quality reporting are ready.
+
+Use post, campaign and offer-specific UTM codes plus a dedicated WhatsApp source field. Record calls and messages as qualified only after service, postcode, urgency and buyer fit are confirmed.
+
+## Approval
+
+Organic and paid assets require claims review, consent status, human approval and a valid destination. Retargeting audiences and message data must follow the documented privacy basis and platform permissions.
 
 ## Paid Media Rules
 
@@ -59,7 +65,7 @@ Canonical UCM page: https://www.facebook.com/ucmservicesuk
 - Genuine review volume and response time.
 - Won revenue and repeat work influenced by Facebook.
 
-## First 90 Days
+## 90-Day Execution
 
 ### Days 1-30
 
@@ -77,4 +83,3 @@ Canonical UCM page: https://www.facebook.com/ucmservicesuk
 
 - Launch a controlled campaign only if tracking and follow-up pass readiness checks.
 - Reallocate budget using lead quality and won-pipeline evidence.
-

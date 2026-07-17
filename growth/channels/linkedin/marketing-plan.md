@@ -9,7 +9,7 @@ Use LinkedIn to create B2B trust through two connected voices:
 
 Carlos's canonical profile is https://www.linkedin.com/in/carlos-cuevas-ba1bbb35.
 
-## Priority Buyers
+## Audience
 
 - Facilities and workplace managers.
 - Property, block and estate managers.
@@ -26,7 +26,7 @@ Recommended headline:
 
 Carlos writes as an experienced operator, not as a generic motivational creator.
 
-## Monthly Baseline
+## Cadence And Formats
 
 - Eight Carlos posts.
 - Four UCM company-page posts.
@@ -53,11 +53,17 @@ No automated connection or direct-message spam.
 - Recruitment and company updates.
 - Building Health Report insights.
 
-## Conversion
+## CTA And Tracking
 
 - Primary CTA: book a site visit or request a commercial quote.
 - Add the best landing page to Carlos's Featured section.
 - Tracking: `utm_source=linkedin&utm_medium=organic_social&utm_campaign=founder_authority` for Carlos and a company-specific campaign value for UCM posts.
+
+Use profile-specific UTM codes and record founder-assisted enquiries in the CRM. Attribute a lead to LinkedIn only when the buyer reports the source, uses the tracked destination or has a recorded content touchpoint.
+
+## Approval
+
+Carlos approves founder posts and video. UCM approves customer, site, client-name and service claims. The growth lead confirms the content manifest, claims status, destination CTA and tracking before publication.
 
 ## KPIs
 
@@ -67,7 +73,7 @@ No automated connection or direct-message spam.
 - Site visits and commercial quote requests.
 - Qualified pipeline and won contract value.
 
-## First 90 Days
+## 90-Day Execution
 
 ### Days 1-30
 
@@ -85,4 +91,3 @@ No automated connection or direct-message spam.
 
 - Publish a founder video and a Building Health Report insight.
 - Compare founder and company-page influence on qualified pipeline.
-

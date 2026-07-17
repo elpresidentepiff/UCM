@@ -35,6 +35,8 @@ Pick one primary theme:
 
 Pick one secondary theme.
 
+Choose one Wave 1 innovation experiment and define its owner, dependency, success metric and stop condition. Do not start a pilot without the required lawful data and human review.
+
 ## 3. Build Content Calendar
 
 Create:
@@ -47,6 +49,14 @@ Create:
 - 1 direct offer post.
 - 1 behind-the-scenes or team trust post.
 - 1 sustainability post with evidence-safe wording.
+
+For each core asset:
+
+- Select Instagram, YouTube, LinkedIn and Facebook adaptations.
+- Assign the buyer, offer, CTA, landing page and UTM naming.
+- Create the content manifest.
+- Check the claims register and consent record.
+- Assign Carlos-led content only where founder participation is confirmed.
 
 ## 4. SEO/GEO Actions
 
@@ -104,3 +114,4 @@ End the month with:
 - Why it matters.
 - What next month should prioritize.
 
+Report channel performance separately. Connect content and paid activity to qualified leads, quote value, contracts, recurring revenue and gross margin wherever data allows. Update the AI Efficiency Ledger with verified admin, quote, travel, rework and margin observations; never infer a savings percentage from engagement data.
