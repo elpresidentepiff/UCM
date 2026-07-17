@@ -1,0 +1,124 @@
+{
+  "updated": "2026-07-16",
+  "method": "First-pass commercial targeting model using public London housing and development signals plus UCM service fit. Scores are directional and should be refined with ad data, Search Console, GBP, quote requests and CRM outcomes.",
+  "sources": [
+    {
+      "name": "GLA London Opportunity Areas",
+      "url": "https://www.london.gov.uk/programmes-strategies/planning/implementing-london-plan/londons-opportunity-areas",
+      "note": "Opportunity Areas typically have capacity for at least 2,500 new homes or 5,000 jobs."
+    },
+    {
+      "name": "London Datastore Opportunity Areas",
+      "url": "https://data.london.gov.uk/dataset/london-plan-opportunity-areas-2jxjl",
+      "note": "Opportunity Areas are major brownfield land sources for housing, commercial and other development."
+    },
+    {
+      "name": "Trust for London housing completions",
+      "url": "https://trustforlondon.org.uk/data/new-housing-completions/",
+      "note": "Tower Hamlets, Brent and Newham had the most completions across 2020/21-2022/23."
+    },
+    {
+      "name": "Trust for London housing tenure",
+      "url": "https://trustforlondon.org.uk/data/housing-tenure-over-time/",
+      "note": "30.1% of London households were privately rented in the 2021 Census."
+    },
+    {
+      "name": "Trust for London rent affordability",
+      "url": "https://trustforlondon.org.uk/data/rent-affordability-borough/",
+      "note": "Average one-bed rent is 52% of London median pre-tax pay; inner London is least affordable."
+    }
+  ],
+  "zones": [
+    {
+      "zone": "Canary Wharf / Isle of Dogs / South Poplar",
+      "boroughs": ["Tower Hamlets"],
+      "score": 96,
+      "segment": "High-density flats, offices, finance workers, managed buildings",
+      "bestServices": ["office cleaning", "communal area cleaning", "end-of-tenancy", "property manager care", "IT equipment cleaning"],
+      "campaignAngle": "AI-assisted cleaning plans for busy apartment blocks and offices: faster quoting, smarter scheduling, less admin waste.",
+      "cta": "Request a managed building or office cleaning quote"
+    },
+    {
+      "zone": "Royal Docks / Canning Town / Stratford / Newham growth belt",
+      "boroughs": ["Newham"],
+      "score": 94,
+      "segment": "New homes, regeneration zones, renters, landlords, property managers",
+      "bestServices": ["end-of-tenancy", "new-build sparkle cleans", "communal cleaning", "property management cleaning"],
+      "campaignAngle": "New-build and rental turnover cleaning with AI-assisted scheduling to keep handovers moving.",
+      "cta": "Book a new-build or tenancy turnover clean"
+    },
+    {
+      "zone": "Wembley / Brent Cross / Cricklewood",
+      "boroughs": ["Brent", "Barnet"],
+      "score": 91,
+      "segment": "New completions, build-to-rent, mixed-use development, family renters",
+      "bestServices": ["residential cleaning", "communal area cleaning", "end-of-tenancy", "property manager care"],
+      "campaignAngle": "Cleaner shared spaces and faster tenant turnaround for growing residential developments.",
+      "cta": "Request a block or landlord cleaning plan"
+    },
+    {
+      "zone": "Nine Elms / Battersea / Clapham Junction",
+      "boroughs": ["Wandsworth", "Lambeth"],
+      "score": 90,
+      "segment": "High-value flats, professionals, renters, offices, hospitality",
+      "bestServices": ["premium residential cleaning", "end-of-tenancy", "office cleaning", "hospitality cleaning"],
+      "campaignAngle": "Premium cleaning support for time-poor professionals and managed buildings.",
+      "cta": "Get a tailored London cleaning quote"
+    },
+    {
+      "zone": "Canada Water / Elephant and Castle / Old Kent Road",
+      "boroughs": ["Southwark"],
+      "score": 89,
+      "segment": "Regeneration, dense apartments, commercial space, young professionals",
+      "bestServices": ["office cleaning", "communal cleaning", "end-of-tenancy", "deep cleaning"],
+      "campaignAngle": "Smart cleaning and maintenance support for fast-changing London neighbourhoods.",
+      "cta": "Request cleaning support for your building"
+    },
+    {
+      "zone": "Greenwich Peninsula / Woolwich / Deptford Creek",
+      "boroughs": ["Greenwich", "Lewisham"],
+      "score": 87,
+      "segment": "Riverside new builds, renters, landlords, young families",
+      "bestServices": ["end-of-tenancy", "residential cleaning", "communal area cleaning", "property care"],
+      "campaignAngle": "AI-assisted scheduling for landlords and property managers handling tenant turnover.",
+      "cta": "Book an end-of-tenancy or property care quote"
+    },
+    {
+      "zone": "Croydon town centre",
+      "boroughs": ["Croydon"],
+      "score": 84,
+      "segment": "Large borough, housing growth, renters, offices, landlords",
+      "bestServices": ["commercial cleaning", "end-of-tenancy", "residential cleaning", "responsive maintenance"],
+      "campaignAngle": "Economical cleaning and maintenance support for landlords and local businesses.",
+      "cta": "Ask for a cost-efficient cleaning plan"
+    },
+    {
+      "zone": "Old Oak / Park Royal / Ealing-Hounslow corridor",
+      "boroughs": ["Ealing", "Hounslow", "Hammersmith and Fulham"],
+      "score": 82,
+      "segment": "Industrial/commercial, regeneration, offices, rental stock",
+      "bestServices": ["commercial cleaning", "office cleaning", "industrial support", "responsive maintenance"],
+      "campaignAngle": "One supplier for cleaning and maintenance across commercial and mixed-use sites.",
+      "cta": "Request a commercial cleaning and maintenance quote"
+    },
+    {
+      "zone": "Westminster / Kensington and Chelsea",
+      "boroughs": ["Westminster", "Kensington and Chelsea"],
+      "score": 81,
+      "segment": "High rents, premium homes, offices, hospitality, strict standards",
+      "bestServices": ["premium residential cleaning", "office cleaning", "hospitality cleaning", "end-of-tenancy"],
+      "campaignAngle": "High-standard cleaning with faster quote handling and clear service scopes.",
+      "cta": "Request a premium cleaning quote"
+    },
+    {
+      "zone": "Kingston / Sutton outer growth pockets",
+      "boroughs": ["Kingston upon Thames", "Sutton"],
+      "score": 74,
+      "segment": "Outer London families, new homes, affordability-sensitive households",
+      "bestServices": ["residential cleaning", "end-of-tenancy", "deep cleaning", "maintenance"],
+      "campaignAngle": "Economical cleaning packages for households and landlords who need predictable costs.",
+      "cta": "Ask for an economical cleaning quote"
+    }
+  ]
+}
+
