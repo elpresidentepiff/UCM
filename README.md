@@ -114,9 +114,10 @@ Operational routes:
 - `growth/scripts/ucm-cleaning-services-extended-video-script.md` - longer human-voiced customer film for the next cleaning video.
 - `growth/scripts/ucm-mission-statement-script.md` - public UCM mission film and concise written statement.
 - `growth/research/ucm-crm-benchmark-2026.md` - cleaning CRM research and UCM build decision.
+- `growth/research/ucm-open-source-video-production-stack-2030.md` - open-source production stack, real-footage standard and next filming sprint.
 - `growth/strategy/ucm-system-boundaries.md` - website, app, CRM, field operations and Media Engine ownership boundaries.
 - `growth/innovation/hocl-verified-disinfection-promotion-and-implementation.md` - HOCl offer, testing protocol, claims controls, scripts, carbon evidence and 30-day pilot.
-- `growth/media/ucm-cleaning-reel/` - rendered UCM cleaning reel, voiceover, subtitles, concept imagery and reproducible renderer.
+- `growth/media/ucm-cleaning-reel/` - rejected first reel retained as a documented failed prototype; it is not approved for publication.
 - `growth/seo-briefs/office-cleaning-london.md` - first SEO/GEO page brief.
 - `growth/seo-briefs/commercial-cleaning-london.md` - second SEO/GEO page brief.
 - `growth/content/2026-07-content-calendar.md` - first content calendar draft.

@@ -46,6 +46,18 @@ Use for:
 
 ## Media Production Tools
 
+### Kdenlive
+
+Primary human finishing editor. Use for final story, pacing, colour, sound, transitions and approval. Kdenlive is free, open source and can receive timeline exports from Auto-Editor.
+
+### Auto-Editor
+
+Use for first-pass removal of dead air and motion/loudness-based rough cuts. Export to Kdenlive; never treat the automatic cut as the finished film.
+
+### Motion Canvas
+
+Use for modern voice-synchronised UCM typography, evidence overlays, diagrams and data moments. Graphics support real footage rather than replacing it.
+
 ### FFmpeg
 
 Use for:
@@ -55,13 +67,19 @@ Use for:
 - Adding basic overlays.
 - Exporting platform-ready files.
 
-### Whisper
+### WhisperX
 
 Use for:
 
-- Transcribing voiceovers.
-- Transcribing testimonials.
-- Finding short clip moments in longer footage.
+- Time-aligned transcription and captions.
+- Searching Carlos interviews and testimonials.
+- Finding spoken moments in longer footage.
+
+All transcripts and word timing require human review.
+
+### PySceneDetect
+
+Use for content-aware shot detection, footage splitting and a searchable shot manifest.
 
 ### VideoAgent
 
@@ -69,11 +87,13 @@ Candidate tool:
 
 - GitHub: https://github.com/HKUDS/VideoAgent
 
-Use only after sandbox testing. It is promising for video understanding, editing and remaking workflows, but UCM should not rely on it for production publishing until it is tested with real short-form cleaning assets.
+Use only after sandbox testing. The repository is MIT licensed, but its documented workflow requires several large local models plus Claude, GPT, Gemini and DeepSeek API configuration. It has no published release. Study its planning and retrieval architecture; do not make it a production dependency.
 
-### Canva / CapCut / Adobe Express
+### SAM 2
 
-Use as practical human-in-the-loop design tools while the AI media center matures.
+Later GPU pilot for tracking people, tools or surfaces so graphics can follow real footage. It must not be used to fabricate or conceal service evidence.
+
+Detailed decision: `growth/research/ucm-open-source-video-production-stack-2030.md`.
 
 ## App Stack Recommendation
 
@@ -96,7 +116,11 @@ Use as practical human-in-the-loop design tools while the AI media center mature
 
 - Worker queue.
 - FFmpeg pipeline.
-- Whisper transcription.
+- WhisperX transcription.
+- PySceneDetect shot indexing.
+- Auto-Editor rough-cut export.
+- Motion Canvas graphics.
+- Kdenlive human finishing.
 - VideoAgent sandbox.
 - Meta/GA4/GBP metric import.
 - Learning loop dashboard.

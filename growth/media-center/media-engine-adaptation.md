@@ -29,6 +29,12 @@ UCM needs a service-business media center:
 6. Route assets through approval.
 7. Return metrics by borough, service, hook, CTA and lead quality.
 
+## 2030 Production Rule
+
+The Media Engine prepares and organises the edit; it does not replace the editor. Flagship UCM films use real approved moving footage and real human voices. The production chain is FFmpeg preparation, Auto-Editor rough cut, WhisperX transcription, PySceneDetect indexing, agent-assisted shot selection, Motion Canvas graphics, Kdenlive human finishing and independent approval.
+
+Detailed stack and capture standard: `growth/research/ucm-open-source-video-production-stack-2030.md`.
+
 ## UCM Content Packet
 
 Every content packet should include:

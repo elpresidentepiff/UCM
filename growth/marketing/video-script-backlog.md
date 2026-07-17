@@ -4,7 +4,9 @@ Every script is a production brief. It requires approved footage, consent and a 
 
 Priority production draft: `growth/scripts/ucm-company-introduction-script.md` combines the origin, differentiation, compliance and evidence-led carbon position in 90, 30 and 15-second formats.
 
-First rendered campaign concept: `growth/media/ucm-cleaning-reel/ucm-cleaning-services-reel-v1.mp4` presents UCM commercial cleaning, before/after cleanliness verification and the controlled HOCl pilot in a 34-second vertical format. Generated concept imagery must be replaced with approved real UCM footage where possible before paid promotion.
+Rejected prototype: `growth/media/ucm-cleaning-reel/ucm-cleaning-services-reel-v1.mp4` must not be published. Its automated still-image treatment and synthetic voice do not meet the UCM 2030 production standard. It is retained only as a documented failed experiment.
+
+Replacement production standard: `growth/research/ucm-open-source-video-production-stack-2030.md`.
 
 Human-voice replacements and company narrative scripts:
 
