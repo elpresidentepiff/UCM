@@ -1,0 +1,49 @@
+{
+  "version": "1.0.0",
+  "lastReviewed": "2026-07-16",
+  "claims": [
+    {
+      "id": "ai-efficiency-core",
+      "status": "approved",
+      "claim": "UCM uses AI-assisted planning to reduce administrative waste and build clearer, more efficient cleaning scopes.",
+      "conditions": "Explain that trained people deliver and approve the service.",
+      "owner": "UCM growth lead"
+    },
+    {
+      "id": "ai-savings-quantified",
+      "status": "evidence-required",
+      "claim": "UCM saves customers a stated percentage through AI.",
+      "conditions": "Requires verified baseline, methodology, sample size and approval.",
+      "owner": "UCM commercial lead"
+    },
+    {
+      "id": "cheapest-london",
+      "status": "blocked",
+      "claim": "UCM is the cheapest cleaning company in London.",
+      "conditions": "Unsupported comparative claim.",
+      "owner": "UCM growth lead"
+    },
+    {
+      "id": "founded-1994",
+      "status": "approved",
+      "claim": "UCM traces its operating history to Universal Technical Cleaning, founded in 1994.",
+      "conditions": "Use one consistent founding statement across channels.",
+      "owner": "Carlos Cuevas"
+    },
+    {
+      "id": "prestigious-client-name",
+      "status": "evidence-required",
+      "claim": "Name or display a historic prestigious client in a campaign.",
+      "conditions": "Requires documentary evidence and permission for the exact use.",
+      "owner": "Carlos Cuevas"
+    },
+    {
+      "id": "sustainable-cleaning",
+      "status": "evidence-required",
+      "claim": "A UCM service, product or process is environmentally preferable.",
+      "conditions": "Specify the exact product or process and retain evidence under the CMA Green Claims Code.",
+      "owner": "UCM operations lead"
+    }
+  ]
+}
+

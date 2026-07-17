@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ucmservices.co.uk/schemas/content-manifest.schema.json",
+  "title": "UCM Content Manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "content_id",
+    "campaign_id",
+    "channel",
+    "account_owner",
+    "service",
+    "buyer_segment",
+    "format",
+    "hook",
+    "proof_status",
+    "consent_status",
+    "cta",
+    "landing_page",
+    "approval_status",
+    "publish_status"
+  ],
+  "properties": {
+    "content_id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]+$" },
+    "campaign_id": { "type": "string", "minLength": 1 },
+    "channel": { "enum": ["instagram", "youtube", "linkedin", "facebook"] },
+    "account_owner": { "enum": ["ucm", "carlos-cuevas"] },
+    "service": { "type": "string", "minLength": 1 },
+    "buyer_segment": { "type": "string", "minLength": 1 },
+    "target_zone": { "type": ["string", "null"] },
+    "format": { "enum": ["static", "carousel", "story", "reel", "short", "video", "text", "article"] },
+    "hook": { "type": "string", "minLength": 1 },
+    "script": { "type": ["string", "null"] },
+    "asset_paths": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+    "proof_status": { "enum": ["not-required", "required", "verified", "rejected"] },
+    "consent_status": { "enum": ["not-required", "pending", "approved", "rejected"] },
+    "cta": { "type": "string", "minLength": 1 },
+    "landing_page": { "type": "string", "format": "uri-reference" },
+    "utm_campaign": { "type": ["string", "null"] },
+    "utm_content": { "type": ["string", "null"] },
+    "approval_owner": { "type": ["string", "null"] },
+    "approval_status": { "enum": ["draft", "review", "approved", "changes-requested", "blocked"] },
+    "publish_status": { "enum": ["not-ready", "scheduled", "published", "failed", "archived"] },
+    "platform_post_id": { "type": ["string", "null"] },
+    "published_at": { "type": ["string", "null"], "format": "date-time" },
+    "metrics": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "views": { "type": "integer", "minimum": 0 },
+        "watch_time_seconds": { "type": "number", "minimum": 0 },
+        "saves": { "type": "integer", "minimum": 0 },
+        "shares": { "type": "integer", "minimum": 0 },
+        "clicks": { "type": "integer", "minimum": 0 },
+        "leads": { "type": "integer", "minimum": 0 },
+        "qualified_leads": { "type": "integer", "minimum": 0 },
+        "won_revenue_gbp": { "type": "number", "minimum": 0 }
+      }
+    }
+  }
+}
+
