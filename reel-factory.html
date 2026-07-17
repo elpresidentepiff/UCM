@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="UCM location-led Reel Factory with independent quality review.">
+  <title>UCM Reel Factory</title>
+  <link rel="stylesheet" href="hub.css">
+</head>
+<body>
+  <header class="app-header">
+    <a class="brand" href="index.html" aria-label="UCM Growth Center">
+      <span class="brand-mark">UCM</span>
+      <span class="brand-copy"><strong>Reel Factory</strong><span>Proof-led London content</span></span>
+    </a>
+    <nav class="header-nav" aria-label="Product navigation">
+      <a href="cleanscope.html">Request scope</a>
+      <a href="lead-center.html">Lead Center</a>
+      <a href="reel-factory.html" aria-current="page">Reel Factory</a>
+    </nav>
+  </header>
+
+  <div class="mode-banner">Demonstration mode: manifests stay in this browser. Nothing is published automatically.</div>
+
+  <main class="page-shell">
+    <section class="page-intro">
+      <div>
+        <p class="eyebrow">Build, review, improve</p>
+        <h1>Location-led reels with proof before promotion.</h1>
+        <p>Every draft needs an approved source, independent review and a measurable commercial destination.</p>
+      </div>
+      <div class="trust-strip">
+        <strong>Hard stops</strong>
+        <span>Missing consent or blocked claims cannot pass at any score.</span>
+        <strong>Quality threshold</strong>
+        <span>85/100 before human approval. Maximum two automated revision rounds.</span>
+      </div>
+    </section>
+
+    <div class="factory-layout" style="margin-top: 28px;">
+      <form class="factory-panel" id="reelForm" novalidate>
+        <div class="step-heading">
+          <p class="eyebrow">Creative brief</p>
+          <h2>London proof reel</h2>
+        </div>
+        <div class="field-grid">
+          <div class="field full">
+            <label class="required" for="sourceLead">Source record</label>
+            <select id="sourceLead" name="sourceLead" required>
+              <option value="">Select a CleanScope lead</option>
+            </select>
+            <span class="field-hint">A lead is context, not marketing permission.</span>
+            <span class="field-error" data-error-for="sourceLead"></span>
+          </div>
+          <div class="field">
+            <label class="required" for="locationLabel">Location</label>
+            <input id="locationLabel" name="locationLabel" maxlength="100" placeholder="Canary Wharf" required>
+          </div>
+          <div class="field">
+            <label class="required" for="serviceCode">Service</label>
+            <select id="serviceCode" name="serviceCode" required>
+              <option value="">Select</option>
+              <option value="office_cleaning">Office cleaning</option>
+              <option value="commercial_cleaning">Commercial cleaning</option>
+              <option value="property_care">Property care</option>
+              <option value="end_of_tenancy">End of tenancy</option>
+              <option value="deep_cleaning">Deep cleaning</option>
+              <option value="technical_cleaning">Technical cleaning</option>
+              <option value="responsive_maintenance">Responsive maintenance</option>
+              <option value="handover_complete">Handover Complete</option>
+            </select>
+          </div>
+          <div class="field full">
+            <label class="required" for="title">Working title</label>
+            <input id="title" name="title" maxlength="120" placeholder="Weekend office reset before Monday opening" required>
+          </div>
+          <div class="field full">
+            <label class="required" for="hook">Opening hook</label>
+            <input id="hook" name="hook" maxlength="140" placeholder="Three floors. One weekend. Ready by Monday." required>
+          </div>
+          <div class="field full">
+            <label class="required" for="proofSummary">Verified proof</label>
+            <textarea id="proofSummary" name="proofSummary" maxlength="700" placeholder="State only the verified site, scope, process and outcome shown in the approved media." required></textarea>
+          </div>
+          <div class="field full">
+            <label class="required" for="buyer">Buyer</label>
+            <input id="buyer" name="buyer" maxlength="100" placeholder="Office and facilities managers" required>
+          </div>
+          <div class="field full">
+            <label class="required" for="callToAction">Commercial CTA</label>
+            <input id="callToAction" name="callToAction" maxlength="140" placeholder="Request a human-reviewed office cleaning scope" required>
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <h3>Hard publishing gates</h3>
+          <div class="consent-stack">
+            <label class="consent-row"><input id="consentVerified" type="checkbox"><span>Written customer, site, logo and media permission has been checked for the proposed channels.</span></label>
+            <label class="consent-row"><input id="sourceVerified" type="checkbox"><span>The footage and every factual result in the brief have been independently verified.</span></label>
+          </div>
+          <div class="field" style="margin-top: 14px;">
+            <label for="claimsStatus">Claims status</label>
+            <select id="claimsStatus">
+              <option value="evidence_required">Evidence required</option>
+              <option value="approved">Approved wording</option>
+              <option value="blocked">Blocked</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <button class="button" type="submit">Create review manifest</button>
+        </div>
+      </form>
+
+      <aside class="review-panel">
+        <div class="score-ring" id="scoreRing"><span id="scoreValue">0</span></div>
+        <div class="step-heading">
+          <p class="eyebrow">Independent review</p>
+          <h2>Quality gate</h2>
+        </div>
+        <div class="quality-grid">
+          <div class="quality-row"><label for="scoreProof">Proof and consent /20</label><input id="scoreProof" type="number" min="0" max="20" value="0"></div>
+          <div class="quality-row"><label for="scoreHook">Opening hook /15</label><input id="scoreHook" type="number" min="0" max="15" value="0"></div>
+          <div class="quality-row"><label for="scoreBuyer">Buyer relevance /15</label><input id="scoreBuyer" type="number" min="0" max="15" value="0"></div>
+          <div class="quality-row"><label for="scoreSpecificity">Location and service /15</label><input id="scoreSpecificity" type="number" min="0" max="15" value="0"></div>
+          <div class="quality-row"><label for="scoreCta">CTA and tracking /10</label><input id="scoreCta" type="number" min="0" max="10" value="0"></div>
+          <div class="quality-row"><label for="scoreBrand">UCM brand /10</label><input id="scoreBrand" type="number" min="0" max="10" value="0"></div>
+          <div class="quality-row"><label for="scoreTechnical">Technical quality /10</label><input id="scoreTechnical" type="number" min="0" max="10" value="0"></div>
+          <div class="quality-row"><label for="scoreClaims">Claims compliance /5</label><input id="scoreClaims" type="number" min="0" max="5" value="0"></div>
+        </div>
+        <div class="hard-failure" id="gateMessage">Not ready: complete the independent review.</div>
+        <div class="field" style="margin-top: 16px;">
+          <label for="reviewRound">Review round</label>
+          <select id="reviewRound">
+            <option value="0">Initial draft</option>
+            <option value="1">Revision 1</option>
+            <option value="2">Revision 2, final automated round</option>
+          </select>
+        </div>
+      </aside>
+    </div>
+
+    <section class="factory-output" id="factoryOutput" hidden aria-live="polite"></section>
+  </main>
+
+  <div class="toast" id="toast" hidden role="status"></div>
+  <script src="hub-store.js"></script>
+  <script src="reel-factory.js"></script>
+</body>
+</html>

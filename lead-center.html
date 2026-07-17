@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="UCM lead qualification and quote pipeline.">
+  <title>UCM Lead Center</title>
+  <link rel="stylesheet" href="hub.css">
+</head>
+<body>
+  <header class="app-header">
+    <a class="brand" href="index.html" aria-label="UCM Growth Center">
+      <span class="brand-mark">UCM</span>
+      <span class="brand-copy"><strong>Lead Center</strong><span>Enquiry to recurring contract</span></span>
+    </a>
+    <nav class="header-nav" aria-label="Product navigation">
+      <a href="cleanscope.html">Request scope</a>
+      <a href="lead-center.html" aria-current="page">Lead Center</a>
+      <a href="reel-factory.html">Reel Factory</a>
+    </nav>
+  </header>
+
+  <div class="mode-banner">Demonstration mode: browser-local records only. Authentication and live CRM sync are not enabled.</div>
+
+  <main class="page-shell">
+    <section class="page-intro">
+      <div>
+        <p class="eyebrow">Commercial operations</p>
+        <h1>Every enquiry has an owner and a next action.</h1>
+        <p>Qualify service fit, protect response time and connect the source to quote and contract outcomes.</p>
+      </div>
+      <div class="trust-strip">
+        <strong>Pipeline</strong>
+        <span>Enquiry, qualified, site visit, quote, won or lost, active and renewal.</span>
+        <strong>Operating rule</strong>
+        <span>No lead remains unowned after qualification.</span>
+      </div>
+    </section>
+
+    <section class="metrics-grid" aria-label="Lead metrics">
+      <article class="metric"><span>Open leads</span><strong id="openCount">0</strong><small>Excludes won and lost</small></article>
+      <article class="metric"><span>Response overdue</span><strong id="overdueCount">0</strong><small>Human response SLA</small></article>
+      <article class="metric"><span>Qualified</span><strong id="qualifiedCount">0</strong><small>Ready for next action</small></article>
+      <article class="metric"><span>Tracked sources</span><strong id="sourceCount">0</strong><small>Channel attribution</small></article>
+    </section>
+
+    <div class="toolbar">
+      <div class="toolbar-group">
+        <div class="field">
+          <label for="leadSearch">Search</label>
+          <input id="leadSearch" type="search" placeholder="Reference, contact or postcode">
+        </div>
+        <div class="field">
+          <label for="statusFilter">Stage</label>
+          <select id="statusFilter">
+            <option value="all">All stages</option>
+            <option value="new">New</option>
+            <option value="qualified">Qualified</option>
+            <option value="site_visit">Site visit</option>
+            <option value="quote">Quote</option>
+            <option value="won">Won</option>
+            <option value="lost">Lost</option>
+            <option value="active">Active</option>
+            <option value="renewal">Renewal</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="serviceFilter">Service</label>
+          <select id="serviceFilter">
+            <option value="all">All services</option>
+            <option value="office_cleaning">Office cleaning</option>
+            <option value="commercial_cleaning">Commercial cleaning</option>
+            <option value="property_care">Property care</option>
+            <option value="end_of_tenancy">End of tenancy</option>
+            <option value="deep_cleaning">Deep cleaning</option>
+            <option value="technical_cleaning">Technical cleaning</option>
+            <option value="responsive_maintenance">Responsive maintenance</option>
+            <option value="handover_complete">Handover Complete</option>
+          </select>
+        </div>
+      </div>
+      <div class="toolbar-group">
+        <button class="button secondary" id="demoButton" type="button">Load demonstration leads</button>
+        <button class="button secondary" id="exportButton" type="button">Export CSV</button>
+        <a class="button" href="cleanscope.html">New enquiry</a>
+      </div>
+    </div>
+
+    <div class="lead-layout">
+      <section class="table-shell" aria-label="Lead pipeline">
+        <div class="table-scroll">
+          <table>
+            <thead>
+              <tr>
+                <th>Reference</th>
+                <th>Stage</th>
+                <th>Buyer</th>
+                <th>Service</th>
+                <th>Postcode</th>
+                <th>Timing</th>
+                <th>Owner</th>
+                <th>Source</th>
+              </tr>
+            </thead>
+            <tbody id="leadRows"></tbody>
+          </table>
+        </div>
+        <div class="empty-state" id="emptyState" hidden>
+          <p>No leads match the current filters.</p>
+        </div>
+      </section>
+
+      <aside class="detail-drawer" id="detailDrawer" hidden aria-label="Lead detail">
+        <div class="detail-header">
+          <div><p class="eyebrow" id="detailReference"></p><h2 id="detailTitle"></h2><span class="status" id="detailStatus"></span></div>
+          <button class="icon-button" id="closeDetail" type="button" aria-label="Close lead detail" title="Close">X</button>
+        </div>
+
+        <dl class="review-list" id="detailSummary"></dl>
+
+        <div class="detail-section">
+          <h3>Control</h3>
+          <div class="field-grid single">
+            <div class="field">
+              <label for="editStatus">Stage</label>
+              <select id="editStatus">
+                <option value="new">New</option>
+                <option value="qualified">Qualified</option>
+                <option value="site_visit">Site visit</option>
+                <option value="quote">Quote</option>
+                <option value="won">Won</option>
+                <option value="lost">Lost</option>
+                <option value="active">Active</option>
+                <option value="renewal">Renewal</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="editOwner">Owner</label>
+              <input id="editOwner" maxlength="80" placeholder="Named person or team">
+            </div>
+            <div class="field">
+              <label for="editNextAction">Next action</label>
+              <textarea id="editNextAction" maxlength="500"></textarea>
+            </div>
+            <button class="button" id="saveLeadButton" type="button">Save lead update</button>
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <h3>Activity</h3>
+          <ol class="timeline" id="detailTimeline"></ol>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <div class="toast" id="toast" hidden role="status"></div>
+  <script src="hub-store.js"></script>
+  <script src="lead-center.js"></script>
+</body>
+</html>
