@@ -12,7 +12,7 @@ Browser-local records are useful for workflow testing only. They are not shared 
 
 ## Production Activation
 
-1. Create a dedicated UCM Supabase project. Do not use the existing shared project.
+1. Create a dedicated UCM Supabase project. The existing project belongs to Velo Oracle Prime and must not receive UCM data or migrations.
 2. Apply `supabase/migrations/20260717013203_create_ucm_cleanscope_foundation.sql` to staging first.
 3. Create the first staff user and insert the matching role in `public.ucm_staff` through an administrator-only process.
 4. Deploy `supabase/functions/submit-cleanscope` with JWT verification disabled. The function performs its own origin, Turnstile and payload validation.
