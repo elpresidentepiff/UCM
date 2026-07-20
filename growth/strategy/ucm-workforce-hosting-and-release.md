@@ -2,43 +2,43 @@
 
 ## Decision
 
-Use GitHub for source control, review and release history. Use Railway for protected staging and, once authentication and data governance are complete, the employee-facing web service. Do not use GitHub Pages for the real employee app because Pages is public static hosting and does not provide the application authentication or server-side authorisation required for HR and pay data.
+Use GitHub for source control, review and release history. Use a UCM-controlled local Docker server as the default deployment target. Railway, Supabase and other managed platforms remain optional alternatives, not dependencies. Do not use GitHub Pages for the real employee app because Pages is public static hosting and does not provide the application authentication or server-side authorisation required for HR and pay data.
 
 Workforce will be completed in a private repository dedicated to UCM using fictional or synthetic data. At acceptance, the private repository, deployment, domains, credentials and documentation transfer to UCM-owned accounts. Carlos becomes an owner or administrator; delivery partners retain only the support access UCM authorises. See [UCM Client Ownership And Access Setup](ucm-client-ownership-and-access-setup.md) and [UCM Proprietary Product Delivery And Handover](ucm-proprietary-product-delivery-and-handover.md).
 
-Railway supports GitHub deployments, HTTPS, custom domains and pull-request preview environments. Railway services can also communicate with a future API and database over private networking rather than exposing those internal services publicly.
+The local stack uses Docker Compose for repeatable services and Caddy as the gateway. The production build later adds PostgreSQL, authentication, private storage, monitoring and encrypted backups after governance approval.
 
 References:
 
-- [Railway static hosting and custom domains](https://docs.railway.com/guides/static-hosting)
-- [Railway GitHub autodeployments and Wait for CI](https://docs.railway.com/deployments/github-autodeploys)
-- [Railway private networking](https://docs.railway.com/private-networking)
-- [Railway health checks](https://docs.railway.com/deployments/healthchecks)
+- [Docker Compose installation](https://docs.docker.com/compose/install/)
+- [Caddy reverse proxy](https://caddyserver.com/docs/quick-starts/reverse-proxy)
+- [PostgreSQL backup and restore](https://www.postgresql.org/docs/current/backup.html)
+- [Authentik Docker Compose installation](https://docs.goauthentik.io/install-config/install/docker-compose/)
 
 ## Current Safe Release
 
-The current application is a fictional demonstration. It may be deployed to a Railway staging URL so UCM can test design, navigation and phone installation. It must display the prototype warning and must not collect or import real employee information.
+The current application is a fictional demonstration. It may be deployed to the local Docker stack so UCM can test design and navigation. It must display the prototype warning and must not collect or import real employee information.
 
 The staging deployment uses the runtime in `app/employee/`:
 
 - `package.json` starts the Node static service.
-- `server.js` listens on Railway's `PORT`, serves only the employee-app directory, applies baseline browser security headers and exposes `/health`.
-- `railway.toml` declares the start command and health check.
+- `server.js` listens on the configured `PORT`, serves only the employee-app directory, applies baseline browser security headers and exposes `/health`.
+- `Dockerfile` packages the service as a non-root application container.
 - `manifest.webmanifest`, the branded icons and `service-worker.js` make the app installable.
 - The service worker caches only the application shell. It does not cache future APIs, payslips, HR documents or employee records.
 
-## Railway Staging Setup
+## Local Docker Staging Setup
 
 1. Move the approved Workforce checkpoint into its dedicated private delivery repository.
-2. In Railway, create a staging service from that private repository.
-3. Configure the repository root as the service root.
-4. Use a staging branch initially rather than production `main` autodeployment.
-5. Confirm Railway detects `npm start` or use the command from `railway.toml`.
-6. Set the health-check path to `/health` and generate a Railway domain.
+2. Install Docker Engine and Docker Compose on the UCM test server.
+3. Start the stack from `deploy/local/compose.yml`.
+4. Confirm the Workforce container is healthy and the gateway returns `/health`.
+5. Keep the gateway bound to localhost during developer testing.
+6. Configure a trusted HTTPS hostname before testing phone installation over the local network.
 7. Test installation, offline shell behaviour and every supported phone size.
 8. Keep the demonstration warning and fictional records until the secure backend is approved.
 
-Railway automatically supplies HTTPS for its generated domain. A later custom domain should be `staff.ucmservices.co.uk`, with both the CNAME and verification record configured as Railway instructs.
+A production hostname should be `staff.ucmservices.co.uk`. Workforce and CRM may be restricted through a UCM VPN; the Client App requires a separately secured public boundary.
 
 ## Phone Installation
 
@@ -73,25 +73,27 @@ Do not cross this gate until UCM approves:
 
 ## Target Architecture
 
-`Phone PWA -> Railway web service -> authenticated API -> dedicated employee database/private storage`
+`Phone PWA -> Caddy HTTPS/VPN -> Workforce service -> authenticated API -> dedicated employee database/private storage`
 
-Only the web service is public. The API and database should use Railway private networking where practical. The payroll system remains the source of truth; Workforce displays authorised outputs and sends controlled queries.
+Only an approved gateway is reachable. Application services and PostgreSQL remain on a private Docker network. The payroll system remains the source of truth; Workforce displays authorised outputs and sends controlled queries.
 
 ## Release Environments
 
 | Environment | Data | Audience | Deployment |
 | --- | --- | --- | --- |
 | Local | Fictional | Developers and UCM reviewers | Manual local server |
-| Railway staging | Fictional or synthetic | Named UCM testers | GitHub staging branch |
+| Local Docker staging | Fictional or synthetic | Named UCM testers | Private GitHub staging branch |
 | Production pilot | Minimum verified employee data | Small authorised employee group | Protected production release |
 | Production | Approved operational data | Authorised UCM workforce | Controlled release after pilot |
 
 ## Immediate Next Actions
 
 1. Create the dedicated private UCM Workforce delivery repository.
-2. Move the approved prototype into it and deploy a fictional-data staging build.
+2. Move the approved prototype into it and deploy the fictional local Docker build.
 3. Decide the employee identity and authentication provider.
 4. Confirm UCM's payroll, HR, rota, training and certificate sources of truth.
 5. Define the minimum employee record and role matrix.
 6. Build authentication and server-side access controls before importing real data.
 7. Prepare Carlos's UCM ownership accounts and complete the transfer at acceptance.
+
+Commercial allowances are in [UCM Local System Cost Proposal](../commercial/ucm-local-system-cost-proposal.md).

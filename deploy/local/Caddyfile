@@ -1,0 +1,20 @@
+{
+	admin off
+	auto_https off
+}
+
+:80 {
+	encode zstd gzip
+
+	header {
+		-Server
+		X-Content-Type-Options "nosniff"
+		X-Frame-Options "DENY"
+	}
+
+	reverse_proxy workforce:3000 {
+		health_uri /health
+		health_interval 30s
+		health_timeout 5s
+	}
+}

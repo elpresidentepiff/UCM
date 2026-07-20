@@ -13,7 +13,7 @@ Supabase remains paused. No database provider should be connected until the rele
 | Asset | UCM owner | Delivery access | Rule |
 | --- | --- | --- | --- |
 | GitHub organisation and repository | Carlos plus one UCM backup owner | Maintainer or write | UCM controls source, releases and removal of access |
-| Railway workspace and billing | Carlos or UCM finance/admin | Member; admin only when operationally required | Staging and production live in the UCM workspace |
+| Hosting server and billing | Carlos or UCM finance/admin | Time-limited administrator access when required | Production runs on UCM-owned hardware or a UCM-controlled hosting account |
 | Domain and DNS | UCM company account | Limited DNS access when required | Use `staff.ucmservices.co.uk` for Workforce |
 | Company email | UCM | Named individual accounts | No shared personal logins |
 | Password manager | UCM | Role-based shared vaults | No secrets in Git, chat or documentation |
@@ -29,7 +29,7 @@ Supabase remains paused. No database provider should be connected until the rele
 - A named company email address controlled by Carlos, not a personal or agency address.
 - A GitHub account with two-factor authentication enabled.
 - A UCM GitHub organisation with Carlos and one trusted UCM backup owner.
-- A UCM Railway workspace with UCM billing details and two-factor authentication enforced where the selected plan permits it.
+- A UCM-owned local server or UCM-controlled hosting account, with named administrators and company billing where applicable.
 - Access to the registrar and DNS account for `ucmservices.co.uk`.
 - A UCM-owned password manager vault for recovery codes, API keys and service credentials.
 
@@ -65,9 +65,9 @@ Roles are enforced by the server and database, not by hiding screens in the brow
 2. Build and review each product with fictional or synthetic data only.
 3. Complete functional, security, role-isolation, backup and restoration testing.
 4. Carlos creates the UCM GitHub organisation and enables two-factor authentication requirements.
-5. Carlos creates the UCM Railway workspace, password vault and named administrator accounts.
+5. Carlos prepares the UCM local server or chosen hosting account, password vault and named administrator accounts.
 6. Transfer the three private repositories with their complete histories and acceptance records.
-7. Recreate or transfer staging and production services into the UCM Railway workspace.
+7. Recreate or transfer staging and production services onto the UCM local server or chosen UCM-controlled host.
 8. Rotate credentials, connect the approved UCM subdomains and verify monitoring and recovery access.
 9. Train Carlos and a UCM backup administrator, then remove unnecessary delivery-owner access.
 10. Import only the approved pilot data, resolve pilot defects and obtain UCM approval before wider rollout.
@@ -83,17 +83,17 @@ Roles are enforced by the server and database, not by hiding screens in the brow
 
 Official reference: [GitHub repository transfers](https://docs.github.com/en/repositories/creating-and-managing-repositories/transferring-a-repository)
 
-## Railway Setup Checks
+## Hosting Setup Checks
 
-- UCM owns the workspace, subscription and billing method.
-- Carlos is an Admin; normal developers are Members or Deployers according to need.
-- The project remains private.
+- UCM owns the physical server or hosting account, subscription and billing method.
+- Carlos is an administrator; normal developers receive only the access required for delivery or support.
+- The server, repositories and management interfaces remain private.
 - Staging and production are separate environments with separate variables.
-- Production secrets exist only in Railway variables or the UCM password manager.
+- Production secrets exist only in protected server variables or the UCM password manager.
 - Health checks, deployment logs and spend alerts are visible to UCM.
 - At least two UCM-controlled people can recover the account.
 
-Official references: [Railway workspaces and roles](https://docs.railway.com/projects/workspaces) and [Railway project transfer](https://docs.railway.com/projects)
+The current local deployment is documented in [`deploy/local/README.md`](../../deploy/local/README.md). Railway, Supabase or another managed platform may be selected later, but none is mandatory.
 
 ## Data Gate
 
@@ -111,7 +111,7 @@ Do not upload names, addresses, phone numbers, right-to-work records, contracts,
 
 UCM is operationally independent only when Carlos can:
 
-- Access GitHub, Railway, DNS, monitoring and the password manager.
+- Access GitHub, the local server or selected host, DNS, monitoring and the password manager.
 - Add and remove a delivery partner without losing the system.
 - View billing and change the payment method.
 - Deploy or roll back an approved release.

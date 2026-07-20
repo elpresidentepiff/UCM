@@ -38,7 +38,7 @@ Official references:
 ### Not Assigned As Bespoke UCM Property
 
 - Open-source software, which remains governed by its original licence.
-- Third-party platforms such as GitHub, Railway, email, payment or identity providers.
+- Third-party platforms such as GitHub, optional hosting providers, email, payment or identity providers.
 - Stock media, fonts, models or datasets governed by third-party terms.
 - General engineering knowledge, methods and independently developed reusable tools not containing UCM confidential information.
 
@@ -57,9 +57,9 @@ A dependency and licence register must identify every non-UCM component before a
 
 ### Handover Phase
 
-- Carlos creates the UCM GitHub organisation, Railway workspace, password vault and named administrator accounts.
+- Carlos creates the UCM GitHub organisation, prepares the UCM local server or chosen hosting account, and creates the password vault and named administrator accounts.
 - Transfer each private repository with complete commit history.
-- Recreate or transfer staging and production projects into the UCM Railway workspace.
+- Recreate or transfer staging and production services onto the UCM local server or chosen UCM-controlled host.
 - Move domain and DNS control to UCM-controlled accounts.
 - Rotate every production credential after transfer so the final values are known to UCM.
 - Deliver database migrations, backup and tested restoration procedures.
