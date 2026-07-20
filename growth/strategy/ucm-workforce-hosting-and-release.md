@@ -4,6 +4,8 @@
 
 Use GitHub for source control, review and release history. Use Railway for protected staging and, once authentication and data governance are complete, the employee-facing web service. Do not use GitHub Pages for the real employee app because Pages is public static hosting and does not provide the application authentication or server-side authorisation required for HR and pay data.
 
+Production accounts must be owned and billed by UCM. Carlos should be an owner or administrator; delivery partners should receive only the collaborator access they need. Transfer the current portable prototype before authentication or real employee data is added. See [UCM Client Ownership And Access Setup](ucm-client-ownership-and-access-setup.md).
+
 Railway supports GitHub deployments, HTTPS, custom domains and pull-request preview environments. Railway services can also communicate with a future API and database over private networking rather than exposing those internal services publicly.
 
 References:
@@ -86,8 +88,9 @@ Only the web service is public. The API and database should use Railway private 
 
 ## Immediate Next Actions
 
-1. Test the installable PWA locally and on a Railway staging URL.
-2. Decide the employee identity and authentication provider.
-3. Confirm UCM's payroll, HR, rota, training and certificate sources of truth.
-4. Define the minimum employee record and role matrix.
-5. Build authentication and server-side access controls before importing real data.
+1. Create the UCM-owned GitHub organisation and Railway workspace.
+2. Transfer this repository and deploy a fictional-data staging build.
+3. Decide the employee identity and authentication provider.
+4. Confirm UCM's payroll, HR, rota, training and certificate sources of truth.
+5. Define the minimum employee record and role matrix.
+6. Build authentication and server-side access controls before importing real data.

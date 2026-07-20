@@ -1,10 +1,10 @@
 "use strict";
 
-const CACHE_NAME = "ucm-workforce-shell-v1";
+const CACHE_NAME = "ucm-workforce-shell-v3";
 const SHELL_ASSETS = [
   "./",
   "./index.html",
-  "./styles.css",
+  "./styles.css?v=3",
   "./app.js",
   "./manifest.webmanifest",
   "./assets/lucide.min.js",
@@ -12,7 +12,11 @@ const SHELL_ASSETS = [
   "./assets/workforce-emerald-grid.jpg",
   "./icons/icon-192.png",
   "./icons/icon-512.png",
-  "./icons/apple-touch-icon.png"
+  "./icons/maskable-192.png",
+  "./icons/maskable-512.png",
+  "./icons/apple-touch-icon.png",
+  "./icons/favicon-32.png",
+  "./icons/badge-96.png"
 ];
 
 const STATIC_URLS = new Set(SHELL_ASSETS.map((asset) => new URL(asset, self.location.href).href));

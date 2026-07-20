@@ -8,9 +8,9 @@
   <meta name="description" content="UCM Workforce employee self-service and field operations demonstration.">
   <title>UCM Workforce</title>
   <link rel="manifest" href="manifest.webmanifest">
-  <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
   <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=3">
   <script src="assets/lucide.min.js" defer></script>
 </head>
 <body>
@@ -171,9 +171,15 @@
       <div class="page-head"><div><p class="eyebrow">Employee self-service</p><h1 id="profileTitle">My profile and leave</h1><p>Review your information and request changes through controlled workflows.</p></div><button class="primary-button" id="openLeave" type="button"><i data-lucide="calendar-plus-2"></i> Request leave</button></div>
       <div class="profile-layout">
         <article class="profile-summary">
+          <div class="employee-badge-head">
+            <span class="employee-badge-logo"><img src="assets/ucm-logo.png" alt="UCM"></span>
+            <span class="employee-badge-type"><i data-lucide="shield-check"></i> Employee ID</span>
+          </div>
           <div class="large-avatar">MA</div>
           <h2>Maya Ahmed</h2><p>Cleaning Operative · Employee UCM-1047</p>
+          <div class="employee-badge-status"><span class="live-dot"></span> Active demonstration profile</div>
           <dl><div><dt>Manager</dt><dd>Andre Lewis</dd></div><div><dt>Home team</dt><dd>West London</dd></div><div><dt>Start date</dt><dd>14 February 2024</dd></div><div><dt>Employment</dt><dd>Permanent · Full-time</dd></div></dl>
+          <p class="employee-badge-warning"><i data-lucide="triangle-alert"></i> Prototype credential. Not valid for identity or site access.</p>
           <button class="secondary-button" id="requestProfileChange" type="button"><i data-lucide="pencil"></i> Request a change</button>
         </article>
         <div>

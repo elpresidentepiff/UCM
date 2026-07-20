@@ -206,13 +206,22 @@ tbody tr:last-child td { border-bottom: 0; }
 .pay-help p { margin: 3px 0 0; color: var(--muted); }
 
 .profile-layout { display: grid; grid-template-columns: minmax(250px,.65fr) minmax(380px,1.35fr); gap: 24px; }
-.profile-summary { padding: 24px; border: 1px solid var(--line); background: rgba(9,23,17,.95); text-align: center; box-shadow: var(--shadow); }
+.profile-summary { position: relative; overflow: hidden; padding: 24px; border: 1px solid #34745b; background-color: rgba(7,27,19,.97); background-image: url("assets/workforce-emerald-grid.jpg"); background-position: center; background-size: cover; text-align: center; box-shadow: var(--shadow), inset 0 1px 0 rgba(255,255,255,.05); }
+.profile-summary::after { position: absolute; inset: auto -28px -55px auto; width: 150px; height: 150px; border: 1px solid rgba(50,227,162,.16); transform: rotate(45deg); content: ""; pointer-events: none; }
+.employee-badge-head { position: relative; z-index: 1; display: flex; align-items: center; justify-content: space-between; gap: 14px; margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid rgba(197,216,190,.18); }
+.employee-badge-logo { display: grid; width: 90px; height: 40px; place-items: center; padding: 8px; border: 1px solid rgba(197,216,190,.35); border-radius: 5px; background: rgba(4,17,12,.72); }
+.employee-badge-logo img { display: block; width: 100%; height: auto; filter: brightness(0) invert(89%) sepia(12%) saturate(447%) hue-rotate(54deg) brightness(95%) contrast(88%); }
+.employee-badge-type { display: inline-flex; align-items: center; gap: 6px; color: var(--sage); font-size: 10px; font-weight: 900; text-transform: uppercase; }
+.employee-badge-type svg { width: 15px; height: 15px; color: var(--green); }
 .large-avatar { display: grid; width: 74px; height: 74px; margin: 0 auto 14px; place-items: center; border: 1px solid var(--green); border-radius: 50%; background: var(--green-soft); color: var(--green); font-size: 20px; font-weight: 900; box-shadow: 0 0 28px rgba(50,227,162,.14); }
 .profile-summary > p { color: var(--muted); }
+.employee-badge-status { display: inline-flex; align-items: center; gap: 8px; margin-top: 4px; padding: 6px 8px; border: 1px solid rgba(50,227,162,.25); border-radius: 4px; background: rgba(5,25,17,.72); color: #bfe3d3; font-size: 9px; font-weight: 900; text-transform: uppercase; }
 .profile-summary dl { margin: 24px 0; border-top: 1px solid var(--line); text-align: left; }
 .profile-summary dl div { display: flex; justify-content: space-between; gap: 14px; padding: 11px 0; border-bottom: 1px solid var(--line); }
 .profile-summary dt { color: var(--muted); }
 .profile-summary dd { margin: 0; font-weight: 800; text-align: right; }
+.profile-summary .employee-badge-warning { display: flex; align-items: start; gap: 8px; margin: -5px 0 18px; padding: 9px; border-left: 3px solid var(--amber); background: rgba(56,46,25,.78); color: #efd89b; font-size: 10px; line-height: 1.4; text-align: left; }
+.employee-badge-warning svg { width: 15px; height: 15px; flex: 0 0 auto; }
 .leave-panel { padding: 24px; border: 1px solid var(--line); background: rgba(15,35,27,.96); box-shadow: var(--shadow); }
 .leave-number { color: var(--green); font-size: 18px; }
 .leave-bar { height: 10px; margin: 20px 0; overflow: hidden; background: #dce3df; }
