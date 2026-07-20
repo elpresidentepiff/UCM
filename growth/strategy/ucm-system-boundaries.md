@@ -2,7 +2,7 @@
 
 ## Rule
 
-The website, customer app, CRM and Media Engine are separate products with explicit responsibilities. They may exchange approved data later, but they must not be presented as one application.
+The website, customer app, CRM, Workforce app and Media Engine are separate products with explicit responsibilities. They may exchange approved data later, but they must not be presented as one application.
 
 ## Public Website
 
@@ -58,6 +58,24 @@ Owns:
 - Escalations to supervisors.
 
 It receives the approved service scope from operations. It does not expose sales notes or unrelated customer records.
+
+Field operations may later become an employee-facing module inside UCM Workforce, while preserving these data boundaries.
+
+## UCM Workforce App
+
+Audience: UCM employees, supervisors and specifically authorised HR, payroll and operations roles.
+
+Owns:
+
+- Employee self-service, approved profile information and controlled change requests.
+- Shifts, assigned field work, readiness acknowledgements and operational escalations.
+- Training requirements, learning progress, competencies and certificate expiry.
+- Leave requests, company policies, announcements and confidential support routes.
+- Display of authorised payslips and payroll outputs from the accounting/payroll source.
+
+Employees see their own personal records. Supervisors see only the operational information needed to manage assigned work. Pay, banking, health, right-to-work and HR-case information require separately authorised access.
+
+The Workforce app does not calculate payroll, replace accounting, expose CRM margins or provide employee information to the Media Engine without explicit permission.
 
 ## Media Engine
 

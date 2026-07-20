@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#06150f">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="UCM Workforce employee self-service and field operations demonstration.">
+  <title>UCM Workforce</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="stylesheet" href="styles.css">
+  <script src="assets/lucide.min.js" defer></script>
+</head>
+<body>
+  <aside class="sidebar" aria-label="Primary navigation">
+    <a class="brand" href="#home" aria-label="UCM Workforce home">
+      <span class="brand-logo-shell"><img src="assets/ucm-logo.png" alt="UCM"></span>
+      <span><strong>Workforce</strong><small>Employee app</small></span>
+    </a>
+    <nav>
+      <a class="active" href="#home" data-nav="home"><i data-lucide="layout-dashboard"></i><span>Home</span></a>
+      <a href="#shifts" data-nav="shifts"><i data-lucide="calendar-days"></i><span>Shifts</span></a>
+      <a href="#training" data-nav="training"><i data-lucide="graduation-cap"></i><span>Training</span></a>
+      <a href="#documents" data-nav="documents"><i data-lucide="folder-closed"></i><span>Documents</span></a>
+      <a href="#pay" data-nav="pay"><i data-lucide="wallet-cards"></i><span>Pay</span></a>
+      <a href="#profile" data-nav="profile"><i data-lucide="circle-user-round"></i><span>Profile</span></a>
+    </nav>
+    <div class="sidebar-foot">
+      <span class="demo-dot"></span>
+      Fictional demonstration
+    </div>
+  </aside>
+
+  <main>
+    <header class="topbar">
+      <div class="employee-greeting">
+        <span class="top-logo-shell"><img src="assets/ucm-logo.png" alt="UCM"></span>
+        <span><p class="eyebrow">Saturday, 18 July</p><strong>Good morning, Maya</strong></span>
+      </div>
+      <div class="top-actions">
+        <button class="icon-button" id="installApp" type="button" aria-label="Install UCM Workforce" title="Install UCM Workforce">
+          <i data-lucide="download"></i>
+        </button>
+        <button class="icon-button" id="openNotifications" type="button" aria-label="Open notifications" title="Notifications">
+          <i data-lucide="bell"></i><span class="notification-count">3</span>
+        </button>
+        <button class="avatar-button" type="button" data-jump="profile" aria-label="Open employee profile">MA</button>
+      </div>
+    </header>
+
+    <div class="demo-banner"><strong>Prototype only.</strong> Fictional employee records, no authentication and no real HR or payroll data.</div>
+
+    <section id="home" class="view active" aria-labelledby="homeTitle">
+      <div class="page-head">
+        <div><p class="eyebrow">My workday</p><h1 id="homeTitle">Everything needed for today.</h1></div>
+        <button class="secondary-button" type="button" id="openSupport"><i data-lucide="headphones"></i> Get help</button>
+      </div>
+
+      <div class="today-layout">
+        <article class="shift-panel">
+          <div class="panel-kicker"><span class="live-dot"></span> Next shift</div>
+          <div class="shift-main">
+            <div><h2>Canary Wharf office</h2><p>18:00-22:00 · Team West · Supervisor: Andre</p></div>
+            <span class="time-until">Starts at 18:00</span>
+          </div>
+          <div class="site-strip">
+            <span><i data-lucide="map-pin"></i><strong>London E14</strong><small>Full address available 2 hours before shift</small></span>
+            <span><i data-lucide="briefcase-business"></i><strong>Office clean</strong><small>Evening service</small></span>
+            <span><i data-lucide="users"></i><strong>4 people</strong><small>Assigned team</small></span>
+          </div>
+          <div class="shift-actions">
+            <button class="primary-button" id="clockButton" type="button"><i data-lucide="play"></i> Start shift</button>
+            <button class="secondary-button" type="button" data-jump="shifts"><i data-lucide="clipboard-list"></i> View job</button>
+          </div>
+          <p class="gate-note" id="clockGate"><i data-lucide="shield-check"></i> Start becomes available at the approved site and time. Location is checked only with permission.</p>
+        </article>
+
+        <div class="action-stack">
+          <article class="action-card urgent">
+            <span class="action-icon"><i data-lucide="badge-alert"></i></span>
+            <div><small>Action required</small><strong>COSHH refresher due in 6 days</strong><p>Complete before assignment to chemical-handling tasks.</p></div>
+            <button class="arrow-button" type="button" data-jump="training" aria-label="Open training"><i data-lucide="arrow-right"></i></button>
+          </article>
+          <article class="action-card">
+            <span class="action-icon blue"><i data-lucide="file-check-2"></i></span>
+            <div><small>Document</small><strong>July payslip available</strong><p>Published 17 July · Fictional demo file.</p></div>
+            <button class="arrow-button" type="button" data-download="payslip" aria-label="Download demonstration payslip"><i data-lucide="download"></i></button>
+          </article>
+          <article class="action-card">
+            <span class="action-icon amber"><i data-lucide="calendar-check-2"></i></span>
+            <div><small>Request</small><strong>Leave approved</strong><p>24-25 July · 2 days deducted.</p></div>
+            <button class="arrow-button" type="button" data-jump="profile" aria-label="View leave"><i data-lucide="arrow-right"></i></button>
+          </article>
+        </div>
+      </div>
+
+      <section class="metric-row" aria-label="Employee summary">
+        <div><span>Hours this week</span><strong>24.0</strong><small>8.0 scheduled today</small></div>
+        <div><span>Training complete</span><strong>83%</strong><small>5 of 6 modules</small></div>
+        <div><span>Leave remaining</span><strong>11 days</strong><small>Current demo year</small></div>
+        <div><span>Certificates valid</span><strong>4 of 5</strong><small>One action due</small></div>
+      </section>
+
+      <section class="content-section">
+        <div class="section-heading"><div><p class="eyebrow">Company updates</p><h2>What employees need to know</h2></div><button class="text-button" id="markAnnouncements" type="button">Mark all read</button></div>
+        <div class="announcement-list" id="announcementList"></div>
+      </section>
+    </section>
+
+    <section id="shifts" class="view" aria-labelledby="shiftsTitle">
+      <div class="page-head"><div><p class="eyebrow">Field operations</p><h1 id="shiftsTitle">Shifts and assigned work</h1><p>Only approved assignments and the minimum site information needed to work safely.</p></div><button class="secondary-button" id="openIncident" type="button"><i data-lucide="triangle-alert"></i> Report issue</button></div>
+      <div class="week-switcher" aria-label="Schedule week">
+        <button class="icon-button" type="button" aria-label="Previous week"><i data-lucide="chevron-left"></i></button>
+        <strong>13-19 July 2026</strong>
+        <button class="icon-button" type="button" aria-label="Next week"><i data-lucide="chevron-right"></i></button>
+      </div>
+      <div class="schedule-list" id="scheduleList"></div>
+      <section class="content-section band-section">
+        <div class="section-heading"><div><p class="eyebrow">Tonight's requirements</p><h2>Pre-shift readiness</h2></div><span class="status amber">2 acknowledgements</span></div>
+        <div class="checklist" id="readinessChecklist"></div>
+      </section>
+    </section>
+
+    <section id="training" class="view" aria-labelledby="trainingTitle">
+      <div class="page-head"><div><p class="eyebrow">Learning and compliance</p><h1 id="trainingTitle">Training and certificates</h1><p>Know what is complete, what is expiring and what prevents assignment to a task.</p></div></div>
+      <div class="progress-panel">
+        <div><span>Required learning</span><strong>5 of 6 complete</strong><p>One module needs attention this week.</p></div>
+        <div class="progress-ring" aria-label="83 percent complete"><span>83%</span></div>
+      </div>
+      <div class="tab-bar" role="tablist" aria-label="Training views">
+        <button class="active" type="button" data-training-tab="courses">Courses</button>
+        <button type="button" data-training-tab="certificates">Certificates</button>
+      </div>
+      <div id="courseList" class="course-list"></div>
+      <div id="certificateList" class="certificate-list" hidden></div>
+    </section>
+
+    <section id="documents" class="view" aria-labelledby="documentsTitle">
+      <div class="page-head"><div><p class="eyebrow">Employee records</p><h1 id="documentsTitle">Documents and policies</h1><p>Personal documents are visible only to the employee and explicitly authorised UCM roles in production.</p></div></div>
+      <label class="search-box" for="documentSearch"><i data-lucide="search"></i><input id="documentSearch" type="search" placeholder="Search documents and policies"></label>
+      <div class="document-group">
+        <div class="section-heading"><div><p class="eyebrow">My documents</p><h2>Personal employment records</h2></div><span class="privacy-label"><i data-lucide="lock-keyhole"></i> Private</span></div>
+        <div class="document-list" id="personalDocuments"></div>
+      </div>
+      <div class="document-group">
+        <div class="section-heading"><div><p class="eyebrow">UCM policies</p><h2>Current company guidance</h2></div><span class="status green">Current versions</span></div>
+        <div class="document-list" id="policyDocuments"></div>
+      </div>
+    </section>
+
+    <section id="pay" class="view" aria-labelledby="payTitle">
+      <div class="page-head"><div><p class="eyebrow">Pay information</p><h1 id="payTitle">Pay and payslips</h1><p>The app displays authorised payroll outputs; it does not calculate payroll or replace UCM's accounting system.</p></div></div>
+      <div class="pay-summary">
+        <div><span>Latest net pay</span><strong>£1,642.80</strong><small>Fictional · Paid 17 July 2026</small></div>
+        <div><span>Pay period</span><strong>June 2026</strong><small>Monthly payroll</small></div>
+        <div><span>Payment account</span><strong>•••• 4721</strong><small>Change requires identity check</small></div>
+      </div>
+      <div class="section-heading"><div><p class="eyebrow">Pay history</p><h2>Payslips</h2></div><span class="privacy-label"><i data-lucide="shield-check"></i> Employee only</span></div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Pay period</th><th>Pay date</th><th>Gross</th><th>Deductions</th><th>Net</th><th>File</th></tr></thead>
+          <tbody id="payslipRows"></tbody>
+        </table>
+      </div>
+      <div class="pay-help"><i data-lucide="message-square-text"></i><div><strong>Something wrong with your pay?</strong><p>Raise a confidential payroll query. Managers should not receive medical or banking details.</p></div><button class="secondary-button" id="openPayQuery" type="button">Raise query</button></div>
+    </section>
+
+    <section id="profile" class="view" aria-labelledby="profileTitle">
+      <div class="page-head"><div><p class="eyebrow">Employee self-service</p><h1 id="profileTitle">My profile and leave</h1><p>Review your information and request changes through controlled workflows.</p></div><button class="primary-button" id="openLeave" type="button"><i data-lucide="calendar-plus-2"></i> Request leave</button></div>
+      <div class="profile-layout">
+        <article class="profile-summary">
+          <div class="large-avatar">MA</div>
+          <h2>Maya Ahmed</h2><p>Cleaning Operative · Employee UCM-1047</p>
+          <dl><div><dt>Manager</dt><dd>Andre Lewis</dd></div><div><dt>Home team</dt><dd>West London</dd></div><div><dt>Start date</dt><dd>14 February 2024</dd></div><div><dt>Employment</dt><dd>Permanent · Full-time</dd></div></dl>
+          <button class="secondary-button" id="requestProfileChange" type="button"><i data-lucide="pencil"></i> Request a change</button>
+        </article>
+        <div>
+          <section class="leave-panel">
+            <div class="section-heading"><div><p class="eyebrow">Annual leave</p><h2>2026 allowance</h2></div><strong class="leave-number">11 days left</strong></div>
+            <div class="leave-bar"><span class="progress-56"></span></div>
+            <div class="leave-figures"><span><strong>25</strong> allowance</span><span><strong>12</strong> taken</span><span><strong>2</strong> approved</span><span><strong>11</strong> available</span></div>
+          </section>
+          <section class="request-list-section">
+            <div class="section-heading"><div><p class="eyebrow">Requests</p><h2>Recent activity</h2></div></div>
+            <div id="requestList" class="request-list"></div>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <footer><span>UCM Workforce demonstration</span><span>Employee app, CRM, website and customer app are separate systems.</span></footer>
+  </main>
+
+  <nav class="mobile-nav" aria-label="Mobile navigation">
+    <a class="active" href="#home" data-nav="home"><i data-lucide="layout-dashboard"></i><span>Home</span></a>
+    <a href="#shifts" data-nav="shifts"><i data-lucide="calendar-days"></i><span>Shifts</span></a>
+    <a href="#training" data-nav="training"><i data-lucide="graduation-cap"></i><span>Training</span></a>
+    <a href="#documents" data-nav="documents"><i data-lucide="folder-closed"></i><span>Docs</span></a>
+    <a href="#profile" data-nav="profile"><i data-lucide="circle-user-round"></i><span>Me</span></a>
+  </nav>
+
+  <div class="drawer-backdrop" id="drawerBackdrop" hidden></div>
+  <aside class="notification-drawer" id="notificationDrawer" aria-labelledby="notificationTitle" hidden>
+    <div class="drawer-head"><div><p class="eyebrow">Updates</p><h2 id="notificationTitle">Notifications</h2></div><button class="icon-button" data-close-drawer type="button" aria-label="Close notifications"><i data-lucide="x"></i></button></div>
+    <div id="notificationList" class="notification-list"></div>
+  </aside>
+
+  <dialog id="formDialog">
+    <form method="dialog" id="dialogForm">
+      <div class="dialog-head"><div><p class="eyebrow" id="dialogEyebrow">Employee request</p><h2 id="dialogTitle">Request</h2></div><button class="icon-button" value="cancel" aria-label="Close dialog"><i data-lucide="x"></i></button></div>
+      <div id="dialogFields" class="dialog-fields"></div>
+      <p class="form-notice"><i data-lucide="info"></i> Demonstration only. No information is transmitted or saved.</p>
+      <div class="dialog-actions"><button class="secondary-button" value="cancel">Cancel</button><button class="primary-button" id="submitDialog" value="default">Submit demonstration</button></div>
+    </form>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" hidden></div>
+  <script src="app.js"></script>
+</body>
+</html>
