@@ -4,6 +4,8 @@
 
 The website, customer app, CRM, Workforce app and Media Engine are separate products with explicit responsibilities. They may exchange approved data later, but they must not be presented as one application.
 
+Workforce, CRM and Client App production code will each use a dedicated private repository and security boundary. They are built specifically for UCM and transferred under the acceptance process in [UCM Proprietary Product Delivery And Handover](ucm-proprietary-product-delivery-and-handover.md).
+
 ## Public Website
 
 Audience: prospects, buyers, candidates and the public.

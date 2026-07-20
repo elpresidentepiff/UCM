@@ -2,13 +2,13 @@
 
 ## Decision
 
-Build production in UCM-owned accounts from this point forward. Do not keep the live employee system, billing, domain, production data or recovery access inside a developer's personal account.
+Build proprietary Workforce, CRM and Client App products for UCM, then transfer their private repositories, production services, billing, domains, credentials and recovery access to Carlos under a formal handover. No live UCM system may remain dependent on a developer's personal account after acceptance.
 
-The current prototype can be transferred without rebuilding it. It contains fictional demonstration data and no backend. Transfer it now, while the move is simple, then continue development with UCM as owner and the delivery team as invited collaborators.
+The current prototypes contain fictional demonstration data and no production backend. They can inform the private builds, but the existing public repository must not be treated as secret proprietary production source. Follow [UCM Proprietary Product Delivery And Handover](ucm-proprietary-product-delivery-and-handover.md).
 
-Supabase remains paused. No database provider should be connected until the employee identity model, access roles, privacy requirements and actual sources of truth are agreed. The public website, employee app and future CRM are separate products even if they later share approved integrations.
+Supabase remains paused. No database provider should be connected until the relevant product's identity model, access roles, privacy requirements and sources of truth are agreed. The public website, Workforce app, CRM and Client App are separate products even if they later share approved integrations.
 
-## Ownership Model
+## Ownership Model After Handover
 
 | Asset | UCM owner | Delivery access | Rule |
 | --- | --- | --- | --- |
@@ -61,24 +61,24 @@ Roles are enforced by the server and database, not by hiding screens in the brow
 
 ## Transfer Sequence
 
-1. Carlos creates the UCM GitHub organisation and enables two-factor authentication requirements.
-2. Add the delivery team as collaborators and confirm Carlos plus a UCM backup person are owners.
-3. Transfer `elpresidentepiff/UCM` to the organisation. Preserve the repository history and update local Git remotes after transfer.
-4. Carlos creates the UCM Railway workspace and adds the delivery team with the minimum required role.
-5. Create a Railway staging project from the transferred repository using `/app/employee` as the service root.
-6. Keep staging on fictional data and confirm the install experience on Carlos's iPhone and an Android device.
-7. Connect `staff.ucmservices.co.uk` only after the staging release passes review.
-8. Select authentication and define the role matrix before selecting or creating the employee database.
-9. Build and independently test server-side access controls.
-10. Import only the minimum pilot data, run the pilot, resolve defects and obtain UCM approval before wider rollout.
+1. Create three private delivery repositories dedicated exclusively to UCM Workforce, CRM and Client App.
+2. Build and review each product with fictional or synthetic data only.
+3. Complete functional, security, role-isolation, backup and restoration testing.
+4. Carlos creates the UCM GitHub organisation and enables two-factor authentication requirements.
+5. Carlos creates the UCM Railway workspace, password vault and named administrator accounts.
+6. Transfer the three private repositories with their complete histories and acceptance records.
+7. Recreate or transfer staging and production services into the UCM Railway workspace.
+8. Rotate credentials, connect the approved UCM subdomains and verify monitoring and recovery access.
+9. Train Carlos and a UCM backup administrator, then remove unnecessary delivery-owner access.
+10. Import only the approved pilot data, resolve pilot defects and obtain UCM approval before wider rollout.
 
 ## GitHub Transfer Checks
 
-- The target organisation must not already contain a repository called `UCM`.
+- The target organisation must not already contain repositories with the three agreed production names.
 - Carlos must allow the transfer and the current repository administrator must initiate it.
-- Confirm actions, deployment secrets, webhooks and GitHub Pages settings after transfer.
+- Confirm actions, deployment secrets and webhooks after each private repository transfer.
 - Update every local clone to the new organisation URL even though GitHub provides repository redirects.
-- Do not create a new repository at the old path after transfer because that can break redirects.
+- Do not create a new repository at an old private delivery path after transfer because that can break redirects.
 - Protect `main`, require reviewed changes for production code and prevent force pushes.
 
 Official reference: [GitHub repository transfers](https://docs.github.com/en/repositories/creating-and-managing-repositories/transferring-a-repository)

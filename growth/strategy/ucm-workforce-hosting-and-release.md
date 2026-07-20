@@ -4,7 +4,7 @@
 
 Use GitHub for source control, review and release history. Use Railway for protected staging and, once authentication and data governance are complete, the employee-facing web service. Do not use GitHub Pages for the real employee app because Pages is public static hosting and does not provide the application authentication or server-side authorisation required for HR and pay data.
 
-Production accounts must be owned and billed by UCM. Carlos should be an owner or administrator; delivery partners should receive only the collaborator access they need. Transfer the current portable prototype before authentication or real employee data is added. See [UCM Client Ownership And Access Setup](ucm-client-ownership-and-access-setup.md).
+Workforce will be completed in a private repository dedicated to UCM using fictional or synthetic data. At acceptance, the private repository, deployment, domains, credentials and documentation transfer to UCM-owned accounts. Carlos becomes an owner or administrator; delivery partners retain only the support access UCM authorises. See [UCM Client Ownership And Access Setup](ucm-client-ownership-and-access-setup.md) and [UCM Proprietary Product Delivery And Handover](ucm-proprietary-product-delivery-and-handover.md).
 
 Railway supports GitHub deployments, HTTPS, custom domains and pull-request preview environments. Railway services can also communicate with a future API and database over private networking rather than exposing those internal services publicly.
 
@@ -29,9 +29,9 @@ The staging deployment uses the runtime in `app/employee/`:
 
 ## Railway Staging Setup
 
-1. Push an approved employee-app checkpoint to GitHub.
-2. In Railway, create a service from `elpresidentepiff/UCM`.
-3. Set the service root directory to `/app/employee`.
+1. Move the approved Workforce checkpoint into its dedicated private delivery repository.
+2. In Railway, create a staging service from that private repository.
+3. Configure the repository root as the service root.
 4. Use a staging branch initially rather than production `main` autodeployment.
 5. Confirm Railway detects `npm start` or use the command from `railway.toml`.
 6. Set the health-check path to `/health` and generate a Railway domain.
@@ -88,9 +88,10 @@ Only the web service is public. The API and database should use Railway private 
 
 ## Immediate Next Actions
 
-1. Create the UCM-owned GitHub organisation and Railway workspace.
-2. Transfer this repository and deploy a fictional-data staging build.
+1. Create the dedicated private UCM Workforce delivery repository.
+2. Move the approved prototype into it and deploy a fictional-data staging build.
 3. Decide the employee identity and authentication provider.
 4. Confirm UCM's payroll, HR, rota, training and certificate sources of truth.
 5. Define the minimum employee record and role matrix.
 6. Build authentication and server-side access controls before importing real data.
+7. Prepare Carlos's UCM ownership accounts and complete the transfer at acceptance.
