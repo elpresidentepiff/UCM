@@ -2,7 +2,7 @@
 
 ## Current Scope
 
-This stack runs the fictional UCM Workforce prototype locally with Docker Compose and Caddy. It does not include authentication, PostgreSQL, customer data, employee data or document storage. Those services enter the private production build only after UCM approves the data model, roles and security controls.
+This stack runs the fictional UCM Workforce and UCM Client prototypes locally with Docker Compose and Caddy. It does not include authentication, PostgreSQL, customer data, employee data, secure media upload or document storage. Those services enter the private production build only after UCM approves the data model, roles and security controls.
 
 ## Start
 
@@ -12,7 +12,12 @@ From the repository root:
 docker compose --env-file deploy/local/.env.example -f deploy/local/compose.yml up --build -d
 ```
 
-Open `http://127.0.0.1:8080/` and check `http://127.0.0.1:8080/health`.
+Open:
+
+- Workforce: `http://127.0.0.1:8080/`
+- Workforce health: `http://127.0.0.1:8080/health`
+- Client App: `http://127.0.0.1:8080/client/`
+- Client App health: `http://127.0.0.1:8080/client/health`
 
 ## Stop
 
@@ -44,4 +49,4 @@ The production local system will add, after approval:
 - Monitoring, audit logs and administrator alerts.
 - Separate application services and database roles for Workforce, CRM and Client App.
 
-Production secrets belong in the UCM password vault and local environment files excluded from Git. Real employee or customer data is prohibited in this demonstration stack.
+Production secrets belong in the UCM password vault and local environment files excluded from Git. Real employee or customer data is prohibited in this demonstration stack. CleanScope media selected in the Client App stays in browser memory and is never uploaded by this prototype.

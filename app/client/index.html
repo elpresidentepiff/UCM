@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#071b14">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="UCM Client demonstration for quotes, bookings, service proof and support.">
+  <title>UCM Client</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="stylesheet" href="styles.css?v=3">
+  <script src="assets/lucide.min.js" defer></script>
+</head>
+<body>
+  <aside class="sidebar" aria-label="Primary navigation">
+    <a class="brand" href="#home" aria-label="UCM Client home">
+      <span class="brand-logo"><img src="assets/ucm-logo.png" alt="UCM"></span>
+      <span><strong>Client</strong><small>Service portal</small></span>
+    </a>
+    <nav>
+      <a class="active" href="#home" data-nav="home"><i data-lucide="layout-dashboard"></i><span>Overview</span></a>
+      <a href="#cleanscope" data-nav="cleanscope"><i data-lucide="scan-line"></i><span>CleanScope</span></a>
+      <a href="#quotes" data-nav="quotes"><i data-lucide="file-check-2"></i><span>Quotes</span></a>
+      <a href="#bookings" data-nav="bookings"><i data-lucide="calendar-days"></i><span>Bookings</span></a>
+      <a href="#proof" data-nav="proof"><i data-lucide="badge-check"></i><span>Proof Passport</span></a>
+      <a href="#documents" data-nav="documents"><i data-lucide="folder-closed"></i><span>Documents</span></a>
+      <a href="#support" data-nav="support"><i data-lucide="messages-square"></i><span>Support</span></a>
+    </nav>
+    <div class="sidebar-account">
+      <span class="account-avatar">AH</span>
+      <span><strong>Alex Hart</strong><small>Fictional client</small></span>
+      <button class="icon-button" type="button" title="Account settings" aria-label="Account settings" data-jump="account"><i data-lucide="settings"></i></button>
+    </div>
+  </aside>
+
+  <main>
+    <header class="topbar">
+      <div class="mobile-brand"><span class="top-logo"><img src="assets/ucm-logo.png" alt="UCM"></span><strong>Client</strong></div>
+      <div class="top-context"><p class="eyebrow">UCM Client</p><strong id="viewLabel">Service overview</strong></div>
+      <div class="top-actions">
+        <button class="icon-button" id="installApp" type="button" title="Install UCM Client" aria-label="Install UCM Client"><i data-lucide="download"></i></button>
+        <button class="icon-button" id="notificationButton" type="button" title="Notifications" aria-label="Open notifications"><i data-lucide="bell"></i><span class="notification-dot"></span></button>
+        <button class="avatar-button" type="button" data-jump="account" aria-label="Open account">AH</button>
+      </div>
+    </header>
+
+    <div class="demo-banner"><strong>Prototype only.</strong> All customer, quote, booking and service records are fictional. Media selected in CleanScope stays on this device and is not uploaded.</div>
+
+    <section id="home" class="view active" aria-labelledby="homeTitle">
+      <div class="page-head">
+        <div><p class="eyebrow">Good morning, Alex</p><h1 id="homeTitle">Your UCM service, clearly managed.</h1><p>Request work, follow progress and see evidence from one place.</p></div>
+        <button class="primary-button" type="button" data-jump="cleanscope"><i data-lucide="camera"></i> Request a quote</button>
+      </div>
+
+      <section class="service-hero" aria-label="Next service">
+        <div class="service-hero-copy">
+          <p class="panel-kicker"><span class="live-dot"></span> Next scheduled service</p>
+          <h2>Office evening clean</h2>
+          <p>Thursday, 23 July at 18:00</p>
+          <div class="service-meta">
+            <span><i data-lucide="map-pin"></i><strong>Canary Wharf</strong><small>London E14</small></span>
+            <span><i data-lucide="clock-3"></i><strong>4-hour window</strong><small>18:00-22:00</small></span>
+            <span><i data-lucide="clipboard-check"></i><strong>12 checks</strong><small>Proof Passport enabled</small></span>
+          </div>
+        </div>
+        <div class="service-status">
+          <span class="status confirmed">Confirmed</span>
+          <strong>Everything is ready</strong>
+          <p>Access instructions are recorded. UCM will notify you when the team is assigned.</p>
+          <button class="secondary-button" type="button" data-jump="bookings"><i data-lucide="arrow-right"></i> View booking</button>
+        </div>
+      </section>
+
+      <section class="quick-grid" aria-label="Quick actions">
+        <button type="button" data-jump="cleanscope"><span class="quick-icon green"><i data-lucide="scan-line"></i></span><span><strong>Start CleanScope</strong><small>Show us the job</small></span><i data-lucide="chevron-right"></i></button>
+        <button type="button" data-jump="quotes"><span class="quick-icon blue"><i data-lucide="file-text"></i></span><span><strong>Review quote</strong><small>One sample awaiting review</small></span><i data-lucide="chevron-right"></i></button>
+        <button type="button" data-jump="support"><span class="quick-icon amber"><i data-lucide="message-circle-more"></i></span><span><strong>Ask UCM</strong><small>Human support available</small></span><i data-lucide="chevron-right"></i></button>
+      </section>
+
+      <section class="split-layout">
+        <div class="activity-panel">
+          <div class="section-heading"><div><p class="eyebrow">Recent activity</p><h2>What has changed</h2></div><button class="text-button" type="button" data-jump="bookings">View schedule</button></div>
+          <div class="timeline compact">
+            <div><span class="timeline-icon"><i data-lucide="calendar-check"></i></span><span><strong>Service confirmed</strong><small>23 July evening clean</small></span><time>Today</time></div>
+            <div><span class="timeline-icon"><i data-lucide="file-check-2"></i></span><span><strong>Quote ready for review</strong><small>Reference UCM-Q-1042</small></span><time>Yesterday</time></div>
+            <div><span class="timeline-icon"><i data-lucide="badge-check"></i></span><span><strong>Proof Passport issued</strong><small>June office clean</small></span><time>30 Jun</time></div>
+          </div>
+        </div>
+        <aside class="care-panel">
+          <p class="eyebrow">Your care plan</p>
+          <h2>Managed Care</h2>
+          <p>Recurring cleaning, support tickets, completion evidence and monthly reporting.</p>
+          <dl><div><dt>Sites</dt><dd>1</dd></div><div><dt>Frequency</dt><dd>Weekly</dd></div><div><dt>Review</dt><dd>30 Sep</dd></div></dl>
+          <button class="text-button light" type="button" id="carePlanButton">View plan details</button>
+        </aside>
+      </section>
+    </section>
+
+    <section id="cleanscope" class="view" aria-labelledby="cleanScopeTitle">
+      <div class="page-head">
+        <div><p class="eyebrow">Camera-led quote request</p><h1 id="cleanScopeTitle">Show us the job. We will scope it.</h1><p>Guided photos or video help UCM understand the work before a human reviews the requirement and price.</p></div>
+        <span class="trust-badge"><i data-lucide="user-check"></i> Human-reviewed</span>
+      </div>
+
+      <div class="privacy-callout"><i data-lucide="shield-check"></i><div><strong>Your evidence is for scoping only.</strong><p>Choosing media does not give marketing permission. In this prototype, selected files never leave this device.</p></div></div>
+
+      <div class="scope-layout">
+        <form id="cleanScopeForm" class="scope-form" novalidate>
+          <ol class="stepper" id="scopeStepper" aria-label="CleanScope steps">
+            <li class="active" data-step="1"><span>1</span><small>Service</small></li>
+            <li data-step="2"><span>2</span><small>Site</small></li>
+            <li data-step="3"><span>3</span><small>Capture</small></li>
+            <li data-step="4"><span>4</span><small>Review</small></li>
+          </ol>
+
+          <section class="scope-step" data-scope-step="1">
+            <div class="step-head"><p class="eyebrow">Step 1 of 4</p><h2>What do you need?</h2><p>Select the closest service. UCM can refine it during review.</p></div>
+            <fieldset data-required-group="service">
+              <legend>Primary service</legend>
+              <div class="service-options">
+                <label><input type="radio" name="service" value="Office cleaning"><span><i data-lucide="building-2"></i><strong>Office cleaning</strong><small>Regular workplace care</small></span></label>
+                <label><input type="radio" name="service" value="Commercial cleaning"><span><i data-lucide="store"></i><strong>Commercial cleaning</strong><small>Business premises</small></span></label>
+                <label><input type="radio" name="service" value="Property care"><span><i data-lucide="building"></i><strong>Property care</strong><small>Blocks and communal areas</small></span></label>
+                <label><input type="radio" name="service" value="End of tenancy"><span><i data-lucide="key-round"></i><strong>End of tenancy</strong><small>Move and handover</small></span></label>
+                <label><input type="radio" name="service" value="Deep clean"><span><i data-lucide="sparkles"></i><strong>Deep clean</strong><small>One-off reset</small></span></label>
+                <label><input type="radio" name="service" value="Technical cleaning"><span><i data-lucide="server"></i><strong>Technical cleaning</strong><small>Equipment and controlled sites</small></span></label>
+              </div>
+              <span class="field-error" data-error="service"></span>
+            </fieldset>
+          </section>
+
+          <section class="scope-step" data-scope-step="2" hidden>
+            <div class="step-head"><p class="eyebrow">Step 2 of 4</p><h2>Tell us about the site</h2><p>Location, scale and timing help UCM route the enquiry correctly.</p></div>
+            <div class="field-grid">
+              <label class="field"><span>Postcode *</span><input id="scopePostcode" name="postcode" autocomplete="postal-code" maxlength="10" placeholder="E14 5AB"><small class="field-error" data-error="postcode"></small></label>
+              <label class="field"><span>Property type *</span><select name="propertyType"><option value="">Select</option><option>Office</option><option>Managed residential building</option><option>House or flat</option><option>Retail or hospitality</option><option>Technical environment</option><option>Other commercial site</option></select><small class="field-error" data-error="propertyType"></small></label>
+              <label class="field"><span>Approximate size</span><input name="size" maxlength="80" placeholder="3 floors or 4,000 sq ft"></label>
+              <label class="field"><span>Timing *</span><select name="urgency"><option value="">Select</option><option>Planning ahead</option><option>Within 30 days</option><option>Within 7 days</option><option>Urgent - within 48 hours</option></select><small class="field-error" data-error="urgency"></small></label>
+              <label class="field full"><span>What result do you need? *</span><textarea name="details" maxlength="1200" placeholder="Describe the areas, current problems, required standard and access restrictions."></textarea><small class="field-help"><span id="detailCount">0</span>/1200 characters</small><small class="field-error" data-error="details"></small></label>
+            </div>
+          </section>
+
+          <section class="scope-step" data-scope-step="3" hidden>
+            <div class="step-head"><p class="eyebrow">Step 3 of 4</p><h2>Show the areas clearly</h2><p>Capture the overall space first, then problem areas. Avoid faces, screens, paperwork and access codes.</p></div>
+            <div class="capture-guide">
+              <div><span>1</span><strong>Wide view</strong><small>Show the overall space</small></div>
+              <div><span>2</span><strong>Problem areas</strong><small>Move slowly and use good light</small></div>
+              <div><span>3</span><strong>Scale</strong><small>Include room size or measurements</small></div>
+            </div>
+            <label class="upload-zone" for="scopeMedia">
+              <i data-lucide="camera"></i>
+              <strong>Take or choose photos and video</strong>
+              <span>Up to 6 JPG, PNG, WebP, MP4 or MOV files. Maximum 25MB each.</span>
+              <span class="upload-button">Choose media</span>
+              <input id="scopeMedia" name="scopeMedia" type="file" accept="image/jpeg,image/png,image/webp,video/mp4,video/quicktime" multiple>
+            </label>
+            <div class="media-preview" id="mediaPreview" aria-live="polite"></div>
+            <label class="consent"><input name="mediaConsent" type="checkbox"><span>I have authority to share the selected files with UCM for scoping and service delivery. This is not marketing permission.</span></label>
+            <span class="field-error" data-error="media"></span>
+          </section>
+
+          <section class="scope-step" data-scope-step="4" hidden>
+            <div class="step-head"><p class="eyebrow">Step 4 of 4</p><h2>Review your request</h2><p>Nothing is priced or approved automatically. A UCM employee makes the final decision.</p></div>
+            <div class="review-grid" id="scopeReview"></div>
+            <div class="human-review"><i data-lucide="badge-info"></i><div><strong>What happens next</strong><p>UCM checks the information, asks any necessary questions and provides a human-reviewed scope. A site visit may still be required.</p></div></div>
+            <label class="consent"><input name="enquiryConsent" type="checkbox"><span>I understand this demonstration does not submit or store a real enquiry.</span></label>
+            <span class="field-error" data-error="enquiryConsent"></span>
+          </section>
+
+          <div class="scope-actions">
+            <button class="secondary-button" id="scopeBack" type="button" hidden><i data-lucide="arrow-left"></i> Back</button>
+            <button class="primary-button" id="scopeNext" type="button">Continue <i data-lucide="arrow-right"></i></button>
+            <button class="primary-button" id="scopeSubmit" type="submit" hidden><i data-lucide="send"></i> Create demonstration request</button>
+          </div>
+        </form>
+
+        <aside class="scope-summary">
+          <p class="eyebrow">Live summary</p>
+          <h2 id="summaryService">Select a service</h2>
+          <dl>
+            <div><dt>Postcode</dt><dd id="summaryPostcode">Not added</dd></div>
+            <div><dt>Timing</dt><dd id="summaryUrgency">Not selected</dd></div>
+            <div><dt>Evidence</dt><dd id="summaryMedia">No files</dd></div>
+          </dl>
+          <div class="completion"><span><small>Scope completeness</small><strong id="completionValue">10%</strong></span><div><i id="completionBar"></i></div></div>
+          <p class="scope-note"><i data-lucide="lock-keyhole"></i> Production requires encrypted upload, retention controls, authentication and audit logging before real customer media is accepted.</p>
+        </aside>
+      </div>
+      <section class="scope-success" id="scopeSuccess" hidden tabindex="-1">
+        <span class="success-mark"><i data-lucide="check"></i></span>
+        <p class="eyebrow">Demonstration complete</p>
+        <h2>Your CleanScope request is ready for human review.</h2>
+        <p>No information or media was transmitted. The sample reference is <strong id="scopeReference"></strong>.</p>
+        <div><button class="secondary-button" type="button" id="restartScope">Start another</button><button class="primary-button" type="button" data-jump="quotes">View quote journey</button></div>
+      </section>
+    </section>
+
+    <section id="quotes" class="view" aria-labelledby="quotesTitle">
+      <div class="page-head"><div><p class="eyebrow">Human-reviewed pricing</p><h1 id="quotesTitle">Quotes and approvals</h1><p>Understand the scope, exclusions and next step before making a decision.</p></div><button class="primary-button" type="button" data-jump="cleanscope"><i data-lucide="plus"></i> New request</button></div>
+      <article class="quote-record">
+        <header><div><span class="status review">Sample - ready for review</span><h2>Weekly office cleaning</h2><p>UCM-Q-1042 - Canary Wharf, London E14</p></div><div class="quote-value"><small>Illustrative monthly price</small><strong>GBP 1,480</strong><span>Excluding VAT</span></div></header>
+        <div class="quote-body">
+          <section><h3>Included scope</h3><ul class="check-list"><li><i data-lucide="check"></i> Three evening visits each week</li><li><i data-lucide="check"></i> Workspaces and communal areas</li><li><i data-lucide="check"></i> Kitchen and washroom service</li><li><i data-lucide="check"></i> Monthly supervisor quality check</li><li><i data-lucide="check"></i> Proof Passport completion record</li></ul></section>
+          <section><h3>Commercial summary</h3><dl class="detail-list"><div><dt>Proposed start</dt><dd>3 August 2026</dd></div><div><dt>Initial term</dt><dd>12 months</dd></div><div><dt>Notice</dt><dd>As stated in final contract</dd></div><div><dt>Valid until</dt><dd>30 July 2026</dd></div></dl></section>
+        </div>
+        <footer><p><i data-lucide="circle-alert"></i> Demonstration only. This is not a real offer or contract.</p><div><button class="secondary-button" id="quoteQuestion" type="button"><i data-lucide="message-circle"></i> Ask a question</button><button class="primary-button" id="quoteApprove" type="button"><i data-lucide="check"></i> Preview approval</button></div></footer>
+      </article>
+      <div class="empty-band"><i data-lucide="archive"></i><div><strong>No previous quotes in this demonstration</strong><p>Accepted, expired and declined quotes will appear here after the secure account system is connected.</p></div></div>
+    </section>
+
+    <section id="bookings" class="view" aria-labelledby="bookingsTitle">
+      <div class="page-head"><div><p class="eyebrow">Service schedule</p><h1 id="bookingsTitle">Bookings</h1><p>Upcoming visits, access readiness and recurring service dates.</p></div><button class="secondary-button" id="requestChange" type="button"><i data-lucide="calendar-clock"></i> Request change</button></div>
+      <div class="booking-list">
+        <article class="booking featured"><time><strong>23</strong><span>Jul</span></time><div><span class="status confirmed">Confirmed</span><h2>Office evening clean</h2><p>18:00-22:00 - Canary Wharf, London E14</p><div class="tag-row"><span><i data-lucide="key-round"></i> Access recorded</span><span><i data-lucide="badge-check"></i> Proof enabled</span></div></div><button class="icon-button" type="button" aria-label="Open booking details" data-dialog="booking"><i data-lucide="chevron-right"></i></button></article>
+        <article class="booking"><time><strong>30</strong><span>Jul</span></time><div><span class="status planned">Planned</span><h2>Office evening clean</h2><p>18:00-22:00 - Canary Wharf, London E14</p></div><button class="icon-button" type="button" aria-label="Open booking details" data-dialog="booking"><i data-lucide="chevron-right"></i></button></article>
+        <article class="booking"><time><strong>06</strong><span>Aug</span></time><div><span class="status planned">Planned</span><h2>Office evening clean</h2><p>18:00-22:00 - Canary Wharf, London E14</p></div><button class="icon-button" type="button" aria-label="Open booking details" data-dialog="booking"><i data-lucide="chevron-right"></i></button></article>
+      </div>
+    </section>
+
+    <section id="proof" class="view" aria-labelledby="proofTitle">
+      <div class="page-head"><div><p class="eyebrow">Visible service evidence</p><h1 id="proofTitle">Proof Passport</h1><p>A human-reviewed completion record showing the agreed work, approved evidence and any issues.</p></div><span class="status verified"><i data-lucide="badge-check"></i> Sample verified</span></div>
+      <article class="passport">
+        <header><div class="passport-mark"><i data-lucide="shield-check"></i></div><div><p class="eyebrow">Completion record</p><h2>June office service</h2><p>UCM-PP-2026-0630 - Issued 30 June 2026</p></div><span class="status verified">Complete</span></header>
+        <div class="passport-metrics"><div><span>12/12</span><small>Checks completed</small></div><div><span>0</span><small>Unresolved issues</small></div><div><span>4</span><small>Approved photos</small></div><div><span>19:54</span><small>Supervisor sign-off</small></div></div>
+        <section><div class="section-heading"><div><p class="eyebrow">Checklist</p><h3>Agreed service checks</h3></div><span>Human-reviewed</span></div><div class="proof-checks"><span><i data-lucide="check"></i> Workspaces</span><span><i data-lucide="check"></i> Communal areas</span><span><i data-lucide="check"></i> Kitchen</span><span><i data-lucide="check"></i> Washrooms</span><span><i data-lucide="check"></i> Floors</span><span><i data-lucide="check"></i> Waste points</span></div></section>
+        <section class="evidence-placeholder"><i data-lucide="images"></i><div><strong>Approved evidence gallery</strong><p>Production will show only consent-approved site images for the authorised customer and site.</p></div><button class="secondary-button" id="evidenceButton" type="button">Preview controls</button></section>
+        <footer><p><i data-lucide="info"></i> A Proof Passport records service completion. It is not a guarantee of sterility or pathogen elimination.</p><button class="secondary-button" type="button" data-download="passport"><i data-lucide="download"></i> Download sample</button></footer>
+      </article>
+    </section>
+
+    <section id="documents" class="view" aria-labelledby="documentsTitle">
+      <div class="page-head"><div><p class="eyebrow">Controlled documents</p><h1 id="documentsTitle">Document centre</h1><p>Approved documents for your account and contracted services.</p></div></div>
+      <div class="document-list">
+        <article><span class="file-icon"><i data-lucide="file-shield"></i></span><div><strong>Public liability insurance</strong><small>Sample PDF - expires 31 December 2026</small></div><span class="status current">Current</span><button class="icon-button" type="button" data-download="insurance" aria-label="Download sample insurance document"><i data-lucide="download"></i></button></article>
+        <article><span class="file-icon blue"><i data-lucide="file-check-2"></i></span><div><strong>Service specification</strong><small>Sample PDF - version 2</small></div><span class="status current">Current</span><button class="icon-button" type="button" data-download="specification" aria-label="Download sample service specification"><i data-lucide="download"></i></button></article>
+        <article><span class="file-icon amber"><i data-lucide="clipboard-list"></i></span><div><strong>Site RAMS</strong><small>Sample controlled document</small></div><span class="status review">Review</span><button class="icon-button" type="button" data-download="rams" aria-label="Download sample RAMS document"><i data-lucide="download"></i></button></article>
+      </div>
+    </section>
+
+    <section id="support" class="view" aria-labelledby="supportTitle">
+      <div class="page-head"><div><p class="eyebrow">Human help throughout</p><h1 id="supportTitle">Support</h1><p>Raise a service question, maintenance issue or account request and keep its status visible.</p></div><button class="primary-button" id="newTicket" type="button"><i data-lucide="plus"></i> New request</button></div>
+      <section class="support-options">
+        <button type="button" id="callSupport"><span><i data-lucide="phone"></i></span><strong>Call UCM</strong><small>For urgent operational matters</small></button>
+        <button type="button" id="messageSupport"><span><i data-lucide="message-circle"></i></span><strong>Send a message</strong><small>Human response during business hours</small></button>
+        <button type="button" data-jump="cleanscope"><span><i data-lucide="scan-line"></i></span><strong>Request new work</strong><small>Use guided CleanScope</small></button>
+      </section>
+      <div class="ticket-list" id="ticketList"><article><span class="ticket-priority">Service question</span><div><strong>Confirm bank-holiday schedule</strong><small>UCM-T-208 - Updated yesterday</small></div><span class="status pending">Awaiting UCM</span><button class="icon-button" type="button" data-dialog="ticket" aria-label="Open support request"><i data-lucide="chevron-right"></i></button></article></div>
+    </section>
+
+    <section id="account" class="view" aria-labelledby="accountTitle">
+      <div class="page-head"><div><p class="eyebrow">Account and privacy</p><h1 id="accountTitle">Account</h1><p>Sample profile, communication choices and security controls.</p></div></div>
+      <div class="account-layout">
+        <section class="profile-panel"><span class="large-avatar">AH</span><div><h2>Alex Hart</h2><p>Facilities contact - Northstar Studio Ltd</p><span class="status current">Fictional demonstration</span></div></section>
+        <section class="settings-list"><button type="button" data-dialog="profile"><span><i data-lucide="user-round"></i><strong>Contact details</strong><small>Manage authorised contact information</small></span><i data-lucide="chevron-right"></i></button><button type="button" data-dialog="security"><span><i data-lucide="shield"></i><strong>Sign-in and security</strong><small>Production authentication is not connected</small></span><i data-lucide="chevron-right"></i></button><button type="button" data-dialog="privacy"><span><i data-lucide="lock-keyhole"></i><strong>Privacy and permissions</strong><small>Media, communications and account requests</small></span><i data-lucide="chevron-right"></i></button></section>
+      </div>
+    </section>
+  </main>
+
+  <nav class="mobile-nav" aria-label="Mobile navigation">
+    <a class="active" href="#home" data-nav="home"><i data-lucide="layout-dashboard"></i><span>Home</span></a>
+    <a href="#cleanscope" data-nav="cleanscope"><i data-lucide="scan-line"></i><span>Quote</span></a>
+    <a href="#bookings" data-nav="bookings"><i data-lucide="calendar-days"></i><span>Bookings</span></a>
+    <a href="#proof" data-nav="proof"><i data-lucide="badge-check"></i><span>Proof</span></a>
+    <a href="#support" data-nav="support"><i data-lucide="messages-square"></i><span>Support</span></a>
+  </nav>
+
+  <aside class="notification-panel" id="notificationPanel" hidden aria-labelledby="notificationTitle">
+    <header><div><p class="eyebrow">Updates</p><h2 id="notificationTitle">Notifications</h2></div><button class="icon-button" id="closeNotifications" type="button" aria-label="Close notifications"><i data-lucide="x"></i></button></header>
+    <div><article><span class="notification-icon"><i data-lucide="file-check-2"></i></span><div><strong>Sample quote ready</strong><p>Review the included scope and commercial summary.</p><small>Yesterday</small></div></article><article><span class="notification-icon blue"><i data-lucide="calendar-check"></i></span><div><strong>Booking confirmed</strong><p>Your 23 July office service is confirmed.</p><small>Today</small></div></article></div>
+  </aside>
+  <div class="scrim" id="scrim" hidden></div>
+
+  <dialog id="appDialog">
+    <form method="dialog">
+      <header><div><p class="eyebrow" id="dialogEyebrow">UCM Client</p><h2 id="dialogTitle">Details</h2></div><button class="icon-button" value="cancel" aria-label="Close"><i data-lucide="x"></i></button></header>
+      <div id="dialogBody"></div>
+      <footer><button class="secondary-button" value="cancel">Close</button><button class="primary-button" id="dialogAction" value="default">Continue</button></footer>
+    </form>
+  </dialog>
+
+  <div class="toast" id="toast" hidden role="status"></div>
+  <script src="app.js?v=4"></script>
+</body>
+</html>

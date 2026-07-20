@@ -1,0 +1,14 @@
+{
+  "name": "ucm-client",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Installable UCM Client demonstration and container-ready staging service.",
+  "scripts": {
+    "start": "node server.js",
+    "check": "node --check app.js && node --check service-worker.js && node --check server.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
