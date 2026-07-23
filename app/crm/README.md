@@ -8,7 +8,7 @@ This folder proves the commercial workflow and interface direction. It does not 
 
 Open [`tenders.html`](tenders.html) for the operational buyer, portal and framework tracker. It includes:
 
-- 45 public-sector portals, housing providers, FM primes and accreditation routes.
+- 103 individually tracked public-sector portals, London authorities, housing providers, property managers, developers, FM primes and accreditation routes.
 - The current RM6264, Anchor Hanover, GLA, Kingston and TfL opportunity position.
 - Editable registration, application, owner, deadline and contact history fields.
 - An RM6264 readiness register covering identity, insurance, finance, policies and operational evidence.
