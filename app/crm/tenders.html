@@ -22,6 +22,7 @@
       <a href="index.html#compliance">Compliance</a>
       <a href="index.html#carbon">Carbon actions</a>
       <a class="active" href="tenders.html">Tenders &amp; registrations</a>
+      <a href="#supplier-pack">Supplier evidence pack</a>
       <a href="#rm6264">RM6264 readiness</a>
     </nav>
     <div class="sidebar-foot">
@@ -73,6 +74,98 @@
         <p class="section-copy">The queue recalculates from priority, application status and the next deadline.</p>
       </div>
       <div id="priorityQueue" class="priority-queue"></div>
+    </section>
+
+    <section id="supplier-pack" class="section supplier-pack" aria-labelledby="supplier-pack-heading">
+      <div class="section-head tracker-head">
+        <div>
+          <p class="eyebrow">One reusable company pack</p>
+          <h2 id="supplier-pack-heading">GOV.UK registration and supplier evidence</h2>
+        </div>
+        <div class="toolbar">
+          <button id="exportEvidenceCsv" class="icon-action" type="button"><i data-lucide="download"></i><span>Export evidence CSV</span></button>
+        </div>
+      </div>
+
+      <div class="platform-truth">
+        <div>
+          <span class="step-number">1</span>
+          <strong>GOV.UK One Login</strong>
+          <p>An individual work-email account with two-factor authentication. Agree the first UCM administrator and a backup.</p>
+        </div>
+        <div>
+          <span class="step-number">2</span>
+          <strong>Find a Tender CDP</strong>
+          <p>Register UCM, complete core supplier information and obtain the PPON. Create a current share code or supplier file.</p>
+        </div>
+        <div>
+          <span class="step-number">3</span>
+          <strong>Buyer portal</strong>
+          <p>Join each council, housing, FM or private buyer system separately. The Central Digital Platform does not replace those portals.</p>
+        </div>
+        <div>
+          <span class="step-number">4</span>
+          <strong>Procurement response</strong>
+          <p>Add contract-specific pricing, method statements, references, mobilisation, TUPE, social value and declarations.</p>
+        </div>
+      </div>
+
+      <div class="security-notice">
+        <i data-lucide="shield-alert"></i>
+        <p><strong>Status tracking only.</strong> Do not upload bank evidence, accounts, personal connected-person data, certificates or signed declarations to this public app. Keep source files in UCM's private, access-controlled evidence library.</p>
+      </div>
+
+      <div class="evidence-metrics" aria-label="Supplier evidence summary">
+        <div><span>Evidence items</span><strong id="evidenceTotal">0</strong></div>
+        <div><span>Ready</span><strong id="evidenceReady">0</strong></div>
+        <div><span>In progress</span><strong id="evidenceProgress">0</strong></div>
+        <div><span>Required / expired</span><strong id="evidenceRequired">0</strong></div>
+      </div>
+
+      <div class="evidence-filters" aria-label="Supplier evidence filters">
+        <label class="search-field" for="evidenceSearch">
+          <span>Search evidence</span>
+          <span class="input-shell"><i data-lucide="search"></i><input id="evidenceSearch" type="search" placeholder="Insurance, RAMS, accounts, safeguarding..."></span>
+        </label>
+        <label for="evidenceCategory">Category
+          <select id="evidenceCategory">
+            <option value="all">All categories</option>
+          </select>
+        </label>
+        <label for="evidenceBuyer">Buyer use
+          <select id="evidenceBuyer">
+            <option value="all">All buyer types</option>
+            <option value="universal">Universal</option>
+            <option value="public">Council / public</option>
+            <option value="housing">Housing provider</option>
+            <option value="fm">FM prime</option>
+            <option value="property">Property / developer</option>
+            <option value="specialist">Specialist site</option>
+          </select>
+        </label>
+        <label for="evidenceStatus">Status
+          <select id="evidenceStatus">
+            <option value="all">All states</option>
+            <option value="required">Required</option>
+            <option value="in-progress">In progress</option>
+            <option value="ready">Ready</option>
+            <option value="expired">Expired</option>
+            <option value="not-applicable">Not applicable</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="register-meta">
+        <span id="evidenceResultCount">0 evidence items</span>
+        <span>Update status, owner and review date. Changes stay in this browser.</span>
+      </div>
+      <div id="evidenceRows" class="evidence-list"></div>
+
+      <div class="official-links">
+        <a href="https://www.gov.uk/government/publications/procurement-act-2023-short-guides/suppliers-how-to-register-your-organisation-and-first-administrator-on-find-a-tender-in-three-easy-steps-html" target="_blank" rel="noreferrer">Official registration guide <i data-lucide="external-link"></i></a>
+        <a href="https://www.gov.uk/government/publications/procurement-act-2023-short-guides/suppliers-detailed-walkthrough-how-an-administrator-completes-and-updates-supplier-information-html" target="_blank" rel="noreferrer">Detailed supplier-information walkthrough <i data-lucide="external-link"></i></a>
+        <a href="https://www.gov.uk/government/publications/procurement-act-2023-short-guides/central-digital-platform-factsheet-html" target="_blank" rel="noreferrer">Central Digital Platform factsheet <i data-lucide="external-link"></i></a>
+      </div>
     </section>
 
     <section class="section" aria-labelledby="register-heading">
