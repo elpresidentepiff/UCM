@@ -19,7 +19,7 @@ Open [`tenders.html`](tenders.html) for the operational buyer, portal and framew
 
 The company CRM is preloaded with researched public information but does not claim that UCM has registered, contacted or applied where that has not been confirmed. Company progress is stored only in the current browser until the private production CRM is built. Sensitive source files must be kept in private, access-controlled storage and must never be uploaded to the public demonstration.
 
-The current control file is [`growth/tenders/ucm-level-1-master-procurement-register.md`](../../growth/tenders/ucm-level-1-master-procurement-register.md). The advanced operating guide is [`growth/tenders/ucm-one-login-and-supplier-evidence-pack.md`](../../growth/tenders/ucm-one-login-and-supplier-evidence-pack.md).
+The current control file is [`growth/tenders/ucm-level-1-master-procurement-register.md`](../../growth/tenders/ucm-level-1-master-procurement-register.md). The first controlled working documents are in [`growth/tenders/level-1-templates/`](../../growth/tenders/level-1-templates/README.md). The advanced operating guide is [`growth/tenders/ucm-one-login-and-supplier-evidence-pack.md`](../../growth/tenders/ucm-one-login-and-supplier-evidence-pack.md).
 
 Production development will move to a dedicated private UCM delivery repository and follow:
 

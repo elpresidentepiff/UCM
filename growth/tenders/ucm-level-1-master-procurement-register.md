@@ -48,6 +48,8 @@ The actual evidence belongs in a private UCM-controlled document library. This f
 | `WAITING FOR CARLOS` | Carlos must provide the document, fact or decision |
 | `CONDITIONAL` | Only required for a relevant contract or role |
 | `READY TO BUILD` | The delivery team can create the document after receiving the required facts |
+| `TEMPLATE CREATED` | A controlled working template exists but still requires verified facts and approval |
+| `DRAFT - AWAITING INPUTS` | A populated draft exists but cannot be issued until Carlos verifies the marked fields |
 | `COMPLETE` | Verified evidence is stored privately and its review date is recorded |
 
 ## The 12 Items Requested From Carlos
@@ -81,12 +83,12 @@ These facts are leads, not final tender evidence:
 
 | Output | Minimum Level 1 contents | Dependency | Status |
 |---|---|---|---|
-| Company capability sheet | Legal identity, services, coverage, capacity, insurance summary, two proof points and contact route | Items 1, 3, 7, 8, 9 and 10 | `READY TO BUILD` |
-| Basic RAMS set | General cleaning, washrooms, kitchens, deep cleaning, slips, manual handling, lone work, equipment and relevant COSHH controls | Items 4, 5, 11 and 12 | `READY TO BUILD` |
-| COSHH register | Product, use, SDS date, assessment owner, PPE, dilution, storage and review date | Item 5 | `READY TO BUILD` |
-| Mobilisation checklist | Award, survey, scope, staff, access, equipment, induction, first-day check and first-week review | Items 7, 8 and 12 | `READY TO BUILD` |
-| Quality checklist | Cleaner completion, supervisor check, defects, corrective action and client acknowledgement | Item 12 | `READY TO BUILD` |
-| Proof Passport example | Job details, checklist, approved photographs, issues, sign-off and next action | Items 10 and 12 | `READY TO BUILD` |
+| Company capability sheet | Legal identity, services, coverage, capacity, insurance summary, two proof points and contact route | Items 1, 3, 7, 8, 9 and 10 | `DRAFT - AWAITING INPUTS` |
+| Basic RAMS set | General cleaning, washrooms, kitchens, deep cleaning, slips, manual handling, lone work, equipment and relevant COSHH controls | Items 4, 5, 11 and 12 | `TEMPLATE CREATED` |
+| COSHH register | Product, use, SDS date, assessment owner, PPE, dilution, storage and review date | Item 5 | `TEMPLATE CREATED` |
+| Mobilisation checklist | Award, survey, scope, staff, access, equipment, induction, first-day check and first-week review | Items 7, 8 and 12 | `TEMPLATE CREATED` |
+| Quality checklist | Cleaner completion, supervisor check, defects, corrective action and client acknowledgement | Item 12 | `TEMPLATE CREATED` |
+| Proof Passport example | Job details, checklist, approved photographs, issues, sign-off and next action | Items 10 and 12 | `TEMPLATE CREATED` |
 | Pricing and margin workbook | Labour, NI, pension, holiday, supervision, products, equipment, travel, overhead, risk and minimum margin | Items 6, 7 and 8 | `READY TO BUILD` |
 | Two case studies | Problem, scope, delivery, result, approved evidence and reference permission | Items 9 and 10 | `READY TO BUILD` |
 | Standard tender folder | Company, insurance, safety, finance, operations, proof and submission folders | All applicable items | `READY TO BUILD` |
@@ -158,9 +160,11 @@ Do not ask Carlos for these unless an opportunity actually requires them:
 | Date | Update | Owner | Result |
 |---|---|---|---|
 | 23 Jul 2026 | Created the Level 1 master procurement register and reduced the Carlos request to 12 basic items | Delivery team | Awaiting Carlos's evidence |
+| 23 Jul 2026 | Created the first controlled template pack: capability draft, RAMS, COSHH, mobilisation, quality/Proof Passport and document control | Delivery team | Templates ready for verified inputs and human approval |
 
 ## Related Files
 
 - [Full supplier evidence guide](ucm-one-login-and-supplier-evidence-pack.md) - later-stage and buyer-specific requirements.
 - [Verified opportunity sweep](verified-opportunity-sweep-2026-07-23.md) - externally verified opportunities and supplier routes.
+- [Level 1 working templates](level-1-templates/README.md) - documents produced by the delivery team and awaiting verified UCM inputs.
 - [UCM Tender Control](../../app/crm/tenders.html) - browser-based opportunity and follow-up tracker.
