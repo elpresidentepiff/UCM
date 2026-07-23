@@ -1,5 +1,7 @@
 # UCM One Login, Central Digital Platform and Supplier Evidence Pack
 
+> **Current starting point:** Use the [UCM Level 1 Master Procurement Register](ucm-level-1-master-procurement-register.md) for the 12 basic items requested from Carlos and the first GBP 50,000-and-under opportunities. This document is the advanced evidence library for later frameworks, major buyers and contract-specific requirements.
+
 ## Purpose
 
 This is the master list UCM should build once and reuse across councils, housing providers, property managers, developers, FM primes and public frameworks.
