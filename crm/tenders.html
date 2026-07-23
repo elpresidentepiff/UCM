@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="UCM tender, framework and supplier registration control centre.">
+  <title>UCM Tender Control</title>
+  <link rel="stylesheet" href="tenders.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <a class="brand" href="index.html" aria-label="UCM CRM dashboard">
+      <span class="brand-mark">UCM</span>
+      <span><strong>Commercial CRM</strong><small>Internal operations</small></span>
+    </a>
+    <nav aria-label="CRM sections">
+      <a href="index.html">Dashboard</a>
+      <a href="index.html#pipeline">Pipeline</a>
+      <a href="index.html#accounts">Accounts and sites</a>
+      <a href="index.html#contracts">Contracts</a>
+      <a href="index.html#compliance">Compliance</a>
+      <a href="index.html#carbon">Carbon actions</a>
+      <a class="active" href="tenders.html">Tenders &amp; registrations</a>
+      <a href="#rm6264">RM6264 readiness</a>
+    </nav>
+    <div class="sidebar-foot">
+      <span class="status-dot"></span>
+      Browser-local tracking
+    </div>
+  </aside>
+
+  <main>
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">UCM commercial system</p>
+        <strong>Tender and supplier control</strong>
+      </div>
+      <div class="system-links" aria-label="Related UCM systems">
+        <a href="index.html">CRM</a>
+        <a href="https://www.ucmservices.co.uk/" target="_blank" rel="noreferrer">Website</a>
+        <a href="https://elpresidentepiff.github.io/UCM/">Growth Center</a>
+      </div>
+    </header>
+
+    <div class="mode-banner"><strong>Honest status control.</strong> Known contact details and public opportunities are preloaded. Nothing is marked registered, contacted or submitted unless confirmed by UCM.</div>
+
+    <section class="section tender-intro">
+      <div>
+        <p class="eyebrow">Tender control room</p>
+        <h1>Turn registrations into qualified contract opportunities.</h1>
+        <p>Every portal, framework, housing provider and FM prime has an owner, current state and next action. Work the priority queue first; do not confuse joining portals with winning profitable contracts.</p>
+      </div>
+      <div class="priority-note">
+        <span>Priority zero</span>
+        <strong>Complete the RM6264 supplier pack</strong>
+        <p>Insurance, Cyber Essentials, finance, policies and service filters must be evidenced before submission.</p>
+        <a class="text-link" href="#rm6264">Open readiness register</a>
+      </div>
+    </section>
+
+    <section class="metric-strip metric-five" aria-label="Tender summary">
+      <div><span>Tracked routes</span><strong id="metricTotal">0</strong><small>Buyer and supplier routes</small></div>
+      <div><span>Priority now</span><strong id="metricPriority">0</strong><small>Immediate next actions</small></div>
+      <div><span>Registered</span><strong id="metricRegistered">0</strong><small>Confirmed only</small></div>
+      <div><span>Applied / ongoing</span><strong id="metricActive">0</strong><small>Submission activity</small></div>
+      <div><span>Blocked</span><strong id="metricBlocked">0</strong><small>Evidence or eligibility gap</small></div>
+    </section>
+
+    <section class="section action-band" aria-labelledby="priority-heading">
+      <div class="section-head">
+        <div><p class="eyebrow">Work in order</p><h2 id="priority-heading">Priority action queue</h2></div>
+        <p class="section-copy">The queue recalculates from priority, application status and the next deadline.</p>
+      </div>
+      <div id="priorityQueue" class="priority-queue"></div>
+    </section>
+
+    <section class="section" aria-labelledby="register-heading">
+      <div class="section-head tracker-head">
+        <div><p class="eyebrow">Full register</p><h2 id="register-heading">Opportunities and registrations</h2></div>
+        <div class="toolbar">
+          <button id="exportCsv" class="icon-action" type="button"><i data-lucide="download"></i><span>Export CSV</span></button>
+          <button id="resetTracker" class="icon-action quiet" type="button"><i data-lucide="rotate-ccw"></i><span>Reset local data</span></button>
+        </div>
+      </div>
+
+      <div class="tracker-filters" aria-label="Tender filters">
+        <label class="search-field" for="searchInput">
+          <span>Search</span>
+          <span class="input-shell"><i data-lucide="search"></i><input id="searchInput" type="search" placeholder="Buyer, route, service or email"></span>
+        </label>
+        <label for="typeFilter">Route
+          <select id="typeFilter">
+            <option value="all">All routes</option>
+            <option value="live-opportunity">Live / pipeline opportunity</option>
+            <option value="public-portal">Public portal</option>
+            <option value="housing">Housing and framework</option>
+            <option value="fm-prime">FM prime</option>
+            <option value="accreditation">Accreditation</option>
+          </select>
+        </label>
+        <label for="registrationFilter">Registration
+          <select id="registrationFilter">
+            <option value="all">All states</option>
+            <option value="not-started">Not started</option>
+            <option value="researching">Researching</option>
+            <option value="in-progress">In progress</option>
+            <option value="registered">Registered</option>
+            <option value="not-required">Not required</option>
+          </select>
+        </label>
+        <label for="applicationFilter">Application
+          <select id="applicationFilter">
+            <option value="all">All states</option>
+            <option value="not-started">Not started</option>
+            <option value="preparing">Preparing</option>
+            <option value="submitted">Submitted</option>
+            <option value="ongoing">Ongoing</option>
+            <option value="monitor">Monitor</option>
+            <option value="subcontract">Subcontract route</option>
+            <option value="closed">Closed</option>
+            <option value="blocked">Blocked</option>
+          </select>
+        </label>
+        <label for="priorityFilter">Priority
+          <select id="priorityFilter">
+            <option value="all">All priorities</option>
+            <option value="0">P0 - immediate</option>
+            <option value="1">P1 - this month</option>
+            <option value="2">P2 - build route</option>
+            <option value="3">P3 - monitor</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="register-meta">
+        <span id="resultCount">0 routes</span>
+        <span>Select a row to update progress and record contact.</span>
+      </div>
+      <div class="table-wrap tender-table-wrap">
+        <table class="tender-table">
+          <thead>
+            <tr>
+              <th>Buyer / route</th>
+              <th>Opportunity</th>
+              <th>Priority</th>
+              <th>Registration</th>
+              <th>Application</th>
+              <th>Contact</th>
+              <th>Deadline</th>
+              <th>Next action</th>
+            </tr>
+          </thead>
+          <tbody id="tenderRows"></tbody>
+        </table>
+      </div>
+      <div id="tenderDetail" class="detail-panel tender-detail" hidden></div>
+    </section>
+
+    <section id="rm6264" class="section band" aria-labelledby="readiness-heading">
+      <div class="section-head">
+        <div><p class="eyebrow">Government Commercial Agency</p><h2 id="readiness-heading">RM6264 readiness register</h2></div>
+        <p class="section-copy">Open to new suppliers until 23 February 2029. Passing admission does not guarantee work; buyer filtering and competitive responses still decide revenue.</p>
+      </div>
+      <div class="readiness-layout">
+        <div>
+          <div class="readiness-summary">
+            <div><span>Complete</span><strong id="readinessComplete">0</strong></div>
+            <div><span>In progress</span><strong id="readinessProgress">0</strong></div>
+            <div><span>Required</span><strong id="readinessRequired">0</strong></div>
+          </div>
+          <div id="readinessRows" class="readiness-list"></div>
+        </div>
+        <aside class="submission-brief">
+          <p class="eyebrow">UCM entry position</p>
+          <h3>Start narrow and credible</h3>
+          <dl>
+            <div><dt>Legal entity</dt><dd>Universal Cleaning &amp; Maintenance Services Ltd, company 12265169</dd></div>
+            <div><dt>Initial value bands</dt><dd>GBP 0-25k and GBP 25-50k; add GBP 50-100k only after finance review</dd></div>
+            <div><dt>Lead services</dt><dd>Routine, deep, reactive, technical/IT rooms, windows, external areas and property handover</dd></div>
+            <div><dt>Commercial levy</dt><dd>Model the 1% DPS order revenue levy in every price</dd></div>
+            <div><dt>Do not select yet</dt><dd>Clinical, hospital, pest, waste or unsupported specialist categories</dd></div>
+          </dl>
+          <a class="primary-link" href="https://www.gca.gov.uk/agreements/RM6264" target="_blank" rel="noreferrer">Open official agreement <i data-lucide="external-link"></i></a>
+          <a class="secondary-link" href="https://supplierregistration.cabinetoffice.gov.uk/organisation/register" target="_blank" rel="noreferrer">Open Supplier Registration Service <i data-lucide="external-link"></i></a>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section governance" aria-labelledby="governance-heading">
+      <div>
+        <p class="eyebrow">Operating rule</p>
+        <h2 id="governance-heading">One route, one owner, one next action.</h2>
+      </div>
+      <div class="governance-grid">
+        <p><strong>Register selectively.</strong> Prioritise portals that expose London cleaning demand, not badges that produce no pipeline.</p>
+        <p><strong>Bid selectively.</strong> Score margin, travel, mobilisation, payment terms, evidence burden and delivery capacity before committing.</p>
+        <p><strong>Record honestly.</strong> A downloaded pack is not an application. A portal login is not an approved supplier appointment.</p>
+        <p><strong>Protect margin.</strong> Capture levies, TUPE, wage requirements, consumables, supervision, reporting and mobilisation costs.</p>
+      </div>
+    </section>
+
+    <footer>
+      <span>UCM Tender Control</span>
+      <span>Public research plus browser-local UCM progress. Verify each notice before relying on dates or requirements.</span>
+    </footer>
+  </main>
+
+  <div id="toast" class="toast" hidden role="status"></div>
+  <script src="../client/assets/lucide.min.js"></script>
+  <script src="tenders.js"></script>
+</body>
+</html>
