@@ -1,5 +1,5 @@
-const STORAGE_KEY = "ucm-tender-control-v1";
-const READINESS_KEY = "ucm-rm6264-readiness-v1";
+const STORAGE_KEY = "ucm-tender-control-v2";
+const READINESS_KEY = "ucm-rm6264-readiness-v2";
 
 const routeLabels = {
   "live-opportunity": "Live / pipeline",
@@ -42,7 +42,7 @@ function record(id, buyer, type, opportunity, route, value, priority, registrati
   return {
     id, buyer, type, opportunity, route, value, priority, registration, application,
     contact, email, portal, notice, deadline, nextAction, requirements, notes,
-    owner: "Unassigned", lastContacted: "", activity: []
+    contactSource: "", owner: "Unassigned", lastContacted: "", activity: []
   };
 }
 
@@ -248,6 +248,218 @@ initialRecords.push(
   ))
 );
 
+const verifiedContacts = {
+  "rm6264": { source: official.rm6264 },
+  "anchor": { source: "https://www.find-tender.service.gov.uk/Notice/022472-2025" },
+  "gla-cleaning": { source: "https://www.find-tender.service.gov.uk/Notice/075901-2025" },
+  "kingston": { source: "https://www.find-tender.service.gov.uk/Notice/072553-2025" },
+  "places-london": { source: "https://www.find-tender.service.gov.uk/Notice/037444-2025" },
+  "tfl-pan": { source: "https://www.find-tender.service.gov.uk/Notice/002468-2026" },
+  "rm6232": { source: "https://www.gca.gov.uk/agreements/RM6232" },
+  "rm6378": { source: "https://www.gca.gov.uk/agreements/RM6378" },
+
+  "contracts-finder": {
+    email: "supplier@crowncommercial.gov.uk",
+    contact: "Government supplier support",
+    source: "https://www.gov.uk/guidance/doing-business-with-government-a-guide-for-smes"
+  },
+  "procontract": {
+    email: "ProContractSuppliers@proactis.com",
+    contact: "ProContract supplier support",
+    source: "https://suppliersupport.proactisservicedesk.com/"
+  },
+  "delta": {
+    email: "helpdesk@delta-esourcing.com",
+    contact: "Delta supplier helpdesk",
+    source: "https://www.delta-esourcing.com/contact/"
+  },
+  "intend": {
+    email: "support@in-tend.co.uk",
+    contact: "In-Tend supplier support",
+    source: "https://in-tend.co.uk/contact-us/"
+  },
+  "city-london": {
+    email: "cityproc.policycompliance@cityoflondon.gov.uk",
+    contact: "Commercial policy and compliance",
+    source: "https://www.cityoflondon.gov.uk/supporting-businesses/tenders-and-procurement/supplier-information"
+  },
+  "nhs-atamis": {
+    email: "england.supplier@nhs.net",
+    contact: "NHS England supplier support",
+    source: "https://www.england.nhs.uk/nhs-commercial/supplying-to-the-nhs/"
+  },
+
+  "lq": {
+    email: "groupprocurement@lqgroup.org.uk",
+    contact: "Group Procurement",
+    source: "https://www.lqgroup.org.uk/contact-us/supplying-goods-and-services-to-lq"
+  },
+  "peabody": {
+    email: "procurement.enquiries@peabody.org.uk",
+    contact: "Procurement enquiries",
+    source: "https://www.peabodygroup.org.uk/about-us/who-we-are/business-with-us/"
+  },
+  "fusion21": {
+    email: "info@fusion21.co.uk",
+    contact: "Framework enquiries",
+    source: "https://www.fusion21.co.uk/lot/cleaning-services"
+  },
+  "espo": {
+    email: "info@espo.org",
+    contact: "Supplier hub enquiries",
+    source: "https://www.espo.org/supplier-hub"
+  },
+  "ypo": {
+    email: "contactus@ypo.co.uk",
+    contact: "Supplier enquiries",
+    source: "https://www.ypo.co.uk/contact"
+  },
+  "lupc": {
+    email: "enquiries@lupc.ac.uk",
+    contact: "Consortium enquiries",
+    source: "https://www.lupc.ac.uk/"
+  },
+  "notting-hill-genesis": {
+    email: "info@nhg.org.uk",
+    contact: "General business contact",
+    source: "https://www.nhg.org.uk/contact-us/"
+  },
+  "hyde-housing": {
+    email: "procurementhelpdesk@hyde-housing.co.uk",
+    contact: "Procurement helpdesk",
+    source: "https://www.hyde-housing.co.uk/the-hyde-group/suppliers/information-for-suppliers/"
+  },
+  "mtvh": {
+    email: "procurement@mtvh.co.uk",
+    contact: "Procurement team",
+    source: "https://www.mtvh.co.uk/about-us/supplying-us/"
+  },
+  "southern-housing": {
+    email: "hello@southernhousing.org.uk",
+    contact: "General business contact",
+    source: "https://www.southernhousing.org.uk/contact-us"
+  },
+  "riverside": {
+    email: "procurement@riverside.org.uk",
+    contact: "Procurement team",
+    source: "https://www.riverside.org.uk/wp-content/uploads/2021/02/LVLR-Terms-and-Conditions-updated-Febuary-2021-RIC-version-FG.pdf"
+  },
+  "home-group": {
+    email: "procurement@homegroup.org.uk",
+    contact: "Procurement team",
+    source: "https://www.homegroup.org.uk/about-us/working-with-us/procurement-teams"
+  },
+
+  "ocs": {
+    email: "safe.contractor@ocs.com",
+    contact: "Supplier compliance route",
+    source: "https://ocs.com/uk/ocs-procurement-supplier-hub/supplier-guidance/"
+  },
+  "mitie": {
+    email: "procurement@mitie.com",
+    contact: "New supplier proposals",
+    source: "https://www.mitie.com/contact-us/"
+  },
+  "iss": {
+    email: "GSCP_new_supplier_interest@group.issworld.com",
+    contact: "New supplier interest",
+    source: "https://www.issworld.com/contact-us/"
+  },
+  "atlas": {
+    email: "info@atlasfm.com",
+    contact: "Business enquiries",
+    source: "https://atlasfm.com/contact-us/"
+  },
+  "bellrock": {
+    email: "workingtogether@bellrock.co.uk",
+    contact: "Supplier partners",
+    source: "https://www.bellrock.co.uk/contact-us"
+  },
+  "pinnacle": {
+    email: "enquiries@pinnaclegroup.co.uk",
+    contact: "New business enquiries",
+    source: "https://www.pinnaclegroup.co.uk/contact/"
+  },
+  "pareto": {
+    email: "info@paretofm.com",
+    contact: "Business enquiries",
+    source: "https://www.paretofm.com/"
+  },
+  "churchill": {
+    email: "helppoint@churchillservices.com",
+    contact: "Business enquiries",
+    source: "https://www.churchillservices.com/contact/"
+  },
+  "abm-uk": {
+    email: "solutions@abm.com",
+    contact: "Sales enquiries",
+    source: "https://www.abm.co.uk/contact"
+  },
+  "integral-uk": {
+    email: "wpmuk.sales@jll.com",
+    contact: "Integral / JLL business enquiries",
+    source: "https://integral.co.uk/"
+  },
+  "tcfm": {
+    email: "info@tcfm.co.uk",
+    contact: "Business enquiries",
+    source: "https://www.tcfm.co.uk/"
+  },
+
+  "rendall-rittner": {
+    email: "office@rendallandrittner.co.uk",
+    contact: "London office enquiries",
+    source: "https://www.rendallandrittner.co.uk/"
+  },
+  "encore-estates": {
+    email: "info@encoreestates.co.uk",
+    contact: "Business enquiries",
+    source: "https://www.encoreestates.co.uk/contact/"
+  },
+  "ballymore": {
+    email: "info@ballymoregroup.com",
+    contact: "Group enquiries",
+    source: "https://www.ballymoregroup.com/contact"
+  },
+
+  "capital-esourcing": {
+    contact: "Official supplier portal; no public support email verified",
+    source: "https://www.capitalesourcing.com/"
+  },
+  "clarion": {
+    contact: "Atamis supplier portal; procurement messaging after registration",
+    source: "https://www.clarionhg.com/about-us/partner-with-us/tender-opportunities"
+  },
+  "pa-housing": {
+    contact: "In-Tend supplier portal; support call offered after invitation",
+    source: "https://www.pahousing.co.uk/contact-us/supply-to-us/"
+  },
+  "equans": {
+    contact: "Official procurement contact form; no public supplier email verified",
+    source: "https://www.equans.co.uk/existing-suppliers"
+  },
+  "cushman": {
+    contact: "Prospective supplier registration portal",
+    source: "https://www.cushmanwakefield.com/en/about-us/supplier-management"
+  },
+  "berkeley-group": {
+    contact: "Contact the commercial department of the relevant Berkeley brand",
+    source: "https://www.berkeleygroup.co.uk/about-us/contact-us"
+  },
+  "get-living": {
+    contact: "Procurement manager / official contact form",
+    source: "https://www.getliving.com/contact/"
+  }
+};
+
+initialRecords.forEach((item) => {
+  const verified = verifiedContacts[item.id];
+  if (!verified) return;
+  if (verified.email) item.email = verified.email;
+  if (verified.contact) item.contact = verified.contact;
+  item.contactSource = verified.source || "";
+});
+
 const initialReadiness = [
   { id: "legal", group: "Identity", item: "Legal entity and company number", evidence: "Universal Cleaning & Maintenance Services Ltd, 12265169", status: "complete" },
   { id: "pack", group: "Identity", item: "RM6264 bid pack downloaded", evidence: "Confirm current version and retain source documents", status: "complete" },
@@ -270,6 +482,18 @@ const initialReadiness = [
   { id: "mi", group: "Delivery", item: "MI, levy and contract administration", evidence: "Owner for monthly returns, including nil returns, and 1% levy", status: "required" },
   { id: "contacts", group: "Delivery", item: "Named operational contacts", evidence: "Commercial, finance, data, contract and escalation owners", status: "required" }
 ];
+
+initialRecords.forEach((item) => {
+  item.registration = "not-started";
+  item.application = "not-started";
+  item.owner = "Unassigned";
+  item.lastContacted = "";
+  item.activity = [];
+});
+
+initialReadiness.forEach((item) => {
+  item.status = "required";
+});
 
 let records = loadState();
 let readiness = loadReadiness();
@@ -352,7 +576,7 @@ function renderMetrics() {
   document.querySelector("#metricPriority").textContent = records.filter((item) => item.priority <= 1 && !["closed", "submitted"].includes(item.application)).length;
   document.querySelector("#metricRegistered").textContent = records.filter((item) => item.registration === "registered").length;
   document.querySelector("#metricActive").textContent = records.filter((item) => ["submitted", "ongoing"].includes(item.application)).length;
-  document.querySelector("#metricBlocked").textContent = records.filter((item) => item.application === "blocked").length;
+  document.querySelector("#metricEmails").textContent = records.filter((item) => item.email).length;
 }
 
 function renderPriorityQueue() {
@@ -372,7 +596,8 @@ function renderPriorityQueue() {
 
 function renderTable() {
   const list = filteredRecords();
-  document.querySelector("#resultCount").textContent = `${list.length} route${list.length === 1 ? "" : "s"}`;
+  const emailCount = list.filter((item) => item.email).length;
+  document.querySelector("#resultCount").textContent = `${list.length} route${list.length === 1 ? "" : "s"} / ${emailCount} public email${emailCount === 1 ? "" : "s"}`;
   document.querySelector("#tenderRows").innerHTML = list.map((item) => `
     <tr data-id="${esc(item.id)}" class="${selectedId === item.id ? "selected" : ""}">
       <td class="buyer-cell"><strong>${esc(item.buyer)}</strong><small>${esc(routeLabels[item.type])} · ${esc(item.route)}</small></td>
@@ -401,7 +626,8 @@ function renderDetail() {
   }
   const sourceLinks = [
     item.portal ? `<a href="${esc(item.portal)}" target="_blank" rel="noreferrer">Open portal</a>` : "",
-    item.notice && item.notice !== item.portal ? `<a href="${esc(item.notice)}" target="_blank" rel="noreferrer">Official notice / source</a>` : ""
+    item.notice && item.notice !== item.portal ? `<a href="${esc(item.notice)}" target="_blank" rel="noreferrer">Official notice / source</a>` : "",
+    item.contactSource && ![item.portal, item.notice].includes(item.contactSource) ? `<a href="${esc(item.contactSource)}" target="_blank" rel="noreferrer">Verify contact</a>` : ""
   ].filter(Boolean).join(" · ");
   const activity = item.activity?.length
     ? item.activity.slice().reverse().map((entry) => `<div class="activity-item"><strong>${esc(entry.action)}</strong>${esc(displayDate(entry.date))}${entry.note ? ` · ${esc(entry.note)}` : ""}</div>`).join("")
@@ -511,11 +737,11 @@ async function copyEmail(email) {
 }
 
 function exportCsv() {
-  const headers = ["Buyer", "Route type", "Opportunity", "Value", "Priority", "Registration", "Application", "Contact", "Email", "Last contacted", "Deadline", "Owner", "Next action", "Portal", "Official source"];
+  const headers = ["Buyer", "Route type", "Opportunity", "Value", "Priority", "Registration", "Application", "Contact", "Email", "Contact source", "Last contacted", "Deadline", "Owner", "Next action", "Portal", "Official source"];
   const rows = records.map((item) => [
     item.buyer, routeLabels[item.type], item.opportunity, item.value, `P${item.priority}`,
     registrationLabels[item.registration], applicationLabels[item.application], item.contact,
-    item.email, item.lastContacted, item.deadline, item.owner, item.nextAction, item.portal, item.notice
+    item.email, item.contactSource, item.lastContacted, item.deadline, item.owner, item.nextAction, item.portal, item.notice
   ]);
   const csv = [headers, ...rows].map((row) => row.map((cell) => `"${String(cell || "").replace(/"/g, '""')}"`).join(",")).join("\r\n");
   const blob = new Blob([csv], { type: "text/csv;charset=utf-8" });
