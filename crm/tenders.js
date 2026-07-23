@@ -1,4 +1,4 @@
-const STORAGE_KEY = "ucm-tender-control-v2";
+const STORAGE_KEY = "ucm-tender-control-v3";
 const READINESS_KEY = "ucm-rm6264-readiness-v2";
 
 const routeLabels = {
@@ -30,6 +30,27 @@ const applicationLabels = {
   blocked: "Blocked"
 };
 
+const opportunityStatusLabels = {
+  "open-now": "Open now",
+  "always-open": "Open admission",
+  upcoming: "Upcoming",
+  watch: "Watch / verify",
+  awarded: "Awarded",
+  "supplier-route": "Supplier route",
+  closed: "Closed",
+  accreditation: "Readiness route"
+};
+
+const fitLabels = {
+  bid: "Bid",
+  prepare: "Prepare",
+  register: "Register",
+  partner: "Partner route",
+  research: "Research",
+  "no-bid": "No bid",
+  "not-assessed": "Not assessed"
+};
+
 const official = {
   rm6264: "https://www.gca.gov.uk/agreements/RM6264",
   srs: "https://supplierregistration.cabinetoffice.gov.uk/organisation/register",
@@ -42,12 +63,16 @@ function record(id, buyer, type, opportunity, route, value, priority, registrati
   return {
     id, buyer, type, opportunity, route, value, priority, registration, application,
     contact, email, portal, notice, deadline, nextAction, requirements, notes,
-    contactSource: "", owner: "Unassigned", lastContacted: "", activity: []
+    contactSource: "", phone: "", opportunityStatus: "supplier-route",
+    fit: "not-assessed", fitReason: "", verifiedDate: "",
+    owner: "Unassigned", lastContacted: "", activity: []
   };
 }
 
 const initialRecords = [
-  record("rm6264", "Government Commercial Agency", "live-opportunity", "RM6264 Facilities Management and Workplace Services DPS", "DPS admission and filtered competitions", "GBP 500m aggregate; no revenue guarantee", 0, "in-progress", "preparing", "GCA customer services", "info@gca.gov.uk", official.srs, official.rm6264, "Open until 23 Feb 2029", "Complete evidence pack, SRS registration and financial review before applying.", ["EL GBP 5m", "PL GBP 1m", "PI GBP 1m", "Cyber Essentials", "Financial viability", "Carbon and social value", "Monthly MI", "1% levy"], "Best immediate national framework route. Start with credible London services and low value bands. Passing admission only creates access to filtered competitions."),
+  record("rm6264", "Crown Commercial Service", "live-opportunity", "RM6264 Facilities Management and Workplace Services DPS", "DPS admission and filtered competitions", "GBP 2bn current estimated ceiling; no revenue guarantee", 0, "in-progress", "preparing", "RM6264 agreement team", "rm6264@crowncommercial.gov.uk", official.srs, "https://www.find-tender.service.gov.uk/Notice/015390-2026", "Open until 23 Feb 2029", "Complete evidence pack, Supplier Registration Service record and financial review before applying.", ["EL GBP 5m", "PL GBP 1m", "PI GBP 1m", "Cyber Essentials", "Financial viability", "Carbon and social value", "Monthly MI", "Management charge"], "Best immediate national framework route. Start with credible London services and low value bands. The official notice says the ceiling was increased to GBP 2bn and explicitly guarantees no business. Passing admission only creates access to filtered competitions."),
+  record("procurement-assist-cleaning", "Procurement Assist / iFM Bolton", "live-opportunity", "Cleaning Services DPS, PA BOS 04", "Delta eSourcing admission, then mini-competitions", "GBP 50m estimated across three categories", 0, "not-started", "not-started", "Tender team", "tenders@procurementassist.co.uk", "https://www.delta-esourcing.com/respond/WM5D5P333B", "https://www.contractsfinder.service.gov.uk/notice/e130c836-07c2-4d7b-867f-a7cc9549b7a6", "Open until 31 May 2029, 12:00", "Download the DPS pack and test UCM against Commercial Cleaning and Domestic Cleaning. Exclude clinical deep-clean claims unless separately evidenced.", ["SME suitable", "Commercial cleaning", "Domestic cleaning", "Commercial deep clean", "Financial standing", "Technical evidence"], "A real continuously open route. The DPS is available to public-sector buyers across the UK, but admission only creates access to future mini-competitions. Category 3 includes clinical and police environments and may require PAS 5748:2014 at further competition, so UCM must not select unsupported scope."),
+  record("our-lady-mac", "Our Lady of the Magnificat MAC", "live-opportunity", "Four-school cleaning tender", "Litmus Tender Management System", "GBP 2.53m including VAT", 1, "not-started", "not-started", "Jeremy Alderton / Litmus", "tenders@litmuspartnership.co.uk", "https://litmustms.co.uk/respond/4Y774F442W", "https://www.find-tender.service.gov.uk/Notice/019983-2026", "31 Jul 2026, 12:00", "Make a documented bid/no-bid decision immediately. Recommendation: no bid unless UCM can prove Warwickshire/Worcestershire mobilisation, school references, TUPE and management capacity.", ["Four schools", "SME suitable", "TUPE and mobilisation", "School safeguarding", "70% quality / 30% price", "Non-London delivery"], "This is genuinely open but probably wrong for UCM: it is outside London, covers four schools and closes in eight days. Keeping it visible prevents urgency from overruling commercial discipline."),
   record("anchor", "Anchor Hanover Group", "live-opportunity", "Supply of Contract Cleaning Services", "Direct tender via Anchor supplier portal", "Estimated GBP 38.5m excl. VAT", 0, "not-started", "monitor", "Procurement team", "procurement@anchor.org.uk", "https://anchor.my.site.com/s/Welcome", "https://www.find-tender.service.gov.uk/Notice/022472-2025", "Check immediately", "Register on Anchor portal and confirm whether the June 2026 tender was published.", ["Communal housing", "Local contractor model", "London coverage", "Mobilisation capacity", "Resident safeguarding"], "Large national value across about 1,000 communal housing locations. UCM should target London packages, not imply capacity for the whole contract."),
   record("gla-cleaning", "Greater London Authority", "live-opportunity", "Cleaning and Porterage Services", "Public tender / specialist subcontract", "Estimated GBP 6.2m excl. VAT", 0, "not-started", "monitor", "Soft FM procurement", "SoftFMProcurement@tfl.gov.uk", "https://www.find-tender.service.gov.uk/", "https://www.find-tender.service.gov.uk/Notice/075901-2025", "Check notice now", "Confirm formal tender status and map technical-room experience to a specialist subcontract offer.", ["Office cleaning", "Porterage", "Window cleaning", "Secure equipment rooms", "High-level cleaning", "London mobilisation"], "Potentially beyond UCM's present prime-contract scale. Stronger first position: specialist technical cleaning or local delivery partner."),
   record("kingston", "Royal Borough of Kingston upon Thames", "live-opportunity", "Cleaning Services Contract, DN797007", "London Tenders Portal / ProContract", "Estimated GBP 4m excl. VAT", 0, "not-started", "monitor", "Commissioning Team", "commissioning@kingston.gov.uk", official.procontract, "https://www.find-tender.service.gov.uk/Notice/072553-2025", "Tender was expected Apr 2026", "Search DN797007 on ProContract and email commissioning for the current procurement position.", ["Corporate estate", "Community estate", "Porterage", "Innovation", "Sustainability", "SME suitable"], "The preliminary market engagement deadline has passed. The notice estimated a September 2026 contract start, so status requires immediate verification."),
@@ -63,12 +88,12 @@ const initialRecords = [
   record("city-london", "City of London Corporation", "public-portal", "City supplier opportunities", "Supplier information and tender portal route", "Multiple", 1, "not-started", "monitor", "Commercial service", "", "https://www.cityoflondon.gov.uk/supporting-businesses/tenders-and-procurement/supplier-information", "https://www.cityoflondon.gov.uk/supporting-businesses/tenders-and-procurement/supplier-information", "This month", "Follow official supplier route and configure cleaning, property and technical-service alerts.", ["Supplier registration", "City delivery evidence", "Compliance"], "High relevance to UCM's office and technical-cleaning history."),
   record("competefor", "CompeteFor", "public-portal", "Supply-chain opportunities from major projects", "Supplier profile and opportunity alerts", "Multiple", 1, "not-started", "monitor", "Portal support", "", "https://www.competefor.com/about/", "https://www.competefor.com/about/", "This month", "Create a detailed SME capability profile using approved evidence and London coverage.", ["Capability statement", "CPV categories", "Case evidence"], "Useful for subcontract opportunities flowing from large public and infrastructure contracts."),
   record("nhs-atamis", "NHS Atamis", "public-portal", "NHS procurement opportunities", "Health Family supplier portal", "Multiple", 3, "not-started", "monitor", "NHS commercial support", "", "https://www.england.nhs.uk/nhs-commercial/supplying-to-the-nhs/", "https://www.england.nhs.uk/nhs-commercial/supplying-to-the-nhs/", "After healthcare readiness", "Research non-clinical opportunities only; do not claim clinical capability.", ["Atamis registration", "NHS standards", "Clinical boundaries", "Workforce checks"], "Future route. UCM should not market hospital-grade delivery until the required evidence, controls and experience are established."),
-  record("met-police", "Metropolitan Police", "public-portal", "Met supplier and subcontract opportunities", "Official supplier guidance / CompeteFor", "Multiple", 2, "not-started", "monitor", "Supplier portal", "", "https://www.met.police.uk/police-forces/metropolitan-police/areas/about-us/about-the-met/commercial-services/information-for-suppliers/become-a-met-supplier/", "https://www.met.police.uk/police-forces/metropolitan-police/areas/about-us/about-the-met/commercial-services/information-for-suppliers/become-a-met-supplier/", "Build readiness first", "Review security, vetting and supplier requirements before selecting a realistic route.", ["Security requirements", "Vetting", "Insurance", "CompeteFor profile"], "Potentially attractive but operational and security requirements may exceed current readiness."),
+  record("met-police", "Metropolitan Police", "public-portal", "Met supplier and subcontract opportunities", "CompeteFor, Coupa, Find a Tender and Contracts Finder", "GBP 5k-50k on CompeteFor; larger routes above GBP 50k", 2, "not-started", "monitor", "Supplier portals", "", "https://www.met.police.uk/police-forces/metropolitan-police/areas/about-us/about-the-met/commercial-services/information-for-suppliers/become-a-met-supplier/", "https://www.met.police.uk/police-forces/metropolitan-police/areas/about-us/about-the-met/commercial-services/information-for-suppliers/become-a-met-supplier/", "Build readiness first", "Register on CompeteFor and monitor Coupa, Find a Tender and Contracts Finder. Prepare SSQ evidence, relevant examples, social value and the Met Supplier Code of Conduct.", ["Security requirements", "Vetting", "Insurance", "CompeteFor profile", "SSQ evidence", "Modern Slavery Assessment Tool"], "The Met states that GBP 5,000-50,000 opportunities are published on CompeteFor and contracts over GBP 50,000 are advertised through Coupa, Find a Tender and Contracts Finder. This is a supplier route, not a confirmed live cleaning contract."),
 
   record("clarion", "Clarion Housing Group", "housing", "Housing cleaning and property-care tenders", "Direct supplier opportunity portal", "Multiple", 1, "not-started", "monitor", "Supplier portal", "", "https://www.clarionhg.com/about-us/partner-with-us/tender-opportunities", "https://www.clarionhg.com/about-us/partner-with-us/tender-opportunities", "This month", "Register interest and build communal-area, void and responsive-care capability pack.", ["Housing evidence", "Resident safety", "Social value", "London coverage"], "Strong buyer fit for recurring communal cleaning and Handover Complete."),
   record("lq", "L&Q", "housing", "Goods and services supplier route", "Direct housing-association registration", "Multiple", 1, "not-started", "monitor", "Supplier portal", "", "https://www.lqgroup.org.uk/contact-us/supplying-goods-and-services-to-lq", "https://www.lqgroup.org.uk/contact-us/supplying-goods-and-services-to-lq", "This month", "Complete supplier route and position cleaning plus minor repairs for London estates.", ["Housing compliance", "Safeguarding", "Social value", "Service evidence"], "High strategic relevance because UCM combines cleaning and maintenance."),
   record("peabody", "Peabody", "housing", "Business with us / estate services", "Direct housing supplier route", "Multiple", 1, "not-started", "monitor", "Supplier portal", "", "https://www.peabodygroup.org.uk/about-us/who-we-are/business-with-us/", "https://www.peabodygroup.org.uk/about-us/who-we-are/business-with-us/", "This month", "Register and monitor estate cleaning, void and responsive-maintenance categories.", ["London estates", "Resident service", "Compliance", "Social value"], "Strong London portfolio fit; use evidence-led local capability, not generic cleaning claims."),
-  record("chic", "CHIC", "housing", "Facilities management frameworks", "Framework / member supply chain", "Multiple", 2, "not-started", "monitor", "Supplier portal", "", "https://www.chicltd.co.uk/services/facilities-managment/", "https://www.chicltd.co.uk/services/facilities-managment/", "Monitor framework windows", "Map UCM services to future FM framework lots and supplier engagement.", ["Framework window", "Housing references", "Geographic coverage"], "Useful route when a relevant framework reopens; not an automatic direct opportunity."),
+  record("chic", "CHIC", "live-opportunity", "Cleaning Services DPS", "CHIC eSourcing admission, then member mini-tenders", "Open DPS; call-off value depends on member demand", 0, "not-started", "not-started", "CHIC tender team", "tenders@chicltd.co.uk", "https://www.chicltd.co.uk/procurement/", "https://www.find-tender.service.gov.uk/Notice/015871-2026", "Open until 23 Feb 2029", "Call CHIC, request the Cleaning Services DPS application route and confirm London and South East categories, fees and current member demand.", ["Housing cleaning", "DPS qualification", "Constructionline alignment", "Regional capacity", "Mini-tender pricing", "Social value"], "A genuine open admission route serving housing and public-sector members. Qualification does not guarantee work; UCM still competes in member mini-tenders and must price any CHIC transaction fee."),
   record("fusion21", "Fusion21", "housing", "Cleaning Services Framework", "Framework monitoring / awarded suppliers", "Closed framework", 3, "not-required", "closed", "Supplier portal", "", "https://www.fusion21.co.uk/lot/cleaning-services", "https://www.fusion21.co.uk/lot/cleaning-services", "Closed; monitor renewal", "Record next framework renewal and identify current prime suppliers for local subcontract discussions.", ["Framework cycle", "Prime mapping"], "Do not spend time trying to apply to a closed framework."),
   record("espo", "ESPO", "housing", "Supplier framework hub", "Framework and tender monitoring", "Multiple", 2, "not-started", "monitor", "Supplier hub", "", "https://www.espo.org/supplier-hub", "https://www.espo.org/supplier-hub", "Monthly", "Register alerts and monitor cleaning, facilities and property-service framework windows.", ["Supplier profile", "Framework alerts"], "Potential national route; prioritise only frameworks with realistic London access."),
   record("ypo", "YPO", "housing", "Public-sector supplier opportunities", "Framework and tender monitoring", "Multiple", 2, "not-started", "monitor", "Supplier portal", "", "https://www.ypo.co.uk/suppliers", "https://www.ypo.co.uk/suppliers", "Monthly", "Register supplier interest and monitor relevant cleaning/FM opportunities.", ["Supplier profile", "Framework alerts"], "Long-term framework route, secondary to live London demand."),
@@ -249,12 +274,34 @@ initialRecords.push(
 );
 
 const verifiedContacts = {
-  "rm6264": { source: official.rm6264 },
+  "rm6264": {
+    email: "rm6264@crowncommercial.gov.uk",
+    contact: "RM6264 agreement team",
+    phone: "0345 410 2222",
+    source: "https://www.find-tender.service.gov.uk/Notice/015390-2026"
+  },
+  "procurement-assist-cleaning": {
+    phone: "0330 128 1336",
+    source: "https://www.contractsfinder.service.gov.uk/notice/e130c836-07c2-4d7b-867f-a7cc9549b7a6"
+  },
+  "our-lady-mac": {
+    phone: "01276 673896",
+    source: "https://www.find-tender.service.gov.uk/Notice/019983-2026"
+  },
   "anchor": { source: "https://www.find-tender.service.gov.uk/Notice/022472-2025" },
   "gla-cleaning": { source: "https://www.find-tender.service.gov.uk/Notice/075901-2025" },
-  "kingston": { source: "https://www.find-tender.service.gov.uk/Notice/072553-2025" },
+  "kingston": {
+    phone: "020 8547 5000",
+    source: "https://www.find-tender.service.gov.uk/Notice/072553-2025"
+  },
   "places-london": { source: "https://www.find-tender.service.gov.uk/Notice/037444-2025" },
   "tfl-pan": { source: "https://www.find-tender.service.gov.uk/Notice/002468-2026" },
+  "chic": {
+    email: "tenders@chicltd.co.uk",
+    contact: "CHIC tender team",
+    phone: "0121 759 9990",
+    source: "https://www.chicltd.co.uk/contact/"
+  },
   "rm6232": { source: "https://www.gca.gov.uk/agreements/RM6232" },
   "rm6378": { source: "https://www.gca.gov.uk/agreements/RM6378" },
 
@@ -292,6 +339,7 @@ const verifiedContacts = {
   "lq": {
     email: "groupprocurement@lqgroup.org.uk",
     contact: "Group Procurement",
+    phone: "0300 456 9998",
     source: "https://www.lqgroup.org.uk/contact-us/supplying-goods-and-services-to-lq"
   },
   "peabody": {
@@ -322,6 +370,7 @@ const verifiedContacts = {
   "notting-hill-genesis": {
     email: "info@nhg.org.uk",
     contact: "General business contact",
+    phone: "020 3815 0000",
     source: "https://www.nhg.org.uk/contact-us/"
   },
   "hyde-housing": {
@@ -332,6 +381,7 @@ const verifiedContacts = {
   "mtvh": {
     email: "procurement@mtvh.co.uk",
     contact: "Procurement team",
+    phone: "020 3535 3535",
     source: "https://www.mtvh.co.uk/about-us/supplying-us/"
   },
   "southern-housing": {
@@ -353,6 +403,7 @@ const verifiedContacts = {
   "ocs": {
     email: "safe.contractor@ocs.com",
     contact: "Supplier compliance route",
+    phone: "0800 614 678",
     source: "https://ocs.com/uk/ocs-procurement-supplier-hub/supplier-guidance/"
   },
   "mitie": {
@@ -368,21 +419,25 @@ const verifiedContacts = {
   "atlas": {
     email: "info@atlasfm.com",
     contact: "Business enquiries",
-    source: "https://atlasfm.com/contact-us/"
+    phone: "020 7549 0800",
+    source: "https://atlasfm.com/site-terms/"
   },
   "bellrock": {
     email: "workingtogether@bellrock.co.uk",
     contact: "Supplier partners",
-    source: "https://www.bellrock.co.uk/contact-us"
+    phone: "0116 464 0800",
+    source: "https://www.bellrockgroup.co.uk/partner-with-us/"
   },
   "pinnacle": {
     email: "enquiries@pinnaclegroup.co.uk",
     contact: "New business enquiries",
+    phone: "020 7017 2000",
     source: "https://www.pinnaclegroup.co.uk/contact/"
   },
   "pareto": {
     email: "info@paretofm.com",
     contact: "Business enquiries",
+    phone: "020 3282 7177",
     source: "https://www.paretofm.com/"
   },
   "churchill": {
@@ -391,9 +446,10 @@ const verifiedContacts = {
     source: "https://www.churchillservices.com/contact/"
   },
   "abm-uk": {
-    email: "solutions@abm.com",
-    contact: "Sales enquiries",
-    source: "https://www.abm.co.uk/contact"
+    email: "ukinfo@abm.com",
+    contact: "UK general enquiries",
+    phone: "020 7089 6600",
+    source: "https://www.abm.co.uk/news-events/london-fire-brigade-partnership-expansion"
   },
   "integral-uk": {
     email: "wpmuk.sales@jll.com",
@@ -457,7 +513,90 @@ initialRecords.forEach((item) => {
   if (!verified) return;
   if (verified.email) item.email = verified.email;
   if (verified.contact) item.contact = verified.contact;
+  if (verified.phone) item.phone = verified.phone;
   item.contactSource = verified.source || "";
+  item.verifiedDate = "23 Jul 2026";
+});
+
+const opportunityIntelligence = {
+  "rm6264": {
+    opportunityStatus: "always-open",
+    fit: "register",
+    fitReason: "Best broad public-sector entry route if UCM completes the insurance, cyber, finance and policy gates."
+  },
+  "procurement-assist-cleaning": {
+    opportunityStatus: "always-open",
+    fit: "register",
+    fitReason: "Strong service match and SME suitable. Start with commercial and domestic categories; do not overclaim clinical deep-clean capability."
+  },
+  "chic": {
+    opportunityStatus: "always-open",
+    fit: "register",
+    fitReason: "Strong housing fit, but confirm London demand, qualification requirements and transaction fees before committing bid time."
+  },
+  "our-lady-mac": {
+    opportunityStatus: "open-now",
+    fit: "no-bid",
+    fitReason: "Live deadline, but four non-London schools, likely TUPE and mobilisation demands make this commercially weak for UCM without existing regional capacity."
+  },
+  "anchor": {
+    opportunityStatus: "upcoming",
+    fit: "prepare",
+    fitReason: "High-value communal-cleaning pipeline. Register now and pursue London packages or a delivery partnership, not the entire national estate."
+  },
+  "gla-cleaning": {
+    opportunityStatus: "upcoming",
+    fit: "partner",
+    fitReason: "Formal tender has not been verified as published. UCM is more credible as a technical-room or London specialist partner than as prime."
+  },
+  "kingston": {
+    opportunityStatus: "watch",
+    fit: "prepare",
+    fitReason: "The preliminary notice forecast an April 2026 tender, but no later official notice was verified. Ask the commissioning team for the revised timetable."
+  },
+  "places-london": {
+    opportunityStatus: "awarded",
+    fit: "partner",
+    fitReason: "Direct tender is closed. Value now comes from identifying the awarded prime and pitching a specialist delivery role."
+  },
+  "tfl-pan": {
+    opportunityStatus: "awarded",
+    fit: "partner",
+    fitReason: "The contract is awarded. The actionable route is Mitie supplier onboarding, not a direct TfL bid."
+  },
+  "met-police": {
+    opportunityStatus: "supplier-route",
+    fit: "prepare",
+    fitReason: "The Met advertises GBP 5k-50k work on CompeteFor and larger contracts through Coupa, Find a Tender and Contracts Finder. Security readiness comes first."
+  },
+  "lupc": {
+    opportunityStatus: "awarded",
+    fit: "partner",
+    fitReason: "Framework entry is closed. Approach awarded cleaning suppliers only with a specific London or technical-service gap."
+  }
+};
+
+initialRecords.forEach((item) => {
+  const intelligence = opportunityIntelligence[item.id];
+  if (intelligence) {
+    Object.assign(item, intelligence);
+    item.verifiedDate = "23 Jul 2026";
+  } else if (item.application === "closed") {
+    item.opportunityStatus = "closed";
+    item.fit = "research";
+    item.fitReason = "The direct route is closed. Retain only for renewal intelligence or prime-contractor mapping.";
+  } else if (item.application === "subcontract") {
+    item.opportunityStatus = "awarded";
+    item.fit = "partner";
+    item.fitReason = "The direct procurement is closed or awarded. Commercial value depends on a specific prime-contractor partnership.";
+  } else if (item.type === "accreditation") {
+    item.opportunityStatus = "accreditation";
+    item.fit = "prepare";
+    item.fitReason = "Complete only where it unlocks a named target buyer or live route.";
+  } else if (!intelligence && item.type === "live-opportunity") {
+    item.opportunityStatus = "watch";
+    item.fit = "research";
+  }
 });
 
 const initialReadiness = [
@@ -558,13 +697,15 @@ function statusBadge(value, labels) {
 function filteredRecords() {
   const search = document.querySelector("#searchInput").value.trim().toLowerCase();
   const type = document.querySelector("#typeFilter").value;
+  const opportunityStatus = document.querySelector("#opportunityStatusFilter").value;
   const registration = document.querySelector("#registrationFilter").value;
   const application = document.querySelector("#applicationFilter").value;
   const priority = document.querySelector("#priorityFilter").value;
   return records.filter((item) => {
-    const haystack = [item.buyer, item.opportunity, item.route, item.email, item.nextAction, item.notes].join(" ").toLowerCase();
+    const haystack = [item.buyer, item.opportunity, item.route, item.email, item.phone, item.nextAction, item.notes, item.fitReason].join(" ").toLowerCase();
     return (!search || haystack.includes(search))
       && (type === "all" || item.type === type)
+      && (opportunityStatus === "all" || item.opportunityStatus === opportunityStatus)
       && (registration === "all" || item.registration === registration)
       && (application === "all" || item.application === application)
       && (priority === "all" || String(item.priority) === priority);
@@ -573,20 +714,25 @@ function filteredRecords() {
 
 function renderMetrics() {
   document.querySelector("#metricTotal").textContent = records.length;
+  document.querySelector("#metricAdmission").textContent = records.filter((item) => item.opportunityStatus === "always-open").length;
+  document.querySelector("#metricLive").textContent = records.filter((item) => item.opportunityStatus === "open-now").length;
   document.querySelector("#metricPriority").textContent = records.filter((item) => item.priority <= 1 && !["closed", "submitted"].includes(item.application)).length;
   document.querySelector("#metricRegistered").textContent = records.filter((item) => item.registration === "registered").length;
   document.querySelector("#metricActive").textContent = records.filter((item) => ["submitted", "ongoing"].includes(item.application)).length;
-  document.querySelector("#metricEmails").textContent = records.filter((item) => item.email).length;
+  document.querySelector("#metricPhones").textContent = records.filter((item) => item.phone).length;
 }
 
 function renderPriorityQueue() {
   const queue = records
-    .filter((item) => item.priority <= 1 && !["closed", "submitted", "ongoing"].includes(item.application))
-    .sort((a, b) => a.priority - b.priority)
-    .slice(0, 3);
+    .filter((item) => ["open-now", "always-open"].includes(item.opportunityStatus))
+    .sort((a, b) => {
+      if (a.opportunityStatus !== b.opportunityStatus) return a.opportunityStatus === "open-now" ? -1 : 1;
+      return a.priority - b.priority;
+    })
+    .slice(0, 4);
   document.querySelector("#priorityQueue").innerHTML = queue.map((item) => `
     <article class="priority-item">
-      <div class="priority-item-top"><span class="priority-code">P${item.priority} / ${esc(routeLabels[item.type])}</span>${statusBadge(item.application, applicationLabels)}</div>
+      <div class="priority-item-top"><span class="priority-code">P${item.priority} / ${esc(fitLabels[item.fit])}</span>${statusBadge(item.opportunityStatus, opportunityStatusLabels)}</div>
       <h3>${esc(item.buyer)}</h3>
       <p>${esc(item.nextAction)}</p>
       <button type="button" data-open="${esc(item.id)}">Open route</button>
@@ -597,19 +743,22 @@ function renderPriorityQueue() {
 function renderTable() {
   const list = filteredRecords();
   const emailCount = list.filter((item) => item.email).length;
-  document.querySelector("#resultCount").textContent = `${list.length} route${list.length === 1 ? "" : "s"} / ${emailCount} public email${emailCount === 1 ? "" : "s"}`;
+  const phoneCount = list.filter((item) => item.phone).length;
+  const openCount = list.filter((item) => ["open-now", "always-open"].includes(item.opportunityStatus)).length;
+  document.querySelector("#resultCount").textContent = `${list.length} routes / ${openCount} open / ${emailCount} emails / ${phoneCount} phone numbers`;
   document.querySelector("#tenderRows").innerHTML = list.map((item) => `
     <tr data-id="${esc(item.id)}" class="${selectedId === item.id ? "selected" : ""}">
       <td class="buyer-cell"><strong>${esc(item.buyer)}</strong><small>${esc(routeLabels[item.type])} · ${esc(item.route)}</small></td>
       <td class="opportunity-cell"><strong>${esc(item.opportunity)}</strong><small>${esc(item.value)}</small></td>
+      <td>${statusBadge(item.opportunityStatus, opportunityStatusLabels)}<small class="fit-note">${esc(fitLabels[item.fit])}</small></td>
       <td><span class="priority-pill p${item.priority}">P${item.priority}</span></td>
       <td>${statusBadge(item.registration, registrationLabels)}</td>
       <td>${statusBadge(item.application, applicationLabels)}</td>
-      <td class="contact-cell">${item.email ? `<a href="mailto:${esc(item.email)}">${esc(item.email)}</a>` : `<span>Portal contact</span>`}<small>${esc(displayDate(item.lastContacted))}</small></td>
+      <td class="contact-cell">${item.email ? `<a href="mailto:${esc(item.email)}">${esc(item.email)}</a>` : `<span>Portal contact</span>`}${item.phone ? `<a href="tel:${esc(item.phone.replace(/\s/g, ""))}">${esc(item.phone)}</a>` : ""}<small>${esc(displayDate(item.lastContacted))}</small></td>
       <td>${esc(item.deadline)}</td>
       <td class="next-cell">${esc(item.nextAction)}</td>
     </tr>
-  `).join("") || `<tr><td colspan="8" class="empty">No routes match these filters.</td></tr>`;
+  `).join("") || `<tr><td colspan="9" class="empty">No routes match these filters.</td></tr>`;
 }
 
 function selectOptions(options, current) {
@@ -635,7 +784,7 @@ function renderDetail() {
   panel.hidden = false;
   panel.innerHTML = `
     <div class="tender-detail-head">
-      <div><p class="eyebrow">P${item.priority} / ${esc(routeLabels[item.type])}</p><h3>${esc(item.buyer)}</h3><p>${esc(item.opportunity)}</p></div>
+      <div><p class="eyebrow">P${item.priority} / ${esc(routeLabels[item.type])} / ${esc(opportunityStatusLabels[item.opportunityStatus])}</p><h3>${esc(item.buyer)}</h3><p>${esc(item.opportunity)}</p></div>
       <button class="close-detail" type="button" aria-label="Close details"><i data-lucide="x"></i></button>
     </div>
     <div class="tender-detail-body">
@@ -646,9 +795,13 @@ function renderDetail() {
           <div><span>Deadline / review</span><strong>${esc(item.deadline)}</strong></div>
           <div><span>Contact</span><strong>${esc(item.contact)}</strong></div>
           <div><span>Email</span>${item.email ? `<a href="mailto:${esc(item.email)}">${esc(item.email)}</a>` : "<strong>Use official portal</strong>"}</div>
+          <div><span>Phone</span>${item.phone ? `<a href="tel:${esc(item.phone.replace(/\s/g, ""))}">${esc(item.phone)}</a>` : "<strong>No verified public number</strong>"}</div>
+          <div><span>Commercial verdict</span><strong>${esc(fitLabels[item.fit])}</strong></div>
+          <div><span>Verified</span><strong>${esc(item.verifiedDate)}</strong></div>
           <div><span>Official source</span>${sourceLinks || "<strong>Verify source</strong>"}</div>
         </div>
         <div class="requirements"><h4>Requirements and gates</h4><div class="requirement-tags">${item.requirements.map((requirement) => `<span>${esc(requirement)}</span>`).join("")}</div></div>
+        ${item.fitReason ? `<p class="fit-verdict"><strong>${esc(fitLabels[item.fit])}:</strong> ${esc(item.fitReason)}</p>` : ""}
         <p class="detail-notes">${esc(item.notes)}</p>
       </div>
       <div class="detail-control">
@@ -662,6 +815,7 @@ function renderDetail() {
         </div>
         <div class="contact-actions">
           ${item.email ? `<a href="mailto:${esc(item.email)}?subject=${encodeURIComponent(`UCM supplier enquiry: ${item.opportunity}`)}"><i data-lucide="mail"></i>Email contact</a>` : ""}
+          ${item.phone ? `<a href="tel:${esc(item.phone.replace(/\s/g, ""))}"><i data-lucide="phone"></i>Call ${esc(item.phone)}</a>` : ""}
           ${item.email ? `<button type="button" data-copy-email="${esc(item.email)}"><i data-lucide="copy"></i>Copy email</button>` : ""}
           <button type="button" data-contacted="${esc(item.id)}"><i data-lucide="check"></i>Mark contacted</button>
         </div>
@@ -737,11 +891,11 @@ async function copyEmail(email) {
 }
 
 function exportCsv() {
-  const headers = ["Buyer", "Route type", "Opportunity", "Value", "Priority", "Registration", "Application", "Contact", "Email", "Contact source", "Last contacted", "Deadline", "Owner", "Next action", "Portal", "Official source"];
+  const headers = ["Buyer", "Route type", "Opportunity", "External status", "Commercial verdict", "Verdict reason", "Value", "Priority", "Registration", "Application", "Contact", "Email", "Phone", "Contact source", "Verified date", "Last contacted", "Deadline", "Owner", "Next action", "Portal", "Official source"];
   const rows = records.map((item) => [
-    item.buyer, routeLabels[item.type], item.opportunity, item.value, `P${item.priority}`,
+    item.buyer, routeLabels[item.type], item.opportunity, opportunityStatusLabels[item.opportunityStatus], fitLabels[item.fit], item.fitReason, item.value, `P${item.priority}`,
     registrationLabels[item.registration], applicationLabels[item.application], item.contact,
-    item.email, item.contactSource, item.lastContacted, item.deadline, item.owner, item.nextAction, item.portal, item.notice
+    item.email, item.phone, item.contactSource, item.verifiedDate, item.lastContacted, item.deadline, item.owner, item.nextAction, item.portal, item.notice
   ]);
   const csv = [headers, ...rows].map((row) => row.map((cell) => `"${String(cell || "").replace(/"/g, '""')}"`).join(",")).join("\r\n");
   const blob = new Blob([csv], { type: "text/csv;charset=utf-8" });
@@ -761,7 +915,7 @@ function showToast(message) {
   showToast.timer = setTimeout(() => { toast.hidden = true; }, 2600);
 }
 
-document.querySelectorAll("#searchInput, #typeFilter, #registrationFilter, #applicationFilter, #priorityFilter").forEach((control) => {
+document.querySelectorAll("#searchInput, #typeFilter, #opportunityStatusFilter, #registrationFilter, #applicationFilter, #priorityFilter").forEach((control) => {
   control.addEventListener(control.tagName === "INPUT" ? "input" : "change", renderTable);
 });
 

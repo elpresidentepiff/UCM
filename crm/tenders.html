@@ -60,20 +60,37 @@
       </div>
     </section>
 
-    <section class="metric-strip metric-five" aria-label="Tender summary">
+    <section class="metric-strip metric-seven" aria-label="Tender summary">
       <div><span>Tracked routes</span><strong id="metricTotal">0</strong><small>Buyer and supplier routes</small></div>
+      <div><span>Open admission</span><strong id="metricAdmission">0</strong><small>DPS routes accepting suppliers</small></div>
+      <div><span>Live deadline</span><strong id="metricLive">0</strong><small>Time-limited tenders open now</small></div>
       <div><span>Priority now</span><strong id="metricPriority">0</strong><small>Immediate next actions</small></div>
       <div><span>Registered</span><strong id="metricRegistered">0</strong><small>Confirmed only</small></div>
       <div><span>Applied / ongoing</span><strong id="metricActive">0</strong><small>Submission activity</small></div>
-      <div><span>Public emails</span><strong id="metricEmails">0</strong><small>Verified contact routes</small></div>
+      <div><span>Phone numbers</span><strong id="metricPhones">0</strong><small>Verified public numbers</small></div>
     </section>
 
     <section class="section action-band" aria-labelledby="priority-heading">
       <div class="section-head">
-        <div><p class="eyebrow">Work in order</p><h2 id="priority-heading">Priority action queue</h2></div>
-        <p class="section-copy">The queue recalculates from priority, application status and the next deadline.</p>
+        <div><p class="eyebrow">Verified 23 July 2026</p><h2 id="priority-heading">Open opportunity queue</h2></div>
+        <p class="section-copy">These are externally open routes. UCM progress remains “Not started” until Carlos confirms action. Open does not mean commercially sensible.</p>
       </div>
       <div id="priorityQueue" class="priority-queue"></div>
+    </section>
+
+    <section class="section bid-reality" aria-labelledby="bid-reality-heading">
+      <div class="section-head">
+        <div><p class="eyebrow">Information gap</p><h2 id="bid-reality-heading">What UCM still needs before serious bids</h2></div>
+        <p class="section-copy">Portals are discovery tools. These facts decide whether UCM can win, mobilise and make money.</p>
+      </div>
+      <div class="decision-grid">
+        <article><span>01</span><strong>Maximum safe contract value</strong><p>Turnover, cash, credit, working-capital requirement and the largest mobilisation UCM can fund without damaging the core business.</p></article>
+        <article><span>02</span><strong>Operational capacity</strong><p>Current headcount, supervisors, relief cover, postcodes, working hours, vehicles and the number of sites UCM can start at once.</p></article>
+        <article><span>03</span><strong>Pricing floor</strong><p>London Living Wage, NI, pension, holiday, sickness, TUPE, equipment, chemicals, supervision, travel, reporting, inflation and minimum gross margin.</p></article>
+        <article><span>04</span><strong>Approved proof</strong><p>Named references, permitted case studies, KPI history, complaints and rework data, photographs and proof of technical-cleaning experience.</p></article>
+        <article><span>05</span><strong>Current compliance</strong><p>Insurance limits and expiries, PPON, Cyber Essentials, ICO status, RAMS, COSHH, training, safeguarding and treatment-risk cover.</p></article>
+        <article><span>06</span><strong>Bid ownership</strong><p>One accountable owner, bid/no-bid score, clarification log, submission calendar, document version control and mobilisation sign-off.</p></article>
+      </div>
     </section>
 
     <section id="supplier-pack" class="section supplier-pack" aria-labelledby="supplier-pack-heading">
@@ -108,12 +125,13 @@
       <div class="official-links">
         <a href="https://www.gov.uk/government/publications/procurement-act-2023-short-guides/suppliers-how-to-register-your-organisation-and-first-administrator-on-find-a-tender-in-three-easy-steps-html" target="_blank" rel="noreferrer">GOV.UK registration guide <i data-lucide="external-link"></i></a>
         <a href="https://github.com/elpresidentepiff/UCM/blob/main/growth/tenders/ucm-one-login-and-supplier-evidence-pack.md" target="_blank" rel="noreferrer">Full paperwork guide <i data-lucide="external-link"></i></a>
+        <a href="https://github.com/elpresidentepiff/UCM/blob/main/growth/tenders/verified-opportunity-sweep-2026-07-23.md" target="_blank" rel="noreferrer">Verified opportunity sweep <i data-lucide="external-link"></i></a>
       </div>
     </section>
 
     <section class="section" aria-labelledby="register-heading">
       <div class="section-head tracker-head">
-        <div><p class="eyebrow">103 routes to work through</p><h2 id="register-heading">Companies and organisations UCM plans to join</h2></div>
+        <div><p class="eyebrow">Verified opportunity and supplier register</p><h2 id="register-heading">Companies and organisations UCM plans to join</h2></div>
         <div class="toolbar">
           <button id="exportCsv" class="icon-action" type="button"><i data-lucide="download"></i><span>Export company CRM</span></button>
           <button id="resetTracker" class="icon-action quiet" type="button"><i data-lucide="rotate-ccw"></i><span>Reset local data</span></button>
@@ -135,6 +153,19 @@
             <option value="property-manager">Property manager / developer</option>
             <option value="fm-prime">FM prime</option>
             <option value="accreditation">Accreditation</option>
+          </select>
+        </label>
+        <label for="opportunityStatusFilter">External status
+          <select id="opportunityStatusFilter">
+            <option value="all">All external states</option>
+            <option value="open-now">Open now</option>
+            <option value="always-open">Open admission</option>
+            <option value="upcoming">Upcoming</option>
+            <option value="watch">Watch / verify</option>
+            <option value="awarded">Awarded</option>
+            <option value="supplier-route">Supplier route</option>
+            <option value="closed">Closed</option>
+            <option value="accreditation">Readiness route</option>
           </select>
         </label>
         <label for="registrationFilter">Registration
@@ -181,6 +212,7 @@
             <tr>
               <th>Buyer / route</th>
               <th>Opportunity</th>
+              <th>External status</th>
               <th>Priority</th>
               <th>Registration</th>
               <th>Application</th>
