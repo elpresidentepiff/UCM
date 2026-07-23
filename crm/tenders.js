@@ -4,7 +4,9 @@ const READINESS_KEY = "ucm-rm6264-readiness-v1";
 const routeLabels = {
   "live-opportunity": "Live / pipeline",
   "public-portal": "Public portal",
+  council: "London authority",
   housing: "Housing / framework",
+  "property-manager": "Property / developer",
   "fm-prime": "FM prime",
   accreditation: "Accreditation"
 };
@@ -95,6 +97,156 @@ const initialRecords = [
   record("constructionline", "Constructionline", "accreditation", "Construction and property supply-chain profile", "Paid membership / verification", "Annual cost", 2, "not-started", "not-started", "Membership team", "", "https://www.constructionline.co.uk/", "https://www.constructionline.co.uk/", "After Handover Complete demand", "Assess whether Wates, BAM and handover buyers require a specific membership level.", ["Company verification", "Safety", "Financials", "References"], "Relevant only if UCM actively targets construction handover and minor works."),
   record("achilles", "Achilles UVDB", "accreditation", "Utilities supply-chain qualification", "Paid pre-qualification", "Annual cost", 3, "not-started", "monitor", "Membership team", "", "https://www.achilles.com/uvdb-powered-by-achilles-for-buyers/", "https://www.achilles.com/uvdb-powered-by-achilles-for-buyers/", "Future technical vertical", "Do not buy until UCM has a named utility or infrastructure opportunity.", ["Utility standards", "Safety", "Financials", "Assessment fee"], "Potential future technical-cleaning route, but currently a distraction without buyer demand.")
 ];
+
+const capitalEsourcing = "https://www.capitalesourcing.com/";
+const councilTargets = [
+  ["barking-dagenham", "London Borough of Barking and Dagenham", "https://www.lbbd.gov.uk/", 2, official.procontract],
+  ["barnet", "London Borough of Barnet", "https://www.barnet.gov.uk/", 1, official.procontract],
+  ["bexley", "London Borough of Bexley", "https://www.bexley.gov.uk/", 2, official.procontract],
+  ["brent", "London Borough of Brent", "https://www.brent.gov.uk/", 1, official.procontract],
+  ["bromley", "London Borough of Bromley", "https://www.bromley.gov.uk/", 2, official.procontract],
+  ["camden", "London Borough of Camden", "https://www.camden.gov.uk/", 1, official.procontract],
+  ["croydon", "London Borough of Croydon", "https://www.croydon.gov.uk/", 1, official.procontract],
+  ["ealing", "London Borough of Ealing", "https://www.ealing.gov.uk/", 1, official.procontract],
+  ["enfield", "London Borough of Enfield", "https://www.enfield.gov.uk/", 2, official.procontract],
+  ["greenwich", "Royal Borough of Greenwich", "https://www.royalgreenwich.gov.uk/", 1, official.procontract],
+  ["hackney", "London Borough of Hackney", "https://hackney.gov.uk/", 1, official.procontract],
+  ["hammersmith-fulham", "London Borough of Hammersmith and Fulham", "https://www.lbhf.gov.uk/", 1, capitalEsourcing],
+  ["haringey", "London Borough of Haringey", "https://www.haringey.gov.uk/", 2, official.procontract],
+  ["harrow", "London Borough of Harrow", "https://www.harrow.gov.uk/", 2, official.procontract],
+  ["havering", "London Borough of Havering", "https://www.havering.gov.uk/", 2, capitalEsourcing],
+  ["hillingdon", "London Borough of Hillingdon", "https://www.hillingdon.gov.uk/", 2, capitalEsourcing],
+  ["hounslow", "London Borough of Hounslow", "https://www.hounslow.gov.uk/", 2, official.procontract],
+  ["islington", "London Borough of Islington", "https://www.islington.gov.uk/", 1, official.procontract],
+  ["kensington-chelsea", "Royal Borough of Kensington and Chelsea", "https://www.rbkc.gov.uk/", 1, capitalEsourcing],
+  ["lambeth", "London Borough of Lambeth", "https://www.lambeth.gov.uk/", 1, official.procontract],
+  ["lewisham", "London Borough of Lewisham", "https://lewisham.gov.uk/", 1, official.procontract],
+  ["merton", "London Borough of Merton", "https://www.merton.gov.uk/", 2, official.procontract],
+  ["newham", "London Borough of Newham", "https://www.newham.gov.uk/", 0, capitalEsourcing],
+  ["redbridge", "London Borough of Redbridge", "https://www.redbridge.gov.uk/", 2, official.procontract],
+  ["richmond", "London Borough of Richmond upon Thames", "https://www.richmond.gov.uk/", 2, official.procontract],
+  ["southwark", "London Borough of Southwark", "https://www.southwark.gov.uk/", 1, official.procontract],
+  ["sutton", "London Borough of Sutton", "https://www.sutton.gov.uk/", 2, official.procontract],
+  ["tower-hamlets", "London Borough of Tower Hamlets", "https://www.towerhamlets.gov.uk/", 0, official.procontract],
+  ["waltham-forest", "London Borough of Waltham Forest", "https://www.walthamforest.gov.uk/", 1, official.procontract],
+  ["wandsworth", "London Borough of Wandsworth", "https://www.wandsworth.gov.uk/", 1, official.procontract],
+  ["westminster", "Westminster City Council", "https://www.westminster.gov.uk/", 0, capitalEsourcing]
+];
+
+const housingTargets = [
+  ["notting-hill-genesis", "Notting Hill Genesis", "https://www.nhg.org.uk/", 1, "Communal areas, voids and London estate services"],
+  ["hyde-housing", "The Hyde Group", "https://www.hyde-housing.co.uk/", 1, "Communal cleaning, property care and responsive support"],
+  ["mtvh", "Metropolitan Thames Valley Housing", "https://www.mtvh.co.uk/", 1, "Estate cleaning, voids and resident-facing services"],
+  ["a2dominion", "A2Dominion", "https://www.a2dominion.co.uk/", 1, "London estate, communal and handover cleaning"],
+  ["southern-housing", "Southern Housing", "https://www.southernhousing.org.uk/", 2, "Communal cleaning and local property-care packages"],
+  ["guinness", "The Guinness Partnership", "https://www.guinnesspartnership.com/", 2, "Estate services, voids and specialist cleaning"],
+  ["riverside", "Riverside", "https://www.riverside.org.uk/", 2, "London housing and estate-service supply chain"],
+  ["pa-housing", "PA Housing", "https://www.pahousing.co.uk/", 2, "Communal cleaning and responsive property support"],
+  ["sng", "Sovereign Network Group", "https://www.sng.org.uk/", 2, "Housing cleaning, void and estate-service opportunities"],
+  ["home-group", "Home Group", "https://www.homegroup.org.uk/", 2, "Regional housing and property-care supply chain"]
+];
+
+const propertyTargets = [
+  ["firstport", "FirstPort", "https://www.firstport.co.uk/", 1, "Managed-block communal cleaning and responsive care"],
+  ["rendall-rittner", "Rendall & Rittner", "https://www.rendallandrittner.co.uk/", 1, "Premium residential and build-to-rent property services"],
+  ["rmg", "Residential Management Group", "https://www.rmguk.com/", 1, "Managed residential cleaning and building care"],
+  ["encore-estates", "Encore Estate Management", "https://www.encoreestates.co.uk/", 2, "Communal areas, inspections and responsive maintenance"],
+  ["greystar", "Greystar", "https://www.greystar.com/", 1, "Build-to-rent cleaning, turnovers and resident areas"],
+  ["get-living", "Get Living", "https://www.getliving.com/", 0, "Large London rental neighbourhood cleaning and turnovers"],
+  ["quintain", "Quintain", "https://www.quintain.co.uk/", 0, "Wembley Park build-to-rent and public-realm support"],
+  ["ballymore", "Ballymore", "https://www.ballymoregroup.com/", 0, "New-build handover, managed buildings and resident areas"],
+  ["berkeley-group", "Berkeley Group", "https://www.berkeleygroup.co.uk/", 1, "Handover Complete, show-space and development cleaning"],
+  ["canary-wharf-group", "Canary Wharf Group", "https://group.canarywharf.com/", 0, "Office, retail, estate and technical-cleaning supply chain"]
+];
+
+const additionalFmTargets = [
+  ["churchill", "Churchill Group", "https://www.churchillservices.com/", 1, "Specialist and regional cleaning delivery partner"],
+  ["bidvest-noonan", "Bidvest Noonan", "https://bidvestnoonan.co.uk/", 1, "London specialist-cleaning and overflow supply chain"],
+  ["abm-uk", "ABM UK", "https://www.abm.co.uk/", 1, "Commercial property and transport cleaning support"],
+  ["emcor-uk", "EMCOR UK", "https://www.emcoruk.com/", 1, "Technical workplace and specialist-cleaning partner"],
+  ["kier-places", "Kier Places", "https://www.kier.co.uk/what-we-do/places/", 2, "Housing, workplace and property-service supply chain"],
+  ["integral-uk", "Integral UK", "https://integral.co.uk/", 1, "Technical FM and managed-workplace cleaning support"],
+  ["tcfm", "TC Facilities Management", "https://www.tcfm.co.uk/", 2, "Regional specialist and contract-cleaning partnership"]
+];
+
+initialRecords.push(
+  ...councilTargets.map(([id, buyer, website, priority, portal]) => record(
+    id,
+    buyer,
+    "council",
+    `${buyer} cleaning, estate and facilities opportunities`,
+    portal === capitalEsourcing ? "capitalEsourcing supplier route" : "London Tenders Portal / buyer route to verify",
+    "Multiple / opportunity-led",
+    priority,
+    "not-started",
+    "monitor",
+    "Procurement portal",
+    "",
+    portal,
+    website,
+    priority === 0 ? "Check weekly" : "Check fortnightly",
+    `Register or confirm UCM's portal profile, then search ${buyer} cleaning and facilities opportunities.`,
+    ["Supplier registration", "Insurance", "Policies", "London mobilisation", "Social value"],
+    "Individual London authority target. Confirm the current tender portal and notice status before relying on any opportunity."
+  )),
+  ...housingTargets.map(([id, buyer, portal, priority, opportunity]) => record(
+    id,
+    buyer,
+    "housing",
+    opportunity,
+    "Direct supplier, procurement or partnership route",
+    "Multiple / opportunity-led",
+    priority,
+    "not-started",
+    "monitor",
+    "Supplier route to verify",
+    "",
+    portal,
+    portal,
+    priority === 1 ? "This month" : "Build relationship",
+    `Find ${buyer}'s current supplier route and introduce UCM's communal, void and responsive-care capability.`,
+    ["Housing evidence", "Resident safety", "Safeguarding", "Social value", "Service reporting"],
+    "Target buyer record, not a claim of a live tender. Confirm current procurement and onboarding routes before contact."
+  )),
+  ...propertyTargets.map(([id, buyer, portal, priority, opportunity]) => record(
+    id,
+    buyer,
+    "property-manager",
+    opportunity,
+    "Direct procurement, property or supply-chain introduction",
+    "Private contract / site-led",
+    priority,
+    "not-started",
+    "not-started",
+    "Procurement contact to identify",
+    "",
+    portal,
+    portal,
+    priority === 0 ? "Research this week" : "Build named account",
+    `Identify the London procurement or operations owner at ${buyer} and send a buyer-specific capability introduction.`,
+    ["Named decision-maker", "Site portfolio", "References", "Service evidence", "Response capacity"],
+    "Private-buyer target. Do not send generic mass outreach; identify a role, portfolio need and credible UCM service angle first."
+  )),
+  ...additionalFmTargets.map(([id, buyer, portal, priority, opportunity]) => record(
+    id,
+    buyer,
+    "fm-prime",
+    opportunity,
+    "Prime-contractor supplier onboarding and partnership",
+    "Subcontract / opportunity-led",
+    priority,
+    "not-started",
+    "not-started",
+    "Supplier contact to identify",
+    "",
+    portal,
+    portal,
+    priority === 1 ? "This month" : "After priority primes",
+    `Find ${buyer}'s official supplier onboarding route and test a specific London specialist-cleaning proposition.`,
+    ["Supplier onboarding", "Insurance", "Health and safety", "References", "London capacity"],
+    "Prime-contractor target. UCM needs a specific delivery gap, geography or specialist capability before outreach."
+  ))
+);
 
 const initialReadiness = [
   { id: "legal", group: "Identity", item: "Legal entity and company number", evidence: "Universal Cleaning & Maintenance Services Ltd, 12265169", status: "complete" },
