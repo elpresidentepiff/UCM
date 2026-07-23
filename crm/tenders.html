@@ -22,7 +22,7 @@
       <a href="index.html#compliance">Compliance</a>
       <a href="index.html#carbon">Carbon actions</a>
       <a class="active" href="tenders.html">Tenders &amp; registrations</a>
-      <a href="#supplier-pack">Supplier evidence pack</a>
+      <a href="#supplier-pack">Required paperwork</a>
       <a href="#rm6264">RM6264 readiness</a>
     </nav>
     <div class="sidebar-foot">
@@ -77,102 +77,45 @@
     </section>
 
     <section id="supplier-pack" class="section supplier-pack" aria-labelledby="supplier-pack-heading">
-      <div class="section-head tracker-head">
+      <div class="section-head paperwork-head">
         <div>
-          <p class="eyebrow">One reusable company pack</p>
-          <h2 id="supplier-pack-heading">GOV.UK registration and supplier evidence</h2>
+          <p class="eyebrow">Build once, reuse for every buyer</p>
+          <h2 id="supplier-pack-heading">Paperwork UCM needs</h2>
         </div>
-        <div class="toolbar">
-          <button id="exportEvidenceCsv" class="icon-action" type="button"><i data-lucide="download"></i><span>Export evidence CSV</span></button>
-        </div>
+        <p class="section-copy">This is the master pack. A buyer may ask for extra contract-specific information, but these are the documents UCM should prepare first.</p>
       </div>
 
-      <div class="platform-truth">
-        <div>
-          <span class="step-number">1</span>
-          <strong>GOV.UK One Login</strong>
-          <p>An individual work-email account with two-factor authentication. Agree the first UCM administrator and a backup.</p>
-        </div>
-        <div>
-          <span class="step-number">2</span>
-          <strong>Find a Tender CDP</strong>
-          <p>Register UCM, complete core supplier information and obtain the PPON. Create a current share code or supplier file.</p>
-        </div>
-        <div>
-          <span class="step-number">3</span>
-          <strong>Buyer portal</strong>
-          <p>Join each council, housing, FM or private buyer system separately. The Central Digital Platform does not replace those portals.</p>
-        </div>
-        <div>
-          <span class="step-number">4</span>
-          <strong>Procurement response</strong>
-          <p>Add contract-specific pricing, method statements, references, mobilisation, TUPE, social value and declarations.</p>
-        </div>
+      <div class="paperwork-list">
+        <article><span>01</span><div><strong>Company identity and government registration</strong><p>Certificate of incorporation, Companies House extract, registered address, VAT status, PPON, Find a Tender supplier record, connected-person details, exclusions declaration and current share code.</p></div></article>
+        <article><span>02</span><div><strong>Accounts and financial capacity</strong><p>Two to three years of accounts, current management accounts, cash-flow forecast, accountant contact, financial viability response, safe contract-value statement and secure company bank evidence.</p></div></article>
+        <article><span>03</span><div><strong>Insurance certificates</strong><p>Employers' liability, public liability, professional indemnity, business motor, products/treatment risk where relevant, policy limits, covered activities and expiry dates.</p></div></article>
+        <article><span>04</span><div><strong>Health and safety</strong><p>Signed policy, RAMS templates and examples, COSHH procedure, product register, safety data sheets, PPE matrix, incident/RIDDOR history and higher-risk task controls.</p></div></article>
+        <article><span>05</span><div><strong>Cleaning operations and quality</strong><p>Service catalogue, equipment register, quality inspections, complaints, corrective actions, business continuity, emergency response, waste controls, subcontractor controls and supply continuity.</p></div></article>
+        <article><span>06</span><div><strong>Employees and safeguarding</strong><p>Right-to-work process, employment and pay controls, training matrix, competency certificates, lawful vetting/DBS rules, safeguarding, equality, modern slavery and TUPE capability.</p></div></article>
+        <article><span>07</span><div><strong>Data protection and cyber security</strong><p>Data-protection policy, ICO status, privacy notices, retention schedule, breach response, access controls, MFA, backups, anti-bribery, conflicts policy and Cyber Essentials where required.</p></div></article>
+        <article><span>08</span><div><strong>Environmental and social value</strong><p>Environmental policy, measured carbon baseline, carbon-reduction plan, sustainable purchasing, waste evidence, local employment, training and contract-level social-value commitments.</p></div></article>
+        <article><span>09</span><div><strong>Commercial proof</strong><p>Capability statement, company profile, approved case studies, permitted client references, organisation chart, key CVs, geographic coverage, response times and service boundaries.</p></div></article>
+        <article><span>10</span><div><strong>Tender response library</strong><p>Method statements, mobilisation plan, staffing and resilience, TUPE assumptions, KPI report, governance, escalation, pricing model, risk register, bid/no-bid score and authorised declarations.</p></div></article>
+        <article><span>11</span><div><strong>HOCl and specialist-service evidence</strong><p>Product source, regulatory position, SDS, COSHH, staff training, verified concentration/contact time, efficacy evidence, surface compatibility, insurance and approved marketing claims.</p></div></article>
+        <article><span>12</span><div><strong>Buyer-specific appendix</strong><p>Council social value and FOI; housing safeguarding and resident care; FM supplier codes; developer handover evidence; technical-site security and shutdown procedures.</p></div></article>
       </div>
 
       <div class="security-notice">
         <i data-lucide="shield-alert"></i>
-        <p><strong>Status tracking only.</strong> Do not upload bank evidence, accounts, personal connected-person data, certificates or signed declarations to this public app. Keep source files in UCM's private, access-controlled evidence library.</p>
+        <p><strong>Do not store the actual files here.</strong> Bank evidence, accounts, personal data and certificates belong in UCM's private document library. This public page is the list, not the filing cabinet.</p>
       </div>
-
-      <div class="evidence-metrics" aria-label="Supplier evidence summary">
-        <div><span>Evidence items</span><strong id="evidenceTotal">0</strong></div>
-        <div><span>Ready</span><strong id="evidenceReady">0</strong></div>
-        <div><span>In progress</span><strong id="evidenceProgress">0</strong></div>
-        <div><span>Required / expired</span><strong id="evidenceRequired">0</strong></div>
-      </div>
-
-      <div class="evidence-filters" aria-label="Supplier evidence filters">
-        <label class="search-field" for="evidenceSearch">
-          <span>Search evidence</span>
-          <span class="input-shell"><i data-lucide="search"></i><input id="evidenceSearch" type="search" placeholder="Insurance, RAMS, accounts, safeguarding..."></span>
-        </label>
-        <label for="evidenceCategory">Category
-          <select id="evidenceCategory">
-            <option value="all">All categories</option>
-          </select>
-        </label>
-        <label for="evidenceBuyer">Buyer use
-          <select id="evidenceBuyer">
-            <option value="all">All buyer types</option>
-            <option value="universal">Universal</option>
-            <option value="public">Council / public</option>
-            <option value="housing">Housing provider</option>
-            <option value="fm">FM prime</option>
-            <option value="property">Property / developer</option>
-            <option value="specialist">Specialist site</option>
-          </select>
-        </label>
-        <label for="evidenceStatus">Status
-          <select id="evidenceStatus">
-            <option value="all">All states</option>
-            <option value="required">Required</option>
-            <option value="in-progress">In progress</option>
-            <option value="ready">Ready</option>
-            <option value="expired">Expired</option>
-            <option value="not-applicable">Not applicable</option>
-          </select>
-        </label>
-      </div>
-
-      <div class="register-meta">
-        <span id="evidenceResultCount">0 evidence items</span>
-        <span>Update status, owner and review date. Changes stay in this browser.</span>
-      </div>
-      <div id="evidenceRows" class="evidence-list"></div>
 
       <div class="official-links">
-        <a href="https://www.gov.uk/government/publications/procurement-act-2023-short-guides/suppliers-how-to-register-your-organisation-and-first-administrator-on-find-a-tender-in-three-easy-steps-html" target="_blank" rel="noreferrer">Official registration guide <i data-lucide="external-link"></i></a>
-        <a href="https://www.gov.uk/government/publications/procurement-act-2023-short-guides/suppliers-detailed-walkthrough-how-an-administrator-completes-and-updates-supplier-information-html" target="_blank" rel="noreferrer">Detailed supplier-information walkthrough <i data-lucide="external-link"></i></a>
-        <a href="https://www.gov.uk/government/publications/procurement-act-2023-short-guides/central-digital-platform-factsheet-html" target="_blank" rel="noreferrer">Central Digital Platform factsheet <i data-lucide="external-link"></i></a>
+        <a href="https://www.gov.uk/government/publications/procurement-act-2023-short-guides/suppliers-how-to-register-your-organisation-and-first-administrator-on-find-a-tender-in-three-easy-steps-html" target="_blank" rel="noreferrer">GOV.UK registration guide <i data-lucide="external-link"></i></a>
+        <a href="https://github.com/elpresidentepiff/UCM/blob/main/growth/tenders/ucm-one-login-and-supplier-evidence-pack.md" target="_blank" rel="noreferrer">Full paperwork guide <i data-lucide="external-link"></i></a>
       </div>
     </section>
 
     <section class="section" aria-labelledby="register-heading">
       <div class="section-head tracker-head">
-        <div><p class="eyebrow">Full register</p><h2 id="register-heading">Opportunities and registrations</h2></div>
+        <div><p class="eyebrow">103 routes to work through</p><h2 id="register-heading">Companies and organisations UCM plans to join</h2></div>
         <div class="toolbar">
-          <button id="exportCsv" class="icon-action" type="button"><i data-lucide="download"></i><span>Export CSV</span></button>
+          <button id="exportCsv" class="icon-action" type="button"><i data-lucide="download"></i><span>Export company CRM</span></button>
           <button id="resetTracker" class="icon-action quiet" type="button"><i data-lucide="rotate-ccw"></i><span>Reset local data</span></button>
         </div>
       </div>
