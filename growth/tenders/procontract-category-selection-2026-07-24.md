@@ -119,4 +119,3 @@ This reduces irrelevant alerts and prevents UCM appearing to claim national cove
 5. Save the registration confirmation privately.
 6. Configure email alerts using the selected cleaning-service categories.
 7. Record the completed registration date in the UCM Tender Tracker.
-
