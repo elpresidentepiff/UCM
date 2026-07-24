@@ -657,6 +657,17 @@ const confirmedProgress = {
       { date: "2026-07-24", action: "Account created", note: "Clarion supplier portal" },
       { date: "2026-07-24", action: "Onboarding started", note: "Application still to be completed" }
     ]
+  },
+  chic: {
+    registration: "registered",
+    application: "preparing",
+    lastContacted: "2026-07-24",
+    nextAction: "Complete the CHIC Cleaning Services DPS application for Lot 1 and Lot 2, confirm London and South coverage, and upload only verified UCM qualification evidence.",
+    previousNextActions: ["Call CHIC, request the Cleaning Services DPS application route and confirm London and South East categories, fees and current member demand."],
+    activity: [
+      { date: "2026-07-24", action: "Account created", note: "CHIC eSourcing portal" },
+      { date: "2026-07-24", action: "Onboarding started", note: "Cleaning Services DPS application still to be completed" }
+    ]
   }
 };
 

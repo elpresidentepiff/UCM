@@ -108,6 +108,7 @@ These facts are leads, not final tender evidence:
 |---|---|---|---|---|
 | Coupa Supplier Portal | `ACCOUNT CREATED` | `ONBOARDING STARTED` | 24 Jul 2026 | Complete UCM's legal-entity and business profile, keep tax and payment information private, and complete each relevant buyer-specific connection separately |
 | Clarion Housing Group | `ACCOUNT CREATED` | `APPLICATION TO COMPLETE` | 24 Jul 2026 | Finish the supplier application and assemble communal-area, void, resident-safety and London delivery evidence |
+| CHIC eSourcing | `ACCOUNT CREATED` | `APPLICATION TO COMPLETE` | 24 Jul 2026 | Complete the Cleaning Services DPS application for Lots 1 and 2, confirm London/South coverage and submit verified qualification evidence |
 
 Creating a Coupa account does not make UCM an approved supplier to every organisation using Coupa. Buyer invitations, qualification questions and sourcing events remain buyer-specific.
 
@@ -171,6 +172,7 @@ Do not ask Carlos for these unless an opportunity actually requires them:
 | 23 Jul 2026 | Created the Level 1 master procurement register and reduced the Carlos request to 12 basic items | Delivery team | Awaiting Carlos's evidence |
 | 23 Jul 2026 | Created the first controlled template pack: capability draft, RAMS, COSHH, mobilisation, quality/Proof Passport and document control | Delivery team | Templates ready for verified inputs and human approval |
 | 24 Jul 2026 | Recorded confirmed Coupa and Clarion account creation and onboarding progress | Delivery team | Both accounts created; applications and onboarding information remain to be completed |
+| 24 Jul 2026 | Recorded confirmed CHIC account creation and onboarding progress | Delivery team | Account created; Cleaning Services DPS application remains to be completed |
 
 ## Related Files
 
