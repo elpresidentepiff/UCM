@@ -658,6 +658,17 @@ const confirmedProgress = {
       { date: "2026-07-24", action: "Onboarding started", note: "Application still to be completed" }
     ]
   },
+  procontract: {
+    registration: "in-progress",
+    application: "preparing",
+    lastContacted: "2026-07-24",
+    nextAction: "Remove irrelevant automatic categories, retain UCM's core cleaning-service codes, set the supply region to London, then continue and save the registration confirmation.",
+    previousNextActions: ["Register and search DN797007 plus London cleaning opportunities."],
+    activity: [
+      { date: "2026-07-24", action: "Registration started", note: "ProContract / Due North" },
+      { date: "2026-07-24", action: "Areas of interest reached", note: "Automatic cleaning categories require refinement before continuing" }
+    ]
+  },
   chic: {
     registration: "registered",
     application: "preparing",
