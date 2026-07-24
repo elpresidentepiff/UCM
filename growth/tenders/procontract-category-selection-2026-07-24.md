@@ -1,6 +1,6 @@
 # UCM ProContract Category Selection
 
-**Status:** Registration in progress
+**Status:** Application submitted - pending ProContract approval and mandatory email verification
 
 **Source reviewed:** ProContract Areas of Interest screen supplied by UCM on 24 July 2026
 
@@ -110,12 +110,18 @@ Use:
 
 This reduces irrelevant alerts and prevents UCM appearing to claim national coverage.
 
-## Final Registration Steps
+## Submission Position
 
-1. Replace the automatic selections with the core list above.
-2. Add conditional categories only after Carlos confirms them.
-3. Change the supply region from United Kingdom to London.
-4. Review every category once more before clicking `Continue registration`.
-5. Save the registration confirmation privately.
-6. Configure email alerts using the selected cleaning-service categories.
-7. Record the completed registration date in the UCM Tender Tracker.
+UCM submitted the ProContract supplier-registration application on 24 July 2026.
+
+Next actions:
+
+1. Monitor the registration email account and check junk or spam.
+2. Follow the mandatory email-confirmation link when it arrives.
+3. Record the username and confirmation privately.
+4. Log in and complete any remaining first-login registration fields.
+5. Confirm the London region and approved cleaning-service categories.
+6. Configure email alerts and review matched opportunities.
+7. Contact ProContract support if no update arrives within 48 hours.
+
+Until the email link is followed and ProContract confirms the registration, UCM must be recorded as `PENDING APPROVAL`, not `REGISTERED`.

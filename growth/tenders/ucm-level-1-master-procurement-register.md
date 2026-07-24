@@ -109,7 +109,7 @@ These facts are leads, not final tender evidence:
 | Coupa Supplier Portal | `ACCOUNT CREATED` | `ONBOARDING STARTED` | 24 Jul 2026 | Complete UCM's legal-entity and business profile, keep tax and payment information private, and complete each relevant buyer-specific connection separately |
 | Clarion Housing Group | `ACCOUNT CREATED` | `APPLICATION TO COMPLETE` | 24 Jul 2026 | Finish the supplier application and assemble communal-area, void, resident-safety and London delivery evidence |
 | CHIC eSourcing | `ACCOUNT CREATED` | `APPLICATION TO COMPLETE` | 24 Jul 2026 | Complete the Cleaning Services DPS application for Lots 1 and 2, confirm London/South coverage and submit verified qualification evidence |
-| ProContract / Due North | `REGISTRATION IN PROGRESS` | `CATEGORY SELECTION` | 24 Jul 2026 | Remove irrelevant automatic matches, retain UCM cleaning-service categories, change the region from United Kingdom to London and continue registration |
+| ProContract / Due North | `PENDING APPROVAL` | `SUBMITTED` | 24 Jul 2026 | Monitor email and spam, follow the mandatory confirmation link, complete first-login registration and contact ProContract if no update arrives within 48 hours |
 
 Creating a Coupa account does not make UCM an approved supplier to every organisation using Coupa. Buyer invitations, qualification questions and sourcing events remain buyer-specific.
 
@@ -175,6 +175,7 @@ Do not ask Carlos for these unless an opportunity actually requires them:
 | 24 Jul 2026 | Recorded confirmed Coupa and Clarion account creation and onboarding progress | Delivery team | Both accounts created; applications and onboarding information remain to be completed |
 | 24 Jul 2026 | Recorded confirmed CHIC account creation and onboarding progress | Delivery team | Account created; Cleaning Services DPS application remains to be completed |
 | 24 Jul 2026 | Reviewed ProContract automatic categories and recorded registration progress | Delivery team | Registration is in progress; category refinement and final confirmation remain |
+| 24 Jul 2026 | Recorded ProContract supplier application submission | Delivery team | Pending approval, mandatory email verification and first-login completion |
 
 ## Related Files
 
