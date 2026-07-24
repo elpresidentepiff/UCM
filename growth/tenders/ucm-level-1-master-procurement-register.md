@@ -109,6 +109,7 @@ These facts are leads, not final tender evidence:
 | Coupa Supplier Portal | `ACCOUNT CREATED` | `ONBOARDING STARTED` | 24 Jul 2026 | Complete UCM's legal-entity and business profile, keep tax and payment information private, and complete each relevant buyer-specific connection separately |
 | Clarion Housing Group | `ACCOUNT CREATED` | `APPLICATION TO COMPLETE` | 24 Jul 2026 | Finish the supplier application and assemble communal-area, void, resident-safety and London delivery evidence |
 | CHIC eSourcing | `ACCOUNT CREATED` | `APPLICATION TO COMPLETE` | 24 Jul 2026 | Complete the Cleaning Services DPS application for Lots 1 and 2, confirm London/South coverage and submit verified qualification evidence |
+| ProContract / Due North | `REGISTRATION IN PROGRESS` | `CATEGORY SELECTION` | 24 Jul 2026 | Remove irrelevant automatic matches, retain UCM cleaning-service categories, change the region from United Kingdom to London and continue registration |
 
 Creating a Coupa account does not make UCM an approved supplier to every organisation using Coupa. Buyer invitations, qualification questions and sourcing events remain buyer-specific.
 
@@ -173,10 +174,12 @@ Do not ask Carlos for these unless an opportunity actually requires them:
 | 23 Jul 2026 | Created the first controlled template pack: capability draft, RAMS, COSHH, mobilisation, quality/Proof Passport and document control | Delivery team | Templates ready for verified inputs and human approval |
 | 24 Jul 2026 | Recorded confirmed Coupa and Clarion account creation and onboarding progress | Delivery team | Both accounts created; applications and onboarding information remain to be completed |
 | 24 Jul 2026 | Recorded confirmed CHIC account creation and onboarding progress | Delivery team | Account created; Cleaning Services DPS application remains to be completed |
+| 24 Jul 2026 | Reviewed ProContract automatic categories and recorded registration progress | Delivery team | Registration is in progress; category refinement and final confirmation remain |
 
 ## Related Files
 
 - [Full supplier evidence guide](ucm-one-login-and-supplier-evidence-pack.md) - later-stage and buyer-specific requirements.
 - [Verified opportunity sweep](verified-opportunity-sweep-2026-07-23.md) - externally verified opportunities and supplier routes.
+- [ProContract category selection](procontract-category-selection-2026-07-24.md) - exact service categories, exclusions, region and completion steps.
 - [Level 1 working templates](level-1-templates/README.md) - documents produced by the delivery team and awaiting verified UCM inputs.
 - [UCM Tender Control](../../app/crm/tenders.html) - browser-based opportunity and follow-up tracker.
