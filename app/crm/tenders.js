@@ -89,6 +89,7 @@ const initialRecords = [
   record("competefor", "CompeteFor", "public-portal", "Supply-chain opportunities from major projects", "Supplier profile and opportunity alerts", "Multiple", 1, "not-started", "monitor", "Portal support", "", "https://www.competefor.com/about/", "https://www.competefor.com/about/", "This month", "Create a detailed SME capability profile using approved evidence and London coverage.", ["Capability statement", "CPV categories", "Case evidence"], "Useful for subcontract opportunities flowing from large public and infrastructure contracts."),
   record("nhs-atamis", "NHS Atamis", "public-portal", "NHS procurement opportunities", "Health Family supplier portal", "Multiple", 3, "not-started", "monitor", "NHS commercial support", "", "https://www.england.nhs.uk/nhs-commercial/supplying-to-the-nhs/", "https://www.england.nhs.uk/nhs-commercial/supplying-to-the-nhs/", "After healthcare readiness", "Research non-clinical opportunities only; do not claim clinical capability.", ["Atamis registration", "NHS standards", "Clinical boundaries", "Workforce checks"], "Future route. UCM should not market hospital-grade delivery until the required evidence, controls and experience are established."),
   record("met-police", "Metropolitan Police", "public-portal", "Met supplier and subcontract opportunities", "CompeteFor, Coupa, Find a Tender and Contracts Finder", "GBP 5k-50k on CompeteFor; larger routes above GBP 50k", 2, "not-started", "monitor", "Supplier portals", "", "https://www.met.police.uk/police-forces/metropolitan-police/areas/about-us/about-the-met/commercial-services/information-for-suppliers/become-a-met-supplier/", "https://www.met.police.uk/police-forces/metropolitan-police/areas/about-us/about-the-met/commercial-services/information-for-suppliers/become-a-met-supplier/", "Build readiness first", "Register on CompeteFor and monitor Coupa, Find a Tender and Contracts Finder. Prepare SSQ evidence, relevant examples, social value and the Met Supplier Code of Conduct.", ["Security requirements", "Vetting", "Insurance", "CompeteFor profile", "SSQ evidence", "Modern Slavery Assessment Tool"], "The Met states that GBP 5,000-50,000 opportunities are published on CompeteFor and contracts over GBP 50,000 are advertised through Coupa, Find a Tender and Contracts Finder. This is a supplier route, not a confirmed live cleaning contract."),
+  record("coupa", "Coupa Supplier Portal", "public-portal", "Supplier account and buyer-specific onboarding", "Coupa Supplier Portal account; each buyer still requires its own connection or sourcing event", "Multiple", 1, "registered", "preparing", "Supplier portal", "", "https://supplier.coupahost.com/", "https://compass.coupa.com/en-us/products/product-documentation/supplier-resources/for-suppliers/coupa-supplier-portal/get-started-with-the-csp/registration-and-login/create%20your-account", "Complete onboarding", "Complete UCM's legal-entity and business profile, confirm tax and payment information privately, then identify and complete each relevant buyer-specific onboarding request.", ["Legal entity", "Business profile", "Tax registration", "Payment method", "Buyer-specific connection", "Sourcing-event documents"], "UCM confirmed the account was created and onboarding began on 24 July 2026. A Coupa account is infrastructure, not automatic approval by the Metropolitan Police, Clarion or any other buyer."),
 
   record("clarion", "Clarion Housing Group", "housing", "Housing cleaning and property-care tenders", "Direct supplier opportunity portal", "Multiple", 1, "not-started", "monitor", "Supplier portal", "", "https://www.clarionhg.com/about-us/partner-with-us/tender-opportunities", "https://www.clarionhg.com/about-us/partner-with-us/tender-opportunities", "This month", "Register interest and build communal-area, void and responsive-care capability pack.", ["Housing evidence", "Resident safety", "Social value", "London coverage"], "Strong buyer fit for recurring communal cleaning and Handover Complete."),
   record("lq", "L&Q", "housing", "Goods and services supplier route", "Direct housing-association registration", "Multiple", 1, "not-started", "monitor", "Supplier portal", "", "https://www.lqgroup.org.uk/contact-us/supplying-goods-and-services-to-lq", "https://www.lqgroup.org.uk/contact-us/supplying-goods-and-services-to-lq", "This month", "Complete supplier route and position cleaning plus minor repairs for London estates.", ["Housing compliance", "Safeguarding", "Social value", "Service evidence"], "High strategic relevance because UCM combines cleaning and maintenance."),
@@ -634,6 +635,31 @@ initialReadiness.forEach((item) => {
   item.status = "required";
 });
 
+const confirmedProgress = {
+  coupa: {
+    registration: "registered",
+    application: "preparing",
+    lastContacted: "2026-07-24",
+    nextAction: "Complete UCM's legal-entity and business profile, confirm tax and payment information privately, then identify and complete each relevant buyer-specific onboarding request.",
+    previousNextActions: [],
+    activity: [
+      { date: "2026-07-24", action: "Account created", note: "Coupa Supplier Portal" },
+      { date: "2026-07-24", action: "Onboarding started", note: "Application and business profile still to be completed" }
+    ]
+  },
+  clarion: {
+    registration: "registered",
+    application: "preparing",
+    lastContacted: "2026-07-24",
+    nextAction: "Complete Clarion's supplier onboarding application and assemble the communal-area, void, resident-safety and London delivery evidence requested by the portal.",
+    previousNextActions: ["Register interest and build communal-area, void and responsive-care capability pack."],
+    activity: [
+      { date: "2026-07-24", action: "Account created", note: "Clarion supplier portal" },
+      { date: "2026-07-24", action: "Onboarding started", note: "Application still to be completed" }
+    ]
+  }
+};
+
 let records = loadState();
 let readiness = loadReadiness();
 let selectedId = null;
@@ -642,13 +668,38 @@ function clone(value) {
   return JSON.parse(JSON.stringify(value));
 }
 
+function mergeConfirmedProgress(base, savedRecord = null) {
+  const merged = { ...base, ...(savedRecord || {}) };
+  const confirmed = confirmedProgress[base.id];
+  if (!confirmed) return merged;
+
+  if (!savedRecord || ["not-started", "researching"].includes(merged.registration)) {
+    merged.registration = confirmed.registration;
+  }
+  if (!savedRecord || ["not-started", "monitor"].includes(merged.application)) {
+    merged.application = confirmed.application;
+  }
+  if (!merged.lastContacted) merged.lastContacted = confirmed.lastContacted;
+  if (!merged.nextAction || confirmed.previousNextActions.includes(merged.nextAction)) {
+    merged.nextAction = confirmed.nextAction;
+  }
+
+  const existingActivity = Array.isArray(merged.activity) ? merged.activity : [];
+  const confirmedActivity = confirmed.activity.filter((entry) => !existingActivity.some((existing) =>
+    existing.date === entry.date && existing.action === entry.action && existing.note === entry.note
+  ));
+  merged.activity = [...confirmedActivity, ...existingActivity];
+  return merged;
+}
+
 function loadState() {
   try {
     const saved = JSON.parse(localStorage.getItem(STORAGE_KEY));
-    if (!Array.isArray(saved)) return clone(initialRecords);
-    return initialRecords.map((base) => ({ ...base, ...(saved.find((item) => item.id === base.id) || {}) }));
+    return initialRecords.map((base) =>
+      mergeConfirmedProgress(base, Array.isArray(saved) ? saved.find((item) => item.id === base.id) : null)
+    );
   } catch {
-    return clone(initialRecords);
+    return initialRecords.map((base) => mergeConfirmedProgress(base));
   }
 }
 
