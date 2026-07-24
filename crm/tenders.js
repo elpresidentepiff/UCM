@@ -15,6 +15,7 @@ const registrationLabels = {
   "not-started": "Not started",
   researching: "Researching",
   "in-progress": "In progress",
+  "pending-approval": "Pending approval",
   registered: "Registered",
   "not-required": "Not required"
 };
@@ -659,14 +660,17 @@ const confirmedProgress = {
     ]
   },
   procontract: {
-    registration: "in-progress",
-    application: "preparing",
+    registration: "pending-approval",
+    application: "submitted",
     lastContacted: "2026-07-24",
-    nextAction: "Remove irrelevant automatic categories, retain UCM's core cleaning-service codes, set the supply region to London, then continue and save the registration confirmation.",
+    nextAction: "Monitor the registration email, check spam, follow the mandatory email-confirmation link, then complete the first-login registration. Escalate to ProContract if no decision arrives within 48 hours.",
     previousNextActions: ["Register and search DN797007 plus London cleaning opportunities."],
+    previousRegistrationStates: ["not-started", "researching", "in-progress"],
+    previousApplicationStates: ["not-started", "monitor", "preparing"],
     activity: [
       { date: "2026-07-24", action: "Registration started", note: "ProContract / Due North" },
-      { date: "2026-07-24", action: "Areas of interest reached", note: "Automatic cleaning categories require refinement before continuing" }
+      { date: "2026-07-24", action: "Areas of interest reached", note: "Automatic cleaning categories reviewed and refined" },
+      { date: "2026-07-24", action: "Application submitted", note: "Pending ProContract approval and mandatory email verification" }
     ]
   },
   chic: {
@@ -695,10 +699,12 @@ function mergeConfirmedProgress(base, savedRecord = null) {
   const confirmed = confirmedProgress[base.id];
   if (!confirmed) return merged;
 
-  if (!savedRecord || ["not-started", "researching"].includes(merged.registration)) {
+  const previousRegistrationStates = confirmed.previousRegistrationStates || ["not-started", "researching"];
+  const previousApplicationStates = confirmed.previousApplicationStates || ["not-started", "monitor"];
+  if (!savedRecord || previousRegistrationStates.includes(merged.registration)) {
     merged.registration = confirmed.registration;
   }
-  if (!savedRecord || ["not-started", "monitor"].includes(merged.application)) {
+  if (!savedRecord || previousApplicationStates.includes(merged.application)) {
     merged.application = confirmed.application;
   }
   if (!merged.lastContacted) merged.lastContacted = confirmed.lastContacted;

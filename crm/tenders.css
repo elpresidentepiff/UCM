@@ -60,7 +60,7 @@
 .priority-pill.p2 { background: var(--blue-soft); color: var(--blue); }
 .priority-pill.p3 { background: #edf1ee; color: var(--muted); }
 .status.not-started { background: #edf1ee; color: #58675f; }
-.status.researching, .status.in-progress, .status.preparing { background: var(--amber-soft); color: var(--amber); }
+.status.researching, .status.in-progress, .status.preparing, .status.pending-approval { background: var(--amber-soft); color: var(--amber); }
 .status.registered, .status.submitted, .status.ongoing { background: var(--green-soft); color: var(--green-dark); }
 .status.monitor, .status.subcontract, .status.not-required { background: var(--blue-soft); color: var(--blue); }
 .status.closed { background: #e8e9e8; color: #656b68; }
