@@ -54,6 +54,7 @@ const fitLabels = {
 
 const official = {
   rm6264: "https://www.gca.gov.uk/agreements/RM6264",
+  rm6241: "https://www.gca.gov.uk/agreements/RM6241",
   srs: "https://supplierregistration.cabinetoffice.gov.uk/organisation/register",
   fts: "https://www.find-tender.service.gov.uk/Search?aff=government+tenders",
   contracts: "https://www.contractsfinder.service.gov.uk/",
@@ -71,6 +72,7 @@ function record(id, buyer, type, opportunity, route, value, priority, registrati
 }
 
 const initialRecords = [
+  record("rm6241", "Government Commercial Agency", "live-opportunity", "RM6241 Housing Maintenance and Repair DPS", "DPS admission, then buyer further competitions", "No guaranteed spend; open admission until 23 Feb 2029", 0, "not-started", "preparing", "RM6241 agreement team", "rm6241housing@crowncommercial.gov.uk", "https://supplierregistration.cabinetoffice.gov.uk/dps/RM6241?nav=0", official.rm6241, "Open until 23 Feb 2029", "Check GBP 5m insurance, start Cyber Essentials and complete a private FVRA test before the online application.", ["D-U-N-S", "EL GBP 5m", "PL GBP 5m", "PI GBP 5m", "Cyber Essentials", "Three years accounts", "FVRA", "Equality policy", "Social value"], "Primarily housing maintenance and repair, not a general cleaning framework. Apply only for evidenced void, property-care, refurbishment or minor-works services. CHAS/SSIP is not an admission requirement, although a buyer may require it at call-off. Start with London and contract values below GBP 100k; do not select regulated or unsupported services."),
   record("rm6264", "Crown Commercial Service", "live-opportunity", "RM6264 Facilities Management and Workplace Services DPS", "DPS admission and filtered competitions", "GBP 2bn current estimated ceiling; no revenue guarantee", 0, "in-progress", "preparing", "RM6264 agreement team", "rm6264@crowncommercial.gov.uk", official.srs, "https://www.find-tender.service.gov.uk/Notice/015390-2026", "Open until 23 Feb 2029", "Complete evidence pack, Supplier Registration Service record and financial review before applying.", ["EL GBP 5m", "PL GBP 1m", "PI GBP 1m", "Cyber Essentials", "Financial viability", "Carbon and social value", "Monthly MI", "Management charge"], "Best immediate national framework route. Start with credible London services and low value bands. The official notice says the ceiling was increased to GBP 2bn and explicitly guarantees no business. Passing admission only creates access to filtered competitions."),
   record("procurement-assist-cleaning", "Procurement Assist / iFM Bolton", "live-opportunity", "Cleaning Services DPS, PA BOS 04", "Delta eSourcing admission, then mini-competitions", "GBP 50m estimated across three categories", 0, "not-started", "not-started", "Tender team", "tenders@procurementassist.co.uk", "https://www.delta-esourcing.com/respond/WM5D5P333B", "https://www.contractsfinder.service.gov.uk/notice/e130c836-07c2-4d7b-867f-a7cc9549b7a6", "Open until 31 May 2029, 12:00", "Download the DPS pack and test UCM against Commercial Cleaning and Domestic Cleaning. Exclude clinical deep-clean claims unless separately evidenced.", ["SME suitable", "Commercial cleaning", "Domestic cleaning", "Commercial deep clean", "Financial standing", "Technical evidence"], "A real continuously open route. The DPS is available to public-sector buyers across the UK, but admission only creates access to future mini-competitions. Category 3 includes clinical and police environments and may require PAS 5748:2014 at further competition, so UCM must not select unsupported scope."),
   record("our-lady-mac", "Our Lady of the Magnificat MAC", "live-opportunity", "Four-school cleaning tender", "Litmus Tender Management System", "GBP 2.53m including VAT", 1, "not-started", "not-started", "Jeremy Alderton / Litmus", "tenders@litmuspartnership.co.uk", "https://litmustms.co.uk/respond/4Y774F442W", "https://www.find-tender.service.gov.uk/Notice/019983-2026", "31 Jul 2026, 12:00", "Make a documented bid/no-bid decision immediately. Recommendation: no bid unless UCM can prove Warwickshire/Worcestershire mobilisation, school references, TUPE and management capacity.", ["Four schools", "SME suitable", "TUPE and mobilisation", "School safeguarding", "70% quality / 30% price", "Non-London delivery"], "This is genuinely open but probably wrong for UCM: it is outside London, covers four schools and closes in eight days. Keeping it visible prevents urgency from overruling commercial discipline."),
@@ -84,6 +86,7 @@ const initialRecords = [
   record("contracts-finder", "Contracts Finder", "public-portal", "England public contracts and opportunities", "Saved search and direct buyer links", "Multiple", 1, "not-started", "monitor", "Portal support", "", official.contracts, official.contracts, "Weekly", "Create saved cleaning and facilities searches; record only commercially viable leads.", ["Search profile", "CPV codes", "London filter"], "Core free source, especially for lower-value public opportunities."),
   record("capital-esourcing", "capitalEsourcing", "public-portal", "London borough and public-body tenders", "Supplier registration and alerts", "Multiple", 1, "not-started", "not-started", "Portal support", "", "https://www.capitalesourcing.com/", "https://www.capitalesourcing.com/", "This month", "Register UCM and configure cleaning/FM alerts for participating London authorities.", ["Company details", "Insurance", "Policies", "Alert profile"], "Relevant authorities include Westminster, Hammersmith & Fulham, Havering, Hillingdon, Newham and Kensington & Chelsea."),
   record("procontract", "ProContract / Due North", "public-portal", "Council, housing and regional tenders", "Supplier registration and opportunity search", "Multiple", 0, "not-started", "not-started", "Portal support", "", official.procontract, official.procontract, "Immediate", "Register and search DN797007 plus London cleaning opportunities.", ["Company profile", "CPV codes", "Email alerts"], "Priority because Kingston directs suppliers to this portal."),
+  record("multiquote", "MultiQuote", "public-portal", "Public-sector supplier registration and opportunity alerts", "Supplier registration, buyer matching and tender alerts", "Multiple", 0, "not-started", "not-started", "Supplier support", "", "https://suppliers.multiquote.com/Page/Login.aspx", "https://suppliers.multiquote.com/Page/Login.aspx", "Submitted 27 Jul 2026", "Monitor the registered email and spam folder for approval, clarification or profile-completion requests, then configure cleaning and property-service alerts.", ["Legal entity", "D-U-N-S", "Company profile", "Service categories", "Monitored email"], "UCM submitted its MultiQuote supplier registration on 27 July 2026. Registration creates access to relevant notices; it is not approval for every buyer or a contract award."),
   record("delta", "Delta eSourcing", "public-portal", "Public and regulated-sector tenders", "Supplier registration and alerts", "Multiple", 1, "not-started", "not-started", "Portal support", "", "https://ukifs.delta-esourcing.com/delta/signup.html?userType=supplier", "https://ukifs.delta-esourcing.com/delta/signup.html?userType=supplier", "This month", "Create supplier account and cleaning/FM alert profile.", ["Company identity", "Service categories", "Alerts"], "Widely used portal. Register once, then judge each buyer and contract separately."),
   record("intend", "In-Tend", "public-portal", "Public bodies, universities and local authorities", "Supplier portal network", "Multiple", 1, "not-started", "monitor", "Portal support", "", "https://www.in-tendhost.co.uk/", "https://www.in-tendhost.co.uk/", "This month", "Identify relevant London In-Tend buyer portals and register only where cleaning demand exists.", ["Buyer selection", "Company profile", "Alerts"], "In-Tend hosts separate buyer portals; one generic visit does not necessarily register UCM with every buyer."),
   record("city-london", "City of London Corporation", "public-portal", "City supplier opportunities", "Supplier information and tender portal route", "Multiple", 1, "not-started", "monitor", "Commercial service", "", "https://www.cityoflondon.gov.uk/supporting-businesses/tenders-and-procurement/supplier-information", "https://www.cityoflondon.gov.uk/supporting-businesses/tenders-and-procurement/supplier-information", "This month", "Follow official supplier route and configure cleaning, property and technical-service alerts.", ["Supplier registration", "City delivery evidence", "Compliance"], "High relevance to UCM's office and technical-cleaning history."),
@@ -104,6 +107,7 @@ const initialRecords = [
   record("rm6378", "Government Commercial Agency", "housing", "RM6378 Open FM framework", "Future reopening / open-framework monitoring", "Multiple", 2, "not-started", "monitor", "GCA customer services", "info@gca.gov.uk", "https://www.gca.gov.uk/agreements/RM6378", "https://www.gca.gov.uk/agreements/RM6378", "Monitor reopening", "Review official lot structure and next supplier admission window.", ["Admission window", "Financial capacity", "Lot fit"], "Potential future route. Do not divert effort from RM6264 until a real admission window is confirmed."),
 
   record("ocs", "OCS Group", "fm-prime", "Approved supply-chain / cleaning subcontract", "Supplier onboarding, generally invitation-led", "Subcontract", 1, "not-started", "not-started", "Supplier guidance", "", "https://ocs.com/uk/ocs-procurement-supplier-hub/supplier-guidance/", "https://ocs.com/uk/ocs-procurement-supplier-hub/supplier-guidance/", "After capability pack", "Prepare specialist cleaning capability statement and verify onboarding requirements.", ["SafeContractor may be required", "Insurance", "Policies", "References"], "Approach with a specific gap UCM can fill, not a generic request to be added to a database."),
+  record("morgan-sindall", "Morgan Sindall Property Services", "fm-prime", "London cleaning, void, handover and property-services supply chain", "Direct supply-chain relationship", "Subcontract / buyer-specific packages", 2, "not-required", "monitor", "MSPS Supply Chain Team", "msps.supplychain@morgansindall.com", "https://www.morgansindallpropertyservices.com/", "https://www.morgansindallpropertyservices.com/", "No requirement at this time", "Keep the contact on the monitored-prime list and recheck only when Morgan Sindall publishes a relevant London requirement or after a proportionate relationship-review interval.", ["Supplier onboarding", "Insurance", "Health and safety", "RAMS and COSHH", "References", "London delivery evidence"], "UCM contacted the MSPS supply-chain team on 27 July 2026. Morgan Sindall replied that there is no requirement at this time. This is not active pipeline and no further onboarding action is currently justified."),
   record("mitie", "Mitie", "fm-prime", "London specialist cleaning subcontract", "Supply-chain introduction", "Subcontract", 0, "not-started", "not-started", "Supplier / contact route", "", "https://www.mitie.com/contact-us/", "https://www.mitie.com/contact-us/", "Immediate after pack", "Target the awarded Pan-TfL supply chain with technical and reactive-cleaning proof.", ["Supplier onboarding", "Safety", "Technical evidence", "London response"], "High-priority prime because of known TfL cleaning award and UCM's technical background."),
   record("cbre", "CBRE", "fm-prime", "Supplier diversity and local FM supply chain", "Supplier registration", "Subcontract", 1, "not-started", "not-started", "Supplier diversity", "", "https://www.cbre.co.uk/about-us/corporate-responsibility/supplier-diversity-program", "https://www.cbre.co.uk/about-us/corporate-responsibility/supplier-diversity-program", "This month", "Register with a focused office, technical and multi-site London capability profile.", ["Supplier profile", "Diversity data", "Insurance", "Evidence"], "Potential access to large corporate portfolios; onboarding alone does not create work."),
   record("iss", "ISS UK", "fm-prime", "Specialist and local cleaning supply chain", "Supplier relations route", "Subcontract", 1, "not-started", "not-started", "Supplier relations", "", "https://www.issworld.com/our-approach/supplier-relations", "https://www.issworld.com/our-approach/supplier-relations", "This month", "Identify UK onboarding channel and send a role-specific capability introduction.", ["Supplier code", "ESG", "Insurance", "Service evidence"], "Lead with technical cleaning, short-notice recovery and London reach."),
@@ -521,6 +525,11 @@ initialRecords.forEach((item) => {
 });
 
 const opportunityIntelligence = {
+  "rm6241": {
+    opportunityStatus: "always-open",
+    fit: "prepare",
+    fitReason: "Open admission, but primarily a housing maintenance and repair route. Apply only for evidenced void, property-care, refurbishment or minor-works services after insurance, Cyber Essentials and FVRA checks."
+  },
   "rm6264": {
     opportunityStatus: "always-open",
     fit: "register",
@@ -683,6 +692,29 @@ const confirmedProgress = {
       { date: "2026-07-24", action: "Account created", note: "CHIC eSourcing portal" },
       { date: "2026-07-24", action: "Onboarding started", note: "Cleaning Services DPS application still to be completed" }
     ]
+  },
+  multiquote: {
+    registration: "pending-approval",
+    application: "submitted",
+    lastContacted: "2026-07-27",
+    nextAction: "Monitor the registered email and spam folder for approval, clarification or profile-completion requests, then configure cleaning and property-service alerts.",
+    previousNextActions: [],
+    activity: [
+      { date: "2026-07-27", action: "Supplier registration submitted", note: "MultiQuote application awaiting response or profile-completion instructions" }
+    ]
+  },
+  "morgan-sindall": {
+    registration: "not-required",
+    application: "monitor",
+    lastContacted: "2026-07-27",
+    nextAction: "Keep the contact on the monitored-prime list and recheck only when Morgan Sindall publishes a relevant London requirement or after a proportionate relationship-review interval.",
+    previousNextActions: ["Await the supply-chain team's onboarding instructions. Follow up after five working days if no response and prepare only the evidence they specifically request."],
+    previousRegistrationStates: ["not-started", "researching", "in-progress"],
+    previousApplicationStates: ["not-started", "preparing", "ongoing"],
+    activity: [
+      { date: "2026-07-27", action: "Supply-chain response received", note: "Morgan Sindall confirmed there is no requirement at this time; route moved to monitor" },
+      { date: "2026-07-27", action: "Onboarding enquiry sent", note: "Email sent to msps.supplychain@morgansindall.com" }
+    ]
   }
 };
 
@@ -773,6 +805,43 @@ function statusBadge(value, labels) {
   return `<span class="status ${esc(value)}">${esc(labels[value] || value)}</span>`;
 }
 
+function compareActivity(a, b) {
+  const openStatuses = ["open-now", "always-open"];
+  const applicationRank = {
+    ongoing: 0,
+    submitted: 1,
+    preparing: 2,
+    "not-started": 3,
+    monitor: 4,
+    subcontract: 5,
+    blocked: 6,
+    closed: 7
+  };
+  const registrationRank = {
+    "in-progress": 0,
+    "pending-approval": 1,
+    registered: 2,
+    researching: 3,
+    "not-started": 4,
+    "not-required": 5
+  };
+
+  const aIsOpen = openStatuses.includes(a.opportunityStatus);
+  const bIsOpen = openStatuses.includes(b.opportunityStatus);
+  if (aIsOpen !== bIsOpen) return aIsOpen ? -1 : 1;
+
+  if (aIsOpen && bIsOpen && a.priority !== b.priority) {
+    return a.priority - b.priority;
+  }
+
+  const applicationDifference = (applicationRank[a.application] ?? 99) - (applicationRank[b.application] ?? 99);
+  if (applicationDifference) return applicationDifference;
+  const registrationDifference = (registrationRank[a.registration] ?? 99) - (registrationRank[b.registration] ?? 99);
+  if (registrationDifference) return registrationDifference;
+  if (a.priority !== b.priority) return a.priority - b.priority;
+  return (b.lastContacted || "").localeCompare(a.lastContacted || "");
+}
+
 function filteredRecords() {
   const search = document.querySelector("#searchInput").value.trim().toLowerCase();
   const type = document.querySelector("#typeFilter").value;
@@ -788,7 +857,7 @@ function filteredRecords() {
       && (registration === "all" || item.registration === registration)
       && (application === "all" || item.application === application)
       && (priority === "all" || String(item.priority) === priority);
-  });
+  }).sort(compareActivity);
 }
 
 function renderMetrics() {
@@ -803,11 +872,12 @@ function renderMetrics() {
 
 function renderPriorityQueue() {
   const queue = records
-    .filter((item) => ["open-now", "always-open"].includes(item.opportunityStatus))
-    .sort((a, b) => {
-      if (a.opportunityStatus !== b.opportunityStatus) return a.opportunityStatus === "open-now" ? -1 : 1;
-      return a.priority - b.priority;
-    })
+    .filter((item) =>
+      ["ongoing", "submitted", "preparing"].includes(item.application)
+      || ["in-progress", "pending-approval"].includes(item.registration)
+      || ["open-now", "always-open"].includes(item.opportunityStatus)
+    )
+    .sort(compareActivity)
     .slice(0, 4);
   document.querySelector("#priorityQueue").innerHTML = queue.map((item) => `
     <article class="priority-item">
