@@ -98,7 +98,7 @@ These facts are leads, not final tender evidence:
 | Registration | Requirement | Cost | Current status | Next action |
 |---|---|---:|---|---|
 | D-U-N-S lookup | Company number and exact legal identity | Free | `READY TO START` | Search the D&B UK register before requesting a new number |
-| MultiQuote | D-U-N-S number and monitored company email | Free registration | `BLOCKED BY D-U-N-S` | Register UCM and select cleaning CPV categories |
+| MultiQuote | D-U-N-S number and monitored company email | Free registration | `SUBMITTED - PENDING RESPONSE` | Monitor the registered email and spam folder, complete any requested profile steps and configure cleaning/property alerts |
 | Find a Tender / PPON | Named administrator, GOV.UK One Login and organisation information | Free | `WAITING FOR CARLOS` | Carlos names the administrator and backup administrator |
 | CompeteFor | Company profile, service categories and monitored email | Free registration | `READY AFTER BASIC PROFILE` | Register after items 1, 3, 7 and 8 are confirmed |
 
@@ -110,6 +110,8 @@ These facts are leads, not final tender evidence:
 | Clarion Housing Group | `ACCOUNT CREATED` | `APPLICATION TO COMPLETE` | 24 Jul 2026 | Finish the supplier application and assemble communal-area, void, resident-safety and London delivery evidence |
 | CHIC eSourcing | `ACCOUNT CREATED` | `APPLICATION TO COMPLETE` | 24 Jul 2026 | Complete the Cleaning Services DPS application for Lots 1 and 2, confirm London/South coverage and submit verified qualification evidence |
 | ProContract / Due North | `PENDING APPROVAL` | `SUBMITTED` | 24 Jul 2026 | Monitor email and spam, follow the mandatory confirmation link, complete first-login registration and contact ProContract if no update arrives within 48 hours |
+| MultiQuote | `PENDING RESPONSE` | `SUBMITTED` | 27 Jul 2026 | Monitor email and spam, respond to any clarification or profile-completion request and configure relevant opportunity alerts after approval |
+| Morgan Sindall Property Services | `DIRECT CONTACT MADE` | `ONBOARDING PROCESS REQUESTED` | 27 Jul 2026 | Await the MSPS supply-chain response; follow up after five working days and prepare only the evidence they request |
 
 ## RM6241 Housing Maintenance And Repair DPS
 
@@ -174,7 +176,7 @@ Do not ask Carlos for these unless an opportunity actually requires them:
 
 ### Days 9-10
 
-- Register on MultiQuote and the first priority portals.
+- Complete any MultiQuote approval/profile steps and configure the first priority portal alerts.
 - Assemble the private Level 1 tender folder.
 - Run a test response against one proportionate opportunity.
 - Record every missing fact and improvement before submitting a live bid.
@@ -199,6 +201,8 @@ Do not ask Carlos for these unless an opportunity actually requires them:
 | 24 Jul 2026 | Reviewed ProContract automatic categories and recorded registration progress | Delivery team | Registration is in progress; category refinement and final confirmation remain |
 | 24 Jul 2026 | Recorded ProContract supplier application submission | Delivery team | Pending approval, mandatory email verification and first-login completion |
 | 27 Jul 2026 | Reviewed the complete RM6241 bid pack and separated admission requirements from future call-off paperwork | Delivery team | Application is viable only for evidenced services; insurance, Cyber Essentials and FVRA are the immediate blockers |
+| 27 Jul 2026 | Recorded MultiQuote supplier registration submission | Delivery team | Submitted; awaiting response or profile-completion instructions |
+| 27 Jul 2026 | Recorded Morgan Sindall Property Services supply-chain email | Delivery team | Onboarding process requested from the MSPS supply-chain team |
 
 ## Related Files
 
