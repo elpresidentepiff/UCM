@@ -82,7 +82,7 @@ const initialRecords = [
   record("places-london", "Places for London", "live-opportunity", "Soft Facilities Management", "Subcontract or future renewal route", "Awarded value about GBP 25.1m", 2, "not-required", "subcontract", "FM opportunity team", "PlacesFMopportunity@tfl.gov.uk", "https://www.find-tender.service.gov.uk/", "https://www.find-tender.service.gov.uk/Notice/037444-2025", "Awarded / closed", "Identify the awarded prime and prepare a specialist London subcontract capability introduction.", ["Technical cleaning", "Transport environment", "Accreditations", "Rapid response"], "Not open for a direct UCM bid. Keep only as a prime-contractor relationship route."),
   record("tfl-pan", "Transport for London", "live-opportunity", "Pan-TfL Cleaning Services", "Mitie subcontract route", "Awarded", 2, "not-required", "subcontract", "Soft FM team", "smbonefm@tfl.gov.uk", "https://www.find-tender.service.gov.uk/", "https://www.find-tender.service.gov.uk/Notice/002468-2026", "Awarded / closed", "Approach Mitie supplier onboarding with UCM technical and responsive-cleaning evidence.", ["Rail environment", "Safety systems", "London coverage", "Prime onboarding"], "The direct procurement is closed. Commercial value now depends on subcontract positioning, not monitoring the old notice."),
 
-  record("find-tender", "Find a Tender", "public-portal", "UK above-threshold public procurements", "Register, save searches and watch notices", "Multiple", 1, "not-started", "monitor", "Portal support", "", official.fts, official.fts, "Weekly", "Create supplier account and saved searches for CPV 90900000, 90910000 and London.", ["Supplier account", "Saved searches", "Weekly review"], "Core free discovery channel. Watching notices does not replace registration on the buyer's tender portal."),
+  record("find-tender", "Find a Tender", "public-portal", "UK above-threshold public procurements", "GOV.UK One Login, organisation registration, saved searches and notice monitoring", "Multiple", 1, "in-progress", "monitor", "Portal support", "", official.srs, official.fts, "One Login setup started 27 Jul 2026", "Finish the individual GOV.UK One Login, register UCM's organisation details, obtain the PPON and configure saved searches for CPV 90900000, 90910000 and London.", ["Individual GOV.UK One Login", "Organisation registration", "PPON", "Saved searches", "Weekly review"], "UCM has started the GOV.UK One Login step. The Find a Tender organisation record and PPON are not complete yet. Watching notices does not replace registration on the buyer's tender portal."),
   record("contracts-finder", "Contracts Finder", "public-portal", "England public contracts and opportunities", "Saved search and direct buyer links", "Multiple", 1, "not-started", "monitor", "Portal support", "", official.contracts, official.contracts, "Weekly", "Create saved cleaning and facilities searches; record only commercially viable leads.", ["Search profile", "CPV codes", "London filter"], "Core free source, especially for lower-value public opportunities."),
   record("capital-esourcing", "capitalEsourcing", "public-portal", "London borough and public-body tenders", "Supplier registration and alerts", "Multiple", 1, "not-started", "not-started", "Portal support", "", "https://www.capitalesourcing.com/", "https://www.capitalesourcing.com/", "This month", "Register UCM and configure cleaning/FM alerts for participating London authorities.", ["Company details", "Insurance", "Policies", "Alert profile"], "Relevant authorities include Westminster, Hammersmith & Fulham, Havering, Hillingdon, Newham and Kensington & Chelsea."),
   record("procontract", "ProContract / Due North", "public-portal", "Council, housing and regional tenders", "Supplier registration and opportunity search", "Multiple", 0, "not-started", "not-started", "Portal support", "", official.procontract, official.procontract, "Immediate", "Register and search DN797007 plus London cleaning opportunities.", ["Company profile", "CPV codes", "Email alerts"], "Priority because Kingston directs suppliers to this portal."),
@@ -702,6 +702,18 @@ const confirmedProgress = {
     previousNextActions: [],
     activity: [
       { date: "2026-07-27", action: "Supplier registration submitted", note: "MultiQuote application awaiting response or profile-completion instructions" }
+    ]
+  },
+  "find-tender": {
+    registration: "in-progress",
+    application: "monitor",
+    lastContacted: "2026-07-27",
+    nextAction: "Finish the individual GOV.UK One Login, register UCM's organisation details, obtain the PPON and configure saved searches for CPV 90900000, 90910000 and London.",
+    previousNextActions: ["Create supplier account and saved searches for CPV 90900000, 90910000 and London."],
+    previousRegistrationStates: ["not-started", "researching"],
+    previousApplicationStates: ["not-started", "monitor"],
+    activity: [
+      { date: "2026-07-27", action: "One Login setup started", note: "Find a Tender organisation registration and PPON still to be completed" }
     ]
   },
   pfh: {

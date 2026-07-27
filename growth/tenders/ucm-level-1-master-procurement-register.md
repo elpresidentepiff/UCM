@@ -99,7 +99,7 @@ These facts are leads, not final tender evidence:
 |---|---|---:|---|---|
 | D-U-N-S lookup | Company number and exact legal identity | Free | `READY TO START` | Search the D&B UK register before requesting a new number |
 | MultiQuote | D-U-N-S number and monitored company email | Free registration | `SUBMITTED - PENDING RESPONSE` | Monitor the registered email and spam folder, complete any requested profile steps and configure cleaning/property alerts |
-| Find a Tender / PPON | Named administrator, GOV.UK One Login and organisation information | Free | `WAITING FOR CARLOS` | Carlos names the administrator and backup administrator |
+| Find a Tender / PPON | Named administrator, GOV.UK One Login and organisation information | Free | `IN PROGRESS - ONE LOGIN` | Finish the individual One Login, register UCM's organisation information, obtain the PPON and add a backup administrator |
 | CompeteFor | Company profile, service categories and monitored email | Free registration | `READY AFTER BASIC PROFILE` | Register after items 1, 3, 7 and 8 are confirmed |
 
 ## Confirmed Supplier Onboarding
@@ -203,6 +203,7 @@ Do not ask Carlos for these unless an opportunity actually requires them:
 | 24 Jul 2026 | Recorded ProContract supplier application submission | Delivery team | Pending approval, mandatory email verification and first-login completion |
 | 27 Jul 2026 | Reviewed the complete RM6241 bid pack and separated admission requirements from future call-off paperwork | Delivery team | Application is viable only for evidenced services; insurance, Cyber Essentials and FVRA are the immediate blockers |
 | 27 Jul 2026 | Recorded MultiQuote supplier registration submission | Delivery team | Submitted; awaiting response or profile-completion instructions |
+| 27 Jul 2026 | Started GOV.UK One Login for Find a Tender registration | Business owner / delivery team | In progress; organisation registration and PPON remain outstanding |
 | 27 Jul 2026 | Recorded Procurement for Housing supplier application | Delivery team | Submitted; awaiting acknowledgement and the relevant DPS/PQQ or future framework route |
 | 27 Jul 2026 | Recorded Morgan Sindall Property Services supply-chain email | Delivery team | Onboarding process requested from the MSPS supply-chain team |
 | 27 Jul 2026 | Recorded Morgan Sindall Property Services response | Delivery team | No requirement at this time; removed from active pipeline and retained as a monitored prime |
