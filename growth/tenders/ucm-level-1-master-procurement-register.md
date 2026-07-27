@@ -111,7 +111,7 @@ These facts are leads, not final tender evidence:
 | CHIC eSourcing | `ACCOUNT CREATED` | `APPLICATION TO COMPLETE` | 24 Jul 2026 | Complete the Cleaning Services DPS application for Lots 1 and 2, confirm London/South coverage and submit verified qualification evidence |
 | ProContract / Due North | `PENDING APPROVAL` | `SUBMITTED` | 24 Jul 2026 | Monitor email and spam, follow the mandatory confirmation link, complete first-login registration and contact ProContract if no update arrives within 48 hours |
 | MultiQuote | `PENDING RESPONSE` | `SUBMITTED` | 27 Jul 2026 | Monitor email and spam, respond to any clarification or profile-completion request and configure relevant opportunity alerts after approval |
-| Morgan Sindall Property Services | `DIRECT CONTACT MADE` | `ONBOARDING PROCESS REQUESTED` | 27 Jul 2026 | Await the MSPS supply-chain response; follow up after five working days and prepare only the evidence they request |
+| Morgan Sindall Property Services | `NO CURRENT REQUIREMENT` | `MONITOR` | 27 Jul 2026 | No onboarding chase; retain the contact and revisit only for a relevant published requirement or proportionate relationship review |
 
 ## RM6241 Housing Maintenance And Repair DPS
 
@@ -203,6 +203,7 @@ Do not ask Carlos for these unless an opportunity actually requires them:
 | 27 Jul 2026 | Reviewed the complete RM6241 bid pack and separated admission requirements from future call-off paperwork | Delivery team | Application is viable only for evidenced services; insurance, Cyber Essentials and FVRA are the immediate blockers |
 | 27 Jul 2026 | Recorded MultiQuote supplier registration submission | Delivery team | Submitted; awaiting response or profile-completion instructions |
 | 27 Jul 2026 | Recorded Morgan Sindall Property Services supply-chain email | Delivery team | Onboarding process requested from the MSPS supply-chain team |
+| 27 Jul 2026 | Recorded Morgan Sindall Property Services response | Delivery team | No requirement at this time; removed from active pipeline and retained as a monitored prime |
 
 ## Related Files
 
