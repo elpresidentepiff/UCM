@@ -72,6 +72,13 @@ function record(id, buyer, type, opportunity, route, value, priority, registrati
 }
 
 const initialRecords = [
+  record("peabody-estates-pme-2026", "Peabody Trust", "live-opportunity", "Estate and Window Cleaning Services across South London and North East London", "Free ProcureCo preliminary market engagement before the formal tender", "GBP 26.4m including VAT estimated over four years", 0, "not-started", "preparing", "Anouska Herman / ProcureCo", "Anouska.Herman@peabody.org.uk", "https://procureco.uk/groups/peabody-estates-and-window-cleaning-services-contract/", "https://www.find-tender.service.gov.uk/Notice/066912-2026", "3 Aug 2026, 17:00", "Register free on ProcureCo, request project-group access and submit UCM's evidence-led response before 17:00 on 3 August. Ask for SME-friendly geographic lots and state UCM's realistic London capacity.", ["Free ProcureCo registration", "Communal and window cleaning experience", "Void and deep-clean capability", "London coverage", "Reporting and quality controls", "Confidential PME response"], "This is market engagement, not a tender or award. It is still commercially valuable because UCM can influence lotting, reporting, innovation and SME access before the competition is designed. Do not imply capacity for the full GBP 26.4m requirement."),
+  record("haringey-schools-2026", "Educo / three Haringey primary schools", "live-opportunity", "Cleaning Tender - Haringey Schools Oct26", "Two-stage competition through mytenders; Stage 1 Selection Questionnaire", "Lot 3 GBP 360k including VAT; total GBP 2.8572m including VAT", 0, "not-started", "preparing", "Emma / Educo", "emma@educo.co.uk", "https://www.mytenders.co.uk/", "https://www.find-tender.service.gov.uk/Notice/063237-2026", "7 Aug 2026, 12:00", "Download the SQ immediately and make Lot 3 Crowland the first bid/no-bid test. Submit only if UCM can evidence school delivery, safeguarding, mobilisation, financial standing and any TUPE requirements in the documents.", ["Stage 1 Selection Questionnaire", "School cleaning evidence", "Safeguarding and DBS controls where eligible", "Mobilisation and supervision", "Financial response", "Portal submission"], "Lot 3 is the most proportionate route: GBP 300k excluding VAT over up to five years. Stage 1 is scored 80% operational and 20% financial, with the top five suppliers progressing. The notice does not settle every TUPE or insurance requirement; verify the SQ before bidding."),
+  record("luton-specialist-deep-clean-2026", "Luton Council", "live-opportunity", "Specialist Deep Cleaning, AT1782", "Open procedure through ProContract / Due North", "GBP 288k including VAT estimated", 0, "not-started", "preparing", "Sal Rahman", "Saleha.rahman@luton.gov.uk", "https://www.procontract.due-north.com/", "https://www.find-tender.service.gov.uk/Notice/061256-2026", "12 Aug 2026, 12:00; enquiries 5 Aug", "Access AT1782 on ProContract and run a hard compliance check before bidding. If UCM cannot evidence biohazard, sharps, contaminated-waste and emergency-response competence, pursue a specialist partner or record no-bid.", ["Communal and end-of-tenancy cleans", "Biohazard and sharps competence", "Hazardous-waste controls", "Emergency response", "SME suitable", "70% quality / 30% price"], "Strong geographic and service overlap, but the hazardous scope is a hard gate. The notice is internally inconsistent on total contract duration, so rely on the portal documents and clarification response. Do not use HOCl marketing as a substitute for specialist training, waste controls or legal compliance."),
+  record("moat-communal-cleaning-2026", "Moat Homes Limited", "live-opportunity", "Communal Cleaning Services, DN817122", "Open procedure through Housing Procurement Portal", "Lot 3 London and Sussex GBP 4.5856m including VAT", 0, "not-started", "preparing", "Moat Procurement", "Procurement@moat.co.uk", "https://www.housingprocurement.com/", "https://www.find-tender.service.gov.uk/Notice/068495-2026", "18 Aug 2026, 12:00; enquiries 6 Aug", "Download DN817122 and test the financial threshold, staffing, TUPE exposure and mobilisation cash before deciding on Lot 3. If prime capacity is too small, identify a delivery-partner route instead of forcing a bid.", ["Conditions of Participation", "Quality proposals", "Pricing schedule", "RAMS", "Waste controls", "TUPE declaration", "Lot-specific social value"], "A strong London service match and expressly SME suitable, but Lot 3 averages roughly GBP 637k excluding VAT per year over six years. That may exceed UCM's current safe prime-contract scale. Commercial discipline matters more than the headline value."),
+  record("guildford-cleaning-2026", "Guildford Borough Council", "live-opportunity", "Window and General Cleaning", "Open procedure through SE Shared Services / In-Tend", "Value not published; separate general and window-cleaning lots", 1, "not-started", "preparing", "Guildford Procurement", "procurement@guildford.gov.uk", "https://www.in-tendhost.co.uk/sesharedservices/aspx/Home", "https://www.find-tender.service.gov.uk/Notice/063877-2026", "7 Aug 2026, 12:00", "Register on SE Shared Services, download the documents and assess the general-cleaning lot for eight weekly sports-pavilion sites. Clarify the notice's inconsistent lot numbering before submission.", ["General cleaning method", "Weekly multi-site route", "Quality 55%", "Social value 5%", "Price 40%", "Window competence if selected"], "This may be a proportionate direct bid, particularly for general cleaning. The official notice describes three options but displays only two lot sections, so the portal documents must control the bid decision."),
+  record("home-group-voids-dynamic-market", "Home Group Limited", "live-opportunity", "Housing Repairs and Maintenance Dynamic Market - Part 3 Voids", "Email admission application, then competitions through Housing Procurement Portal", "Opportunity-led; 0% supplier fee", 1, "not-started", "preparing", "Lynn Mason / Dynamic Markets", "Dynamic.Markets@homegroup.org.uk", "https://www.housingprocurement.com/", "https://www.find-tender.service.gov.uk/Notice/039092-2026", "Open until 30 Apr 2029", "Download the Dynamic Market pack and apply only for Part 3 Voids where UCM can evidence cleans and relevant repair work. Check Creditsafe and questionnaire gates before submission.", ["Dynamic Market questionnaire", "Creditsafe check", "Void cleans", "Repair-work boundaries", "London and South East coverage", "SME suitable"], "This is a practical longer-term route: open admission, no supplier fee and specific inclusion of void cleans. Admission creates access to future competitions; it does not guarantee work."),
+  record("se-trains-fleet-pme-2026", "SE Trains Limited", "live-opportunity", "Fleet Cleaning preliminary market engagement", "Supplier workshop at Ashford Train Depot before future procurement", "GBP 100m-130m estimated over six years", 1, "not-started", "preparing", "Molly Weston", "molly.weston@southeasternrailway.co.uk", "https://www.find-tender.service.gov.uk/Notice/070294-2026", "https://www.find-tender.service.gov.uk/Notice/070294-2026", "Confirm attendance by 28 Aug 2026, 12:00", "Email Molly Weston to request a workshop place. Attend as a London specialist, innovation or subcontract partner; do not present UCM as able to prime 378 units across 44 locations.", ["Workshop registration", "Fleet-cleaning capability", "Sustainability evidence", "Technology and reporting ideas", "Partner strategy", "Rail safety gap assessment"], "This is market engagement, not an open tender. It is valuable for intelligence and relationships, but the scale is far beyond UCM's current prime capacity. The realistic angle is specialist delivery, pilot work or partnership."),
   record("rm6241", "Government Commercial Agency", "live-opportunity", "RM6241 Housing Maintenance and Repair DPS", "DPS admission, then buyer further competitions", "No guaranteed spend; open admission until 23 Feb 2029", 0, "not-started", "preparing", "RM6241 agreement team", "rm6241housing@crowncommercial.gov.uk", "https://supplierregistration.cabinetoffice.gov.uk/dps/RM6241?nav=0", official.rm6241, "Open until 23 Feb 2029", "Check GBP 5m insurance, start Cyber Essentials and complete a private FVRA test before the online application.", ["D-U-N-S", "EL GBP 5m", "PL GBP 5m", "PI GBP 5m", "Cyber Essentials", "Three years accounts", "FVRA", "Equality policy", "Social value"], "Primarily housing maintenance and repair, not a general cleaning framework. Apply only for evidenced void, property-care, refurbishment or minor-works services. CHAS/SSIP is not an admission requirement, although a buyer may require it at call-off. Start with London and contract values below GBP 100k; do not select regulated or unsupported services."),
   record("rm6264", "Crown Commercial Service", "live-opportunity", "RM6264 Facilities Management and Workplace Services DPS", "DPS admission and filtered competitions", "GBP 2bn current estimated ceiling; no revenue guarantee", 0, "in-progress", "preparing", "RM6264 agreement team", "rm6264@crowncommercial.gov.uk", official.srs, "https://www.find-tender.service.gov.uk/Notice/015390-2026", "Open until 23 Feb 2029", "Complete evidence pack, Supplier Registration Service record and financial review before applying.", ["EL GBP 5m", "PL GBP 1m", "PI GBP 1m", "Cyber Essentials", "Financial viability", "Carbon and social value", "Monthly MI", "Management charge"], "Best immediate national framework route. Start with credible London services and low value bands. The official notice says the ceiling was increased to GBP 2bn and explicitly guarantees no business. Passing admission only creates access to filtered competitions."),
   record("procurement-assist-cleaning", "Procurement Assist / iFM Bolton", "live-opportunity", "Cleaning Services DPS, PA BOS 04", "Delta eSourcing admission, then mini-competitions", "GBP 50m estimated across three categories", 0, "not-started", "not-started", "Tender team", "tenders@procurementassist.co.uk", "https://www.delta-esourcing.com/respond/WM5D5P333B", "https://www.contractsfinder.service.gov.uk/notice/e130c836-07c2-4d7b-867f-a7cc9549b7a6", "Open until 31 May 2029, 12:00", "Download the DPS pack and test UCM against Commercial Cleaning and Domestic Cleaning. Exclude clinical deep-clean claims unless separately evidenced.", ["SME suitable", "Commercial cleaning", "Domestic cleaning", "Commercial deep clean", "Financial standing", "Technical evidence"], "A real continuously open route. The DPS is available to public-sector buyers across the UK, but admission only creates access to future mini-competitions. Category 3 includes clinical and police environments and may require PAS 5748:2014 at further competition, so UCM must not select unsupported scope."),
@@ -281,6 +288,49 @@ initialRecords.push(
 );
 
 const verifiedContacts = {
+  "peabody-estates-pme-2026": {
+    email: "Anouska.Herman@peabody.org.uk",
+    contact: "Anouska Herman / ProcureCo",
+    source: "https://www.find-tender.service.gov.uk/Notice/066912-2026",
+    verifiedDate: "27 Jul 2026"
+  },
+  "haringey-schools-2026": {
+    email: "emma@educo.co.uk",
+    contact: "Emma / Educo",
+    source: "https://www.find-tender.service.gov.uk/Notice/063237-2026",
+    verifiedDate: "27 Jul 2026"
+  },
+  "luton-specialist-deep-clean-2026": {
+    email: "Saleha.rahman@luton.gov.uk",
+    contact: "Sal Rahman",
+    phone: "01582 546846",
+    source: "https://www.find-tender.service.gov.uk/Notice/061256-2026",
+    verifiedDate: "27 Jul 2026"
+  },
+  "moat-communal-cleaning-2026": {
+    email: "Procurement@moat.co.uk",
+    contact: "Moat Procurement",
+    source: "https://www.find-tender.service.gov.uk/Notice/068495-2026",
+    verifiedDate: "27 Jul 2026"
+  },
+  "guildford-cleaning-2026": {
+    email: "procurement@guildford.gov.uk",
+    contact: "Guildford Procurement",
+    source: "https://www.find-tender.service.gov.uk/Notice/063877-2026",
+    verifiedDate: "27 Jul 2026"
+  },
+  "home-group-voids-dynamic-market": {
+    email: "Dynamic.Markets@homegroup.org.uk",
+    contact: "Lynn Mason / Dynamic Markets",
+    source: "https://www.find-tender.service.gov.uk/Notice/039092-2026",
+    verifiedDate: "27 Jul 2026"
+  },
+  "se-trains-fleet-pme-2026": {
+    email: "molly.weston@southeasternrailway.co.uk",
+    contact: "Molly Weston",
+    source: "https://www.find-tender.service.gov.uk/Notice/070294-2026",
+    verifiedDate: "27 Jul 2026"
+  },
   "rm6264": {
     email: "rm6264@crowncommercial.gov.uk",
     contact: "RM6264 agreement team",
@@ -522,10 +572,52 @@ initialRecords.forEach((item) => {
   if (verified.contact) item.contact = verified.contact;
   if (verified.phone) item.phone = verified.phone;
   item.contactSource = verified.source || "";
-  item.verifiedDate = "23 Jul 2026";
+  item.verifiedDate = verified.verifiedDate || "23 Jul 2026";
 });
 
 const opportunityIntelligence = {
+  "peabody-estates-pme-2026": {
+    opportunityStatus: "open-now",
+    fit: "prepare",
+    fitReason: "Urgent free market engagement. UCM can influence SME lotting and show London communal-cleaning capability without pretending this is already a bid.",
+    verifiedDate: "27 Jul 2026"
+  },
+  "haringey-schools-2026": {
+    opportunityStatus: "open-now",
+    fit: "bid",
+    fitReason: "Lot 3 is the clearest Level 1 opportunity found: about GBP 60k excluding VAT per year if the full five-year term is used. Bid only after the SQ confirms UCM can pass school, finance and mobilisation gates.",
+    verifiedDate: "27 Jul 2026"
+  },
+  "luton-specialist-deep-clean-2026": {
+    opportunityStatus: "open-now",
+    fit: "prepare",
+    fitReason: "Good location and value, but biohazard, sharps, contaminated waste and emergency response are pass/fail capability questions. Partner or no-bid if evidence is missing.",
+    verifiedDate: "27 Jul 2026"
+  },
+  "moat-communal-cleaning-2026": {
+    opportunityStatus: "open-now",
+    fit: "prepare",
+    fitReason: "Excellent London service fit but likely too large for UCM as prime without strong turnover, staffing and mobilisation finance. Complete a rapid bid/no-bid review before the enquiry deadline.",
+    verifiedDate: "27 Jul 2026"
+  },
+  "guildford-cleaning-2026": {
+    opportunityStatus: "open-now",
+    fit: "bid",
+    fitReason: "The general-cleaning lot for eight weekly pavilion sites may be proportionate. Confirm lot structure, value and mobilisation requirements in the portal documents before bidding.",
+    verifiedDate: "27 Jul 2026"
+  },
+  "home-group-voids-dynamic-market": {
+    opportunityStatus: "always-open",
+    fit: "register",
+    fitReason: "Open admission, 0% supplier fee, SME suitable and directly includes void cleans. Apply for Part 3 only within UCM's evidenced cleaning and repair boundaries.",
+    verifiedDate: "27 Jul 2026"
+  },
+  "se-trains-fleet-pme-2026": {
+    opportunityStatus: "open-now",
+    fit: "partner",
+    fitReason: "Attend for intelligence and partnership positioning. The future GBP 100m-130m contract is not credible as a UCM prime bid at current scale.",
+    verifiedDate: "27 Jul 2026"
+  },
   "rm6241": {
     opportunityStatus: "always-open",
     fit: "prepare",
@@ -592,7 +684,7 @@ initialRecords.forEach((item) => {
   const intelligence = opportunityIntelligence[item.id];
   if (intelligence) {
     Object.assign(item, intelligence);
-    item.verifiedDate = "23 Jul 2026";
+    item.verifiedDate = intelligence.verifiedDate || "23 Jul 2026";
   } else if (item.application === "closed") {
     item.opportunityStatus = "closed";
     item.fit = "research";

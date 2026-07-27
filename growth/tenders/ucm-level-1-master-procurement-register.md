@@ -207,11 +207,13 @@ Do not ask Carlos for these unless an opportunity actually requires them:
 | 27 Jul 2026 | Recorded Procurement for Housing supplier application | Delivery team | Submitted; awaiting acknowledgement and the relevant DPS/PQQ or future framework route |
 | 27 Jul 2026 | Recorded Morgan Sindall Property Services supply-chain email | Delivery team | Onboarding process requested from the MSPS supply-chain team |
 | 27 Jul 2026 | Recorded Morgan Sindall Property Services response | Delivery team | No requirement at this time; removed from active pipeline and retained as a monitored prime |
+| 27 Jul 2026 | Completed a London and South East live-opportunity sweep and added seven verified routes to the tender CRM | Delivery team | Peabody PME, Haringey Lot 3, Home Group Voids, Guildford, Luton, Moat and SE Trains ranked with bid/no-bid controls |
 
 ## Related Files
 
 - [Full supplier evidence guide](ucm-one-login-and-supplier-evidence-pack.md) - later-stage and buyer-specific requirements.
 - [Verified opportunity sweep](verified-opportunity-sweep-2026-07-23.md) - externally verified opportunities and supplier routes.
+- [Live opportunity sweep - 27 July 2026](verified-opportunity-sweep-2026-07-27.md) - seven current bids, market-engagement exercises and open admission routes ranked by commercial fit.
 - [ProContract category selection](procontract-category-selection-2026-07-24.md) - exact service categories, exclusions, region and completion steps.
 - [RM6241 application assessment](rm6241-application-assessment-2026-07-27.md) - pass/fail gates, service-fit decision and submission order.
 - [Level 1 working templates](level-1-templates/README.md) - documents produced by the delivery team and awaiting verified UCM inputs.
