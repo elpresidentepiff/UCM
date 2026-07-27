@@ -525,6 +525,11 @@ initialRecords.forEach((item) => {
 });
 
 const opportunityIntelligence = {
+  "rm6241": {
+    opportunityStatus: "always-open",
+    fit: "prepare",
+    fitReason: "Open admission, but primarily a housing maintenance and repair route. Apply only for evidenced void, property-care, refurbishment or minor-works services after insurance, Cyber Essentials and FVRA checks."
+  },
   "rm6264": {
     opportunityStatus: "always-open",
     fit: "register",
@@ -801,6 +806,7 @@ function statusBadge(value, labels) {
 }
 
 function compareActivity(a, b) {
+  const openStatuses = ["open-now", "always-open"];
   const applicationRank = {
     ongoing: 0,
     submitted: 1,
@@ -819,6 +825,15 @@ function compareActivity(a, b) {
     "not-started": 4,
     "not-required": 5
   };
+
+  const aIsOpen = openStatuses.includes(a.opportunityStatus);
+  const bIsOpen = openStatuses.includes(b.opportunityStatus);
+  if (aIsOpen !== bIsOpen) return aIsOpen ? -1 : 1;
+
+  if (aIsOpen && bIsOpen && a.priority !== b.priority) {
+    return a.priority - b.priority;
+  }
+
   const applicationDifference = (applicationRank[a.application] ?? 99) - (applicationRank[b.application] ?? 99);
   if (applicationDifference) return applicationDifference;
   const registrationDifference = (registrationRank[a.registration] ?? 99) - (registrationRank[b.registration] ?? 99);
