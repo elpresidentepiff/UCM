@@ -4,7 +4,7 @@
 
 **Stage:** Level 1 - contracts around GBP 50,000 and smaller supplier opportunities
 
-**Last updated:** 23 July 2026
+**Last updated:** 27 July 2026
 
 **Commercial owner:** Carlos Cuevas
 
@@ -111,6 +111,28 @@ These facts are leads, not final tender evidence:
 | CHIC eSourcing | `ACCOUNT CREATED` | `APPLICATION TO COMPLETE` | 24 Jul 2026 | Complete the Cleaning Services DPS application for Lots 1 and 2, confirm London/South coverage and submit verified qualification evidence |
 | ProContract / Due North | `PENDING APPROVAL` | `SUBMITTED` | 24 Jul 2026 | Monitor email and spam, follow the mandatory confirmation link, complete first-login registration and contact ProContract if no update arrives within 48 hours |
 
+## RM6241 Housing Maintenance And Repair DPS
+
+**Decision:** `PREPARE - APPLY ONLY FOR EVIDENCED SERVICES`
+
+The supplied RM6241 bid pack has been reviewed. This is primarily a housing maintenance and repair route, not a general commercial-cleaning framework. UCM should use it only for services it can prove, such as relevant void, refurbishment, decorating or minor-works delivery.
+
+Priority admission gates:
+
+- valid D-U-N-S details matching the Supplier Registration Service record;
+- Equality and Diversity Policy and Supplier Code acceptance;
+- Employers' Liability, Public Liability and Professional Indemnity at GBP 5 million;
+- Cyber Essentials Basic;
+- completed Financial Viability Risk Assessment tool and three years of accounts;
+- social-value commitment and reporting;
+- carefully limited London, building-type, service and contract-value filters.
+
+CHAS or another SSIP certificate is not stated as an RM6241 admission requirement. It may still be requested by an individual buyer at call-off.
+
+UCM should initially select contract-value bands only up to GBP 99,999, subject to capacity and working-capital review. It must not select GBP 5 million-plus bands, unsupported national coverage, Whole Home Retrofit or regulated technical services.
+
+See [RM6241 application assessment](rm6241-application-assessment-2026-07-27.md) for the full decision, blockers and submission sequence.
+
 Creating a Coupa account does not make UCM an approved supplier to every organisation using Coupa. Buyer invitations, qualification questions and sourcing events remain buyer-specific.
 
 ## Contract-Specific Items
@@ -176,11 +198,13 @@ Do not ask Carlos for these unless an opportunity actually requires them:
 | 24 Jul 2026 | Recorded confirmed CHIC account creation and onboarding progress | Delivery team | Account created; Cleaning Services DPS application remains to be completed |
 | 24 Jul 2026 | Reviewed ProContract automatic categories and recorded registration progress | Delivery team | Registration is in progress; category refinement and final confirmation remain |
 | 24 Jul 2026 | Recorded ProContract supplier application submission | Delivery team | Pending approval, mandatory email verification and first-login completion |
+| 27 Jul 2026 | Reviewed the complete RM6241 bid pack and separated admission requirements from future call-off paperwork | Delivery team | Application is viable only for evidenced services; insurance, Cyber Essentials and FVRA are the immediate blockers |
 
 ## Related Files
 
 - [Full supplier evidence guide](ucm-one-login-and-supplier-evidence-pack.md) - later-stage and buyer-specific requirements.
 - [Verified opportunity sweep](verified-opportunity-sweep-2026-07-23.md) - externally verified opportunities and supplier routes.
 - [ProContract category selection](procontract-category-selection-2026-07-24.md) - exact service categories, exclusions, region and completion steps.
+- [RM6241 application assessment](rm6241-application-assessment-2026-07-27.md) - pass/fail gates, service-fit decision and submission order.
 - [Level 1 working templates](level-1-templates/README.md) - documents produced by the delivery team and awaiting verified UCM inputs.
 - [UCM Tender Control](../../app/crm/tenders.html) - browser-based opportunity and follow-up tracker.
