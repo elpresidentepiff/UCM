@@ -59,14 +59,14 @@ The actual evidence belongs in a private UCM-controlled document library. This f
 | 1 | Company identity | `KNOWN - VERIFY` | Confirm exact legal name, company number, registered address and trading address | `01-Company/` | Verify public record against current company documents | Carlos |
 | 2 | VAT and UTR | `WAITING FOR CARLOS` | VAT certificate or non-registration status, plus UTR confirmation | `01-Company/Tax/` | Supply privately; never commit numbers to this repository | Carlos |
 | 3 | Employers' and Public Liability insurance | `WAITING FOR CARLOS` | Current certificates, limits, covered activities, insurer and expiry dates | `02-Insurance/` | Check whether cleaning, maintenance and specialist treatments are covered | Carlos |
-| 4 | Basic health and safety policy | `WAITING FOR CARLOS` | Existing signed policy and latest review date | `03-Health-and-Safety/` | Review first; create a replacement only if missing or materially outdated | Carlos / delivery team |
+| 4 | Basic health and safety policy | `DRAFT - AWAITING INPUTS` | Existing signed policy and latest review date, or confirmation that none exists | `03-Health-and-Safety/` | Review the UCM draft against real arrangements; obtain competent review, Carlos's signature and staff briefing | Carlos / delivery team |
 | 5 | COSHH and Safety Data Sheets | `WAITING FOR CARLOS` | Current product list, COSHH assessments and supplier SDS files | `03-Health-and-Safety/COSHH/` | Build a simple product and expiry register after files arrive | Carlos / delivery team |
 | 6 | Accounts or turnover evidence | `WAITING FOR CARLOS` | Latest filed accounts and current approximate turnover | `04-Finance/` | Establish a safe contract-value band without publishing financial data | Carlos / accountant |
 | 7 | Staff and delivery capacity | `WAITING FOR CARLOS` | Current employee count, supervisors, regular subcontractors, coverage and available capacity | `05-Operations/Capacity/` | Produce a one-page capacity statement | Carlos / operations |
 | 8 | Services and current prices | `PARTIAL` | Confirm services UCM will sell now, exclusions, hourly rates and minimum call-out | `06-Commercial/Pricing/` | Reconcile the website service list with real delivery and pricing | Carlos / delivery team |
 | 9 | Two client references | `WAITING FOR CARLOS` | Two contactable clients and explicit permission to approach them | `07-Proof/References/` | Create a controlled reference register | Carlos |
 | 10 | Two similar-work examples | `WAITING FOR CARLOS` | Scope, location, result, dates, approved facts and media permission | `07-Proof/Case-Studies/` | Convert the evidence into two one-page case studies | Carlos / delivery team |
-| 11 | Training and role-appropriate DBS evidence | `CONDITIONAL` | Existing staff training certificates; DBS evidence only for eligible roles | `08-Workforce/Training/` | Build a training matrix and identify genuine gaps | Carlos / operations |
+| 11 | Training and role-appropriate DBS evidence | `TEMPLATE CREATED` | Existing staff training certificates; DBS evidence only for eligible roles | `08-Workforce/Training/` | Populate the training matrix, complete induction and identify genuine gaps | Carlos / operations |
 | 12 | Current contracts, checklists or inspection forms | `WAITING FOR CARLOS` | Sample scope, cleaning checklist, inspection record and contract terms with sensitive data removed | `05-Operations/Current-Documents/` | Use the best existing material before creating new templates | Carlos / delivery team |
 
 ## Public Information Already Located
@@ -86,6 +86,13 @@ These facts are leads, not final tender evidence:
 | Company capability sheet | Legal identity, services, coverage, capacity, insurance summary, two proof points and contact route | Items 1, 3, 7, 8, 9 and 10 | `DRAFT - AWAITING INPUTS` |
 | Basic RAMS set | General cleaning, washrooms, kitchens, deep cleaning, slips, manual handling, lone work, equipment and relevant COSHH controls | Items 4, 5, 11 and 12 | `TEMPLATE CREATED` |
 | COSHH register | Product, use, SDS date, assessment owner, PPE, dilution, storage and review date | Item 5 | `TEMPLATE CREATED` |
+| Individual COSHH assessment | Product, task, exposure, controls, PPE, emergencies, storage, disposal, briefing and approval | Item 5 | `TEMPLATE CREATED` |
+| Health and safety policy | Signed intent, named responsibilities and arrangements reflecting actual UCM operations | Items 4, 5, 7, 11 and 12 | `DRAFT - AWAITING INPUTS` |
+| Incident and near-miss procedure | Immediate response, reporting, investigation, RIDDOR decision and corrective actions | Items 4, 7, 11 and 12 | `DRAFT - AWAITING INPUTS` |
+| PPE management record | Task selection, individual issue, checks, defects and replacement | Items 5, 7, 11 and 12 | `TEMPLATE CREATED` |
+| Equipment control record | Inventory, risk-based inspections, service history, defects and repair | Items 7, 11 and 12 | `TEMPLATE CREATED` |
+| Training and induction record | Role requirements, competence matrix, induction and toolbox talks | Item 11 | `TEMPLATE CREATED` |
+| Implementation evidence checklist | Two genuine evidence bundles proving controls are used in practice | Items 5, 10, 11 and 12 | `TEMPLATE CREATED` |
 | Mobilisation checklist | Award, survey, scope, staff, access, equipment, induction, first-day check and first-week review | Items 7, 8 and 12 | `TEMPLATE CREATED` |
 | Quality checklist | Cleaner completion, supervisor check, defects, corrective action and client acknowledgement | Item 12 | `TEMPLATE CREATED` |
 | Proof Passport example | Job details, checklist, approved photographs, issues, sign-off and next action | Items 10 and 12 | `TEMPLATE CREATED` |
@@ -98,7 +105,7 @@ These facts are leads, not final tender evidence:
 | Registration | Requirement | Cost | Current status | Next action |
 |---|---|---:|---|---|
 | D-U-N-S lookup | Company number and exact legal identity | Free | `READY TO START` | Search the D&B UK register before requesting a new number |
-| MultiQuote | D-U-N-S number and monitored company email | Free registration | `SUBMITTED - PENDING RESPONSE` | Monitor the registered email and spam folder, complete any requested profile steps and configure cleaning/property alerts |
+| MultiQuote | D-U-N-S number and monitored company email | Free registration | `LIVE - SIGNED IN 25 OCT 2026` | Add the PPON to the supplier profile once issued, correct the company-name display, and configure cleaning/maintenance category alerts |
 | Find a Tender / PPON | Named administrator, GOV.UK One Login and organisation information | Free | `IN PROGRESS - ONE LOGIN` | Finish the individual One Login, register UCM's organisation information, obtain the PPON and add a backup administrator |
 | CompeteFor | Company profile, service categories and monitored email | Free registration | `READY AFTER BASIC PROFILE` | Register after items 1, 3, 7 and 8 are confirmed |
 
@@ -110,7 +117,7 @@ These facts are leads, not final tender evidence:
 | Clarion Housing Group | `ACCOUNT CREATED` | `APPLICATION TO COMPLETE` | 24 Jul 2026 | Finish the supplier application and assemble communal-area, void, resident-safety and London delivery evidence |
 | CHIC eSourcing | `ACCOUNT CREATED` | `APPLICATION TO COMPLETE` | 24 Jul 2026 | Complete the Cleaning Services DPS application for Lots 1 and 2, confirm London/South coverage and submit verified qualification evidence |
 | ProContract / Due North | `PENDING APPROVAL` | `SUBMITTED` | 24 Jul 2026 | Monitor email and spam, follow the mandatory confirmation link, complete first-login registration and contact ProContract if no update arrives within 48 hours |
-| MultiQuote | `PENDING RESPONSE` | `SUBMITTED` | 27 Jul 2026 | Monitor email and spam, respond to any clarification or profile-completion request and configure relevant opportunity alerts after approval |
+| MultiQuote | `ACCOUNT LIVE` | `ACTIVE - FIRST EXPRESSION OF INTEREST SENT` | 25 Oct 2026 | Complete the supplier profile (PPON, categories), track Plumpton College CA18588 and review new opportunities weekly |
 | Procurement for Housing | `PENDING RESPONSE` | `SUPPLIER APPLICATION SUBMITTED` | 27 Jul 2026 | Monitor for acknowledgement and confirm whether UCM must complete an InTend DPS/PQQ or await a relevant framework procurement |
 | Morgan Sindall Property Services | `NO CURRENT REQUIREMENT` | `MONITOR` | 27 Jul 2026 | No onboarding chase; retain the contact and revisit only for a relevant published requirement or proportionate relationship review |
 
@@ -208,6 +215,11 @@ Do not ask Carlos for these unless an opportunity actually requires them:
 | 27 Jul 2026 | Recorded Morgan Sindall Property Services supply-chain email | Delivery team | Onboarding process requested from the MSPS supply-chain team |
 | 27 Jul 2026 | Recorded Morgan Sindall Property Services response | Delivery team | No requirement at this time; removed from active pipeline and retained as a monitored prime |
 | 27 Jul 2026 | Completed a London and South East live-opportunity sweep and added seven verified routes to the tender CRM | Delivery team | Peabody PME, Haringey Lot 3, Home Group Voids, Guildford, Luton, Moat and SE Trains ranked with bid/no-bid controls |
+| 28 Jul 2026 | Expanded the Level 1 templates into a controlled CHAS readiness pack | Delivery team | Policy, COSHH assessment, incident, PPE, equipment, training and implementation-evidence documents created; all await verified UCM inputs and approval |
+| 25 Oct 2026 | Confirmed the MultiQuote supplier account is live and reviewed all 53 public opportunities | Delivery team | Most are outside UCM's services or area; one cleaning tender in the South East and two open-ended maintenance routes identified |
+| 25 Oct 2026 | Expressed interest in Plumpton College internal building cleaning services (MultiQuote CA18588) and recorded the decision to bid | Business owner / delivery team | Tender documents held in the private evidence library only; campus-visit attendance confirmed for 30 Oct; submission deadline 7 Dec 2026 |
+| 25 Oct 2026 | Asked the insurance broker for renewal terms with higher public/products liability and a professional indemnity quote | Delivery team | Insurance is a gate: the bid cannot be submitted until the position is confirmed in writing. Current policy expires 7 Nov 2026 |
+| 25 Oct 2026 | Built a private pricing model and an open-questions list for CA18588 | Delivery team | Price, staffing approach, safeguarding checks and KPI evidence still need Carlos's decisions; GOV.UK One Login and PPON still outstanding |
 
 ## Related Files
 
