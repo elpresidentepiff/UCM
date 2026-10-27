@@ -106,7 +106,7 @@ These facts are leads, not final tender evidence:
 |---|---|---:|---|---|
 | D-U-N-S lookup | Company number and exact legal identity | Free | `READY TO START` | Search the D&B UK register before requesting a new number |
 | MultiQuote | D-U-N-S number and monitored company email | Free registration | `LIVE - SIGNED IN 25 OCT 2026` | Add the PPON to the supplier profile once issued, correct the company-name display, and configure cleaning/maintenance category alerts |
-| Find a Tender / PPON | Named administrator, GOV.UK One Login and organisation information | Free | `IN PROGRESS - ONE LOGIN` | Finish the individual One Login, register UCM's organisation information, obtain the PPON and add a backup administrator |
+| Find a Tender / PPON | Named administrator, GOV.UK One Login and organisation information | Free | `PPON ISSUED 27 OCT 2026` (PXJG-1597-RLQN) | Complete the six supplier-information sections (organisation, connected persons, qualifications, trade assurances, exclusion declaration, financial information), then the declaration and share code; add a backup administrator with their own One Login |
 | CompeteFor | Company profile, service categories and monitored email | Free registration | `READY AFTER BASIC PROFILE` | Register after items 1, 3, 7 and 8 are confirmed |
 
 ## Confirmed Supplier Onboarding
@@ -114,10 +114,10 @@ These facts are leads, not final tender evidence:
 | Organisation / platform | Account status | Application status | Confirmed | Next action |
 |---|---|---|---|---|
 | Coupa Supplier Portal | `ACCOUNT CREATED` | `ONBOARDING STARTED` | 24 Jul 2026 | Complete UCM's legal-entity and business profile, keep tax and payment information private, and complete each relevant buyer-specific connection separately |
-| Clarion Housing Group | `ACCOUNT CREATED` | `APPLICATION TO COMPLETE` | 24 Jul 2026 | Finish the supplier application and assemble communal-area, void, resident-safety and London delivery evidence |
+| Clarion Housing Group | `ACCOUNT EXISTS - ACCESS BLOCKED` | `APPLICATION TO COMPLETE` | 27 Oct 2026 | A duplicate-organisation join request is waiting on the existing account's login. Clarion Procurement and Atamis Supplier Support contacted 27 Oct; restore access before the Void and Sparkle tender closes (30 Oct 2026, 5pm), then finish the supplier application and assemble void, communal-area and London/South East delivery evidence |
 | CHIC eSourcing | `ACCOUNT CREATED` | `APPLICATION TO COMPLETE` | 24 Jul 2026 | Complete the Cleaning Services DPS application for Lots 1 and 2, confirm London/South coverage and submit verified qualification evidence |
-| ProContract / Due North | `PENDING APPROVAL` | `SUBMITTED` | 24 Jul 2026 | Monitor email and spam, follow the mandatory confirmation link, complete first-login registration and contact ProContract if no update arrives within 48 hours |
-| MultiQuote | `ACCOUNT LIVE` | `ACTIVE - FIRST EXPRESSION OF INTEREST SENT` | 25 Oct 2026 | Complete the supplier profile (PPON, categories), track Plumpton College CA18588 and review new opportunities weekly |
+| ProContract / Due North | `ACCOUNT EXISTS - LOGIN UNKNOWN` | `SUPPORT TICKET 8135 OPEN` | 27 Oct 2026 | Proactis confirmed an account exists with the managing director as administrator; the registered login email is not yet known. Obtain the username/registered email or a reset, then create a user for the second bidder. Needed for the Habinteg opportunity (site-visit registration by 12:00, 30 Oct 2026) |
+| MultiQuote | `ACCOUNT LIVE` | `ACTIVE - PROFILE UPDATED 27 OCT 2026` | 27 Oct 2026 | PPON added and company-name display corrected; share code still to add once generated. Track Plumpton College CA18588 and review new opportunities weekly |
 | Procurement for Housing | `PENDING RESPONSE` | `SUPPLIER APPLICATION SUBMITTED` | 27 Jul 2026 | Monitor for acknowledgement and confirm whether UCM must complete an InTend DPS/PQQ or await a relevant framework procurement |
 | Morgan Sindall Property Services | `NO CURRENT REQUIREMENT` | `MONITOR` | 27 Jul 2026 | No onboarding chase; retain the contact and revisit only for a relevant published requirement or proportionate relationship review |
 
@@ -189,6 +189,21 @@ Do not ask Carlos for these unless an opportunity actually requires them:
 - Run a test response against one proportionate opportunity.
 - Record every missing fact and improvement before submitting a live bid.
 
+## Live Bid Pipeline (status only)
+
+Dates are the public deadlines. No tender-document detail, pricing or staffing information is kept in this public repository.
+
+| Opportunity | Reference | Public deadline | Decision | Status | Next action |
+|---|---|---|---|---|---|
+| Plumpton College Group - internal building cleaning | MultiQuote CA18588 | 7 Dec 2026 (portal 12:00; ITT says 5pm) | `BID` | Interest expressed; campus visit 30 Oct 10:00; private pricing model and open-questions list built | Staffing/TUPE decision, KPI evidence, insurance confirmation, clarification questions by 6 Nov |
+| Habinteg - communal cleaning, grounds and window cleaning, Central and East of England, Lots 2 (Letchworth) and 4 (Essex and Ipswich) | Find a Tender 100583-2026; ProContract DN833466 | Site-visit registration 12:00, 30 Oct 2026; enquiries 18 Nov; submit 12:00, 25 Nov 2026 | `BID - LOTS 2 AND 4` | Blocked on ProContract login (ticket 8135) | Register for the mandatory site visit, download documents, price against the lot budget caps |
+| Clarion Housing Group - Void and Sparkle Cleaning (national), Greater London and South East lots | Find a Tender 085343-2026; Clarion Atamis portal | 30 Oct 2026, 5pm | `BID - LONDON AND SOUTH EAST LOTS` | Blocked on Atamis portal access | Restore access today; read the documents for turnover, insurance and evidence requirements |
+| Barham Primary School - cleaning | Find a Tender 090841-2026; myTenders | Questions 2 Nov 2026, 13:00 | `REGISTER AND REVIEW` | Documents behind a myTenders login with CAPTCHA | Business owner to register (PPON now available) |
+| Hertford Regional College - cleaning | Find a Tender 098642-2026 | Questionnaire 12 Nov 2026, 16:15 | `NO BID` | Minimum turnover condition is above UCM's current level | Revisit if a smaller lot or lower threshold appears |
+| Kings Langley School - cleaning | Find a Tender 094258-2026 | Questionnaire 1 Nov 2026, 13:00 | `NO BID` | Too little time to evidence a two-stage response | Monitor the second stage |
+| Sandown Town Council - public toilet cleaning and maintenance | Contracts Finder BAY-WC02 | 20 Nov 2026, 5pm | `NO BID` | Isle of Wight logistics | None |
+| CPC Minor Works DPS 2 | MultiQuote CA15362 | Open to Feb 2029 | `HOLD` | Interest recorded 25 Oct 2026; supplier questionnaire not started | Decide whether to apply once insurance, accreditations and references are in place |
+
 ## Decision Rules
 
 - Do not submit a tender until insurance, price and delivery capacity have been checked.
@@ -220,6 +235,13 @@ Do not ask Carlos for these unless an opportunity actually requires them:
 | 25 Oct 2026 | Expressed interest in Plumpton College internal building cleaning services (MultiQuote CA18588) and recorded the decision to bid | Business owner / delivery team | Tender documents held in the private evidence library only; campus-visit attendance confirmed for 30 Oct; submission deadline 7 Dec 2026 |
 | 25 Oct 2026 | Asked the insurance broker for renewal terms with higher public/products liability and a professional indemnity quote | Delivery team | Insurance is a gate: the bid cannot be submitted until the position is confirmed in writing. Current policy expires 7 Nov 2026 |
 | 25 Oct 2026 | Built a private pricing model and an open-questions list for CA18588 | Delivery team | Price, staffing approach, safeguarding checks and KPI evidence still need Carlos's decisions; GOV.UK One Login and PPON still outstanding |
+| 26 Oct 2026 | Asked ProContract support about the July registration, then found the email address used had been retired and was not forwarded | Delivery team | Sent to the live Proactis supplier-support address on 27 Oct |
+| 27 Oct 2026 | Registered UCM as a supplier on the Central Digital Platform with the managing director's One Login | Business owner / delivery team | PPON issued; supplier-information sections and share code still to complete. Passkey prompt skipped |
+| 27 Oct 2026 | Added the PPON to the MultiQuote profile and corrected the company-name display | Delivery team | Saved and verified by reloading the profile |
+| 27 Oct 2026 | Re-swept MultiQuote, Contracts Finder, Find a Tender and public aggregators for cleaning and maintenance work in London, the South East and the East of England | Delivery team | One strong new route (Habinteg Lots 2 and 4); Clarion Void and Sparkle confirmed; four routes ruled out (see Live Bid Pipeline) |
+| 27 Oct 2026 | Recorded decisions to bid Habinteg Lots 2 and 4 and the Clarion London and South East lots | Business owner | Both depend on restoring portal access before 30 Oct |
+| 27 Oct 2026 | Proactis support confirmed UCM already has a ProContract account with the managing director as administrator | Delivery team | Login email still unknown; follow-up sent on ticket 8135 |
+| 27 Oct 2026 | Contacted Clarion Procurement and Atamis Supplier Support about the blocked supplier account | Delivery team | Awaiting replies; deadline 30 Oct 2026, 5pm |
 
 ## Related Files
 
